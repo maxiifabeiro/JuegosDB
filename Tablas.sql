@@ -1,3 +1,37 @@
+CREATE DATABASE JuegosDB;
+GO
+USE JuegosDB;
+GO
+
+
+CREATE TABLE Permisos(
+    IdPermiso INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Descripcion VARCHAR(250) NULL,
+);
+GO
+
+CREATE TABLE ClasificacionEdades(
+    IdClasificacionEdade INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Descripcion VARCHAR(250) NOT NULL,
+);
+GO
+
+CREATE TABLE FormasDePago(
+    IdFormaDePago INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    Nombre VARCHAR(250) NOT NULL,
+    Estado BIT DEFAULT 1 NOT NULL,
+);
+GO
+
+CREATE TABLE Formatos(
+    IdFormato INT IDENTITY(1,1) PRIMARY KEY NOT NULL ,
+    Nombre VARCHAR(50) NOT NULL,
+    Fisico BIT NOT NULL,
+);
+GO
+
 CREATE TABLE Idiomas(
 	IdIdiomas INT  IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Nombre CHAR(50) NOT NULL 
@@ -23,10 +57,12 @@ CREATE TABLE FormasDePagoPorVenta (
 GO
 
 CREATE TABLE DesarrolladorasJuegos(
-	IdDesarrolladoraJ INT  IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	IdDesarrolladoraJ INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Nombre VARCHAR(50) NOT NULL,
 	IdPais INT NOT NULL,
 	FechaFundacion DATE NOT NULL,
 	CONSTRAINT FK_DesarrolladorasJuegos_Pais FOREIGN KEY (IdPais) REFERENCES Pais (IdPais)
 );
-GO
+
+
+
