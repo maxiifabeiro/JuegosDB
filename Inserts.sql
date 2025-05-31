@@ -1,23 +1,23 @@
 INSERT INTO Idiomas (Nombre)
 VALUES 
-    ('Espa�ol'),
-    ('Ingl�s'),
-    ('Franc�s'),
+    ('Espa�ol'),
+    ('Ingl�s'),
+    ('Franc�s'),
     ('Italiano'),
-    ('Portugu�s'),
-    ('Japon�s'),
+    ('Portugu�s'),
+    ('Japon�s'),
     ('Chino'),
     ('Coreano'),
-    ('Alem�n'),
+    ('Alem�n'),
     ('Ruso'),
-    ('�rabe'),
+    ('�rabe'),
     ('Hindi'),
     ('Turco'),
-    ('Neerland�s'),
+    ('Neerland�s'),
     ('Sueco'),
-    ('Dan�s'),
+    ('Dan�s'),
     ('Noruego'),
-    ('Finland�s'),
+    ('Finland�s'),
     ('Griego'),
     ('Polaco');
 GO
@@ -63,4 +63,57 @@ VALUES
     ('Naughty Dog', 2, '1984-09-27'),
     ('Rare', 5, '1985-07-01'),
     ('BioWare', 3, '1995-02-01');
+GO
+
+INSERT INTO Permisos(Nombre, Descripcion) 
+VALUES 
+    ('Administrador', 'Permiso absoluto para administradores del sistema'),
+    ('Vendedor', 'Permiso para vendedores de la tienda, en el que podra gestionar nuevas ventas...'),
+    ('Comprador', 'Permiso para el usuarios externos, el cual podran comprar juegos');
+GO
+
+INSERT INTO ClasificacionEdades(Nombre, Descripcion)
+VALUES
+    --Clasificación ESRB (Estados Unidos y Canadá)
+    ('EC', 'Para niños pequeños (3+). Sin contenido inapropiado'),
+    ('E', 'Apto para todos (6+). Puede tener algo de humor leve o violencia muy leve'),
+    ('E10+', 'Para mayores de 10 años. Puede incluir violencia leve, lenguaje moderado'),
+    ('T', 'Para mayores de 13 años. Violencia, lenguaje fuerte, temas sugerentes'),
+    ('M', 'Para mayores de 17 años. Violencia intensa, sangre, lenguaje fuerte, contenido sexual'),
+    ('AO', 'Solo para adultos (18+). Contenido sexual explícito o violencia extrema'),
+    ('RP', 'Clasificación aún no asignada'),
+    --Clasificación PEGI (Europa)
+    ('PEGI 3', 'Apto para todas las edades. Sin sonidos ni imágenes que puedan asustar'),
+    ('PEGI 7', 'Puede tener escenas o sonidos que asusten a niños pequeños'),
+    ('PEGI 12', 'Violencia moderada, lenguaje suave, insinuaciones sexuales leves'),
+    ('PEGI 16', 'Violencia más realista, lenguaje fuerte, consumo de drogas'),
+    ('PEGI 18', 'Violencia extrema, contenido sexual explícito, glorificación de drogas'),
+    --Clasificación CERO (Japón)
+    ('A','Todos los públicos'),
+    ('B','12 años o más'),
+    ('C','15 años o más'),
+    ('D','17 años o más'),
+    ('Z','Solo para adultos (18+). Venta restringida legalmente');
+GO
+
+INSERT INTO FormasDePago(Nombre, Estado)
+VALUES
+    ('Efectivo',1),
+    ('Tarjeta de credito', 1),
+    ('Tarjeta de debito', 1),
+    ('Mercado Pago', 1),
+    ('Pago Facil', 1),
+    ('Trasferencia', 1),
+    ('Criptomonedas',1);
+GO
+
+INSERT INTO Formatos(Nombre, Fisico)
+VALUES
+    ('Cartucho', 1),
+    ('Blu-ray', 1),
+    ('Descarga', 0),
+    ('Streaming',0),
+    ('App Movil',0),
+    ('CD',1),
+    ('DVD', 1);
 GO
