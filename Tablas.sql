@@ -93,5 +93,23 @@ CREATE TABLE Categorias (
     Nombre VARCHAR(50) NOT NULL
 );
 
+CREATE TABLE InfoVentas (
+    IDVenta INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    IDUsuarioComprador INT NULL,
+    FechaVenta DATETIME NOT NULL DEFAULT GETDATE(),
+    IDFormaPago INT NOT NULL,
+    IDCarrito INT NOT NULL,
+    FOREIGN KEY (IDUsuarioComprador) REFERENCES Usuario(IDUsuario),
+    FOREIGN KEY (IDFormaPago) REFERENCES FormaPago(IDFormaPago),
+    FOREIGN KEY (IDCarrito) REFERENCES Carrito(IDCarrito)
+);
+
+CREATE TABLE Carrito (
+    IDCarrito INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    Cantidad INT NOT NULL,
+    IDJuego INT NOT NULL,
+    PrecioTotal DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (IDJuego) REFERENCES Juego(IDJuego)
+);
 
 
