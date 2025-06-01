@@ -117,3 +117,36 @@ VALUES
     ('CD',1),
     ('DVD', 1);
 GO
+INSERT INTO DatosUsuarios (IDUsuario, Nombre, Apellido, FechaNacimiento, IDPais, Genero) VALUES
+(1, 'Melina', 'Gonzalez', '1990-05-12', 1, 'Femenino'),
+(2, 'Maria', 'Lopez', '1988-08-23', 1, 'Femenino'),
+(3, 'Lucas', 'Perez', '1992-11-30', 2, 'Masculino'),
+(4, 'Sofia', 'Ramirez', '1995-07-17', 1, 'Femenino'),
+(5, 'Martin', 'Fernandez', '1985-01-09', 3, 'Masculino'),
+(6, 'Carla', 'Sanchez', '1993-10-28', 1, 'Femenino'),
+(7, 'Diego', 'Diaz', '1989-03-15', 2, 'Masculino'),
+(8, 'Natalia', 'Torres', '1991-12-02', 1, 'Femenino'),
+(9, 'Tomas', 'Vargas', '1994-06-21', 3, 'Masculino'),
+(10, 'Laura', 'Morales', '1987-09-19', 1, 'Femenino'),
+(11, 'Andres', 'Ruiz', '1986-11-05', 2, 'Masculino'),
+(12, 'Camila', 'Castro', '1993-04-11', 1, 'Femenino'),
+(13, 'Valeria', 'Mendez', '1990-02-25', 1, 'Femenino'),
+(14, 'Bruno', 'Ortiz', '1988-07-30', 3, 'Masculino'),
+(15, 'Florencia', 'Rojas', '1995-05-14', 2, 'Femenino'),
+(16, 'Matias', 'Gomez', '1991-01-22', 1, 'Masculino'),
+(17, 'Carolina', 'Nunez', '1989-03-06', 3, 'Femenino'),
+(18, 'Rodrigo', 'Flores', '1992-12-18', 2, 'Masculino'),
+(19, 'Julia', 'Herrera', '1994-08-08', 1, 'Femenino'),
+(20, 'Agustin', 'Sosa', '1990-10-29', 1, 'Masculino');
+
+INSERT INTO Categorias (Nombre) VALUES
+('Acción'),
+('Aventura'),
+('Estrategia'),
+('Deportes'),
+('Simulación'),
+('Rol'),
+('Puzzle'),
+('Terror'),
+('Multijugador'),
+('Educativo');

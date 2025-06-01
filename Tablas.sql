@@ -64,5 +64,34 @@ CREATE TABLE DesarrolladorasJuegos(
 	CONSTRAINT FK_DesarrolladorasJuegos_Pais FOREIGN KEY (IdPais) REFERENCES Pais (IdPais)
 );
 
+CREATE TABLE DatosUsuarios (
+    IDDatoUsuario INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    IDUsuario INT NOT NULL,
+    Nombre VARCHAR(50) NOT NULL,
+    Apellido VARCHAR(50) NOT NULL,
+    FechaNacimiento DATE NOT NULL,
+    IDPais INT NOT NULL,
+    Genero VARCHAR(20),
+
+    FOREIGN KEY (IDPais) REFERENCES Paises(IDPais),
+    FOREIGN KEY (IDUsuario) REFERENCES Usuarios(IDUsuario)
+);
+
+
+CREATE TABLE IdiomasXJuegos (
+    IDIdiomaXJuego INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    IDJuego INT NOT NULL,
+    IDIdioma INT NOT NULL,
+
+    FOREIGN KEY (IDJuego) REFERENCES Juegos(IDJuego),
+    FOREIGN KEY (IDIdioma) REFERENCES Idiomas(IDIdioma)
+);
+
+
+CREATE TABLE Categorias (
+    IDCategoria INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
+    Nombre VARCHAR(50) NOT NULL
+);
+
 
 
