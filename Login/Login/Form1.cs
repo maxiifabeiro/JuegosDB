@@ -26,28 +26,41 @@ namespace Login
         {
             string usuario = txtusuario.Text;
             string password = txtcontrasena.Text;
+            bool EsAdministrador = true;
+            
 
             string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario AND Contrasena = @contrasena";
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario AND Contrasena = @contrasena AND EsAdministrador=@EsAdministrador";
+                //string tipousuario = "SELECT EsAdministrador FROM Usuarios WHERE NombreUsuario = @usuario AND  EsAdministrador=1";
+
 
                 using (SqlCommand cmd = new SqlCommand(query, con))
                 {
                     cmd.Parameters.AddWithValue("@usuario", usuario);
                     cmd.Parameters.AddWithValue("@contrasena", password);
+                    cmd.Parameters.AddWithValue("@EsAdministrador", true);
+
 
 
                     int count = (int)cmd.ExecuteScalar();
 
-                    if (count > 0)
+                    if (EsAdministrador)
                     {
-                        Form2 formulario = new Form2();
+                        VisorAdmin formulario = new VisorAdmin();
                         formulario.Show();
                         this.Hide();
                     }
+                    else if (count > 0)
+                        {
+                            Form2 formulario = new Form2();
+                            formulario.Show();
+                            this.Hide();
+                        }
+                    
                     else
                     {
                         MessageBox.Show("Usuario o contraseña incorrectos");
