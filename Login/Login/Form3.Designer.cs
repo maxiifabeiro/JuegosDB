@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Form3
+    partial class CrearUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearUsuario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.txtGenero = new System.Windows.Forms.TextBox();
@@ -266,7 +266,7 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // Form3
+            // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -275,7 +275,7 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
-            this.Name = "Form3";
+            this.Name = "CrearUsuario";
             this.Text = "Crear usuario nuevo";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);

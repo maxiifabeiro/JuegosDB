@@ -101,14 +101,16 @@ namespace Login
            
         }
 
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void OlvidoContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Form4 formulario = new Form4();
+            formulario.Show();
+            this.Hide();
         }
 
         private void CrearUsuario_Click(object sender, EventArgs e)
         {
-            Form3 formulario = new Form3();
+            CrearUsuario formulario = new CrearUsuario();
             formulario.Show();
         }
     }

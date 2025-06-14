@@ -36,7 +36,6 @@ CREATE PROCEDURE VerificarUsuario
     @Contrasena NVARCHAR(50)
 AS
 BEGIN
-    SELECT EsAdministrador
-    FROM Usuarios
+    SELECT EsAdministrador FROM Usuarios
     WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
 END

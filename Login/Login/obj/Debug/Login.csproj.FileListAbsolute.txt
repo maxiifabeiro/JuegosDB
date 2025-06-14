@@ -8,8 +8,8 @@ C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.pdb
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.exe
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.pdb
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Form3.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Form4.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
+C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources

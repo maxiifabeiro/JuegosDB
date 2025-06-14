@@ -95,7 +95,7 @@
             this.ForgotClave.TabIndex = 7;
             this.ForgotClave.TabStop = true;
             this.ForgotClave.Text = "Olvidó su contraseña?";
-            this.ForgotClave.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.ForgotClave.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.OlvidoContrasena_LinkClicked);
             // 
             // btnsalir
             // 
@@ -183,7 +183,7 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Name = "Inicio";
-            this.Text = "System Security";
+            this.Text = "Inicio";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

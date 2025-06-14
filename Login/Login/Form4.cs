@@ -26,5 +26,17 @@ namespace Login
         {
 
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Inicio formulario = new Inicio();
+            formulario.Show();
+            this.Hide();
+        }
     }
 }

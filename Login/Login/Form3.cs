@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Login
 {
-    public partial class Form3 : Form
+    public partial class CrearUsuario : Form
     {
-        public Form3()
+        public CrearUsuario()
         {
             InitializeComponent();
         }
@@ -50,15 +50,18 @@ namespace Login
 
         private void ComprobarContrasena_Click(object sender, EventArgs e)
         {
-            if (txtContrasena.Text == txtComprobarContrasena.Text)
+            if (txtContrasena.Text.Equals(txtComprobarContrasena.Text))
             {
                 txtFechaNacimiento.Focus();
             }
             else
             {
                 MessageBox.Show("Las contraseñas no coinciden");
+                txtComprobarContrasena.Clear();
+                txtComprobarContrasena.Focus();
             }
         }
+
 
 
         private void Contrasena_Click(object sender, EventArgs e)
