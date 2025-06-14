@@ -19,26 +19,45 @@ namespace Login
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\v11.0;Initial Catalog=TiendaJuegosPrueba;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\v11.0;Initial Catalog=TiendaJuegos;Integrated Security=True");
 
 
         private void btningresar_Click(object sender, EventArgs e)
         {
-            string usuario, password;
+            string usuario = txtusuario.Text;
+            string password = txtcontrasena.Text;
 
-            usuario = txtusuario.Text;
-            password = txtcontrasena.Text;
+            string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
 
-            if (usuario == txtusuario.Text && password == txtcontrasena.Text)
+            using (SqlConnection con = new SqlConnection(connectionString))
             {
-                Form2 formulario = new Form2();
-                formulario.Show();
-            }
-            else
-            {
-                MessageBox.Show("Los datos ingresados son incorrectos, intente nuevamente.");
+                con.Open();
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario AND Contrasena = @contrasena";
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    cmd.Parameters.AddWithValue("@usuario", usuario);
+                    cmd.Parameters.AddWithValue("@contrasena", password);
+
+
+                    int count = (int)cmd.ExecuteScalar();
+
+                    if (count > 0)
+                    {
+                        Form2 formulario = new Form2();
+                        formulario.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuario o contraseña incorrectos");
+                    }
+                }
             }
         }
+
+
+
 
         private void btnlimpiar_Click(object sender, EventArgs e)
         {

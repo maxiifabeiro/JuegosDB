@@ -48,6 +48,7 @@
             this.NombreUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -55,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnCrearUsuario);
             this.groupBox1.Controls.Add(this.txtGenero);
             this.groupBox1.Controls.Add(this.txtAvatar);
             this.groupBox1.Controls.Add(this.txtPais);
@@ -137,6 +139,7 @@
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(162, 20);
             this.txtNombreUsuario.TabIndex = 14;
+            this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // AvatarURL
             // 
@@ -221,6 +224,7 @@
             this.NombreUsuario.Size = new System.Drawing.Size(128, 16);
             this.NombreUsuario.TabIndex = 7;
             this.NombreUsuario.Text = "Nombre de Usuario:";
+            this.NombreUsuario.Click += new System.EventHandler(this.NombreUsuario_Click);
             // 
             // pictureBox1
             // 
@@ -240,6 +244,16 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // btnCrearUsuario
+            // 
+            this.btnCrearUsuario.Location = new System.Drawing.Point(174, 310);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(125, 31);
+            this.btnCrearUsuario.TabIndex = 15;
+            this.btnCrearUsuario.Text = "Crear Usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
             // 
             // Form3
             // 
@@ -281,5 +295,6 @@
         private System.Windows.Forms.Label ComprobarContrasena;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnCrearUsuario;
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -69,5 +70,21 @@ namespace Login
         {
 
         }
+
+        private void txtNombreUsuario_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NombreUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCrearUsuario_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
