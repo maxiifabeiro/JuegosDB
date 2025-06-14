@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.txtGenero = new System.Windows.Forms.TextBox();
             this.txtAvatar = new System.Windows.Forms.TextBox();
             this.txtPais = new System.Windows.Forms.TextBox();
@@ -48,7 +49,7 @@
             this.NombreUsuario = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCrearUsuario = new System.Windows.Forms.Button();
+            this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -81,33 +82,43 @@
             this.groupBox1.Text = "Datos Nuevo Usuario";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // btnCrearUsuario
+            // 
+            this.btnCrearUsuario.Location = new System.Drawing.Point(174, 310);
+            this.btnCrearUsuario.Name = "btnCrearUsuario";
+            this.btnCrearUsuario.Size = new System.Drawing.Size(125, 31);
+            this.btnCrearUsuario.TabIndex = 9;
+            this.btnCrearUsuario.Text = "Crear Usuario";
+            this.btnCrearUsuario.UseVisualStyleBackColor = true;
+            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
+            // 
             // txtGenero
             // 
             this.txtGenero.Location = new System.Drawing.Point(190, 238);
             this.txtGenero.Name = "txtGenero";
             this.txtGenero.Size = new System.Drawing.Size(162, 20);
-            this.txtGenero.TabIndex = 14;
+            this.txtGenero.TabIndex = 7;
             // 
             // txtAvatar
             // 
             this.txtAvatar.Location = new System.Drawing.Point(190, 268);
             this.txtAvatar.Name = "txtAvatar";
             this.txtAvatar.Size = new System.Drawing.Size(162, 20);
-            this.txtAvatar.TabIndex = 14;
+            this.txtAvatar.TabIndex = 8;
             // 
             // txtPais
             // 
             this.txtPais.Location = new System.Drawing.Point(190, 204);
             this.txtPais.Name = "txtPais";
             this.txtPais.Size = new System.Drawing.Size(162, 20);
-            this.txtPais.TabIndex = 14;
+            this.txtPais.TabIndex = 6;
             // 
             // txtFechaNacimiento
             // 
             this.txtFechaNacimiento.Location = new System.Drawing.Point(190, 166);
             this.txtFechaNacimiento.Name = "txtFechaNacimiento";
             this.txtFechaNacimiento.Size = new System.Drawing.Size(162, 20);
-            this.txtFechaNacimiento.TabIndex = 14;
+            this.txtFechaNacimiento.TabIndex = 4;
             this.txtFechaNacimiento.TextChanged += new System.EventHandler(this.txtFechaNacimiento_TextChanged);
             // 
             // txtComprobarContrasena
@@ -116,7 +127,7 @@
             this.txtComprobarContrasena.Name = "txtComprobarContrasena";
             this.txtComprobarContrasena.PasswordChar = '*';
             this.txtComprobarContrasena.Size = new System.Drawing.Size(162, 20);
-            this.txtComprobarContrasena.TabIndex = 14;
+            this.txtComprobarContrasena.TabIndex = 3;
             // 
             // txtContrasena
             // 
@@ -124,21 +135,21 @@
             this.txtContrasena.Name = "txtContrasena";
             this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(162, 20);
-            this.txtContrasena.TabIndex = 14;
+            this.txtContrasena.TabIndex = 2;
             // 
             // txtCorreoElectronico
             // 
             this.txtCorreoElectronico.Location = new System.Drawing.Point(190, 64);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(162, 20);
-            this.txtCorreoElectronico.TabIndex = 14;
+            this.txtCorreoElectronico.TabIndex = 1;
             // 
             // txtNombreUsuario
             // 
             this.txtNombreUsuario.Location = new System.Drawing.Point(190, 29);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(162, 20);
-            this.txtNombreUsuario.TabIndex = 14;
+            this.txtNombreUsuario.TabIndex = 0;
             this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // AvatarURL
@@ -245,21 +256,22 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
-            // btnCrearUsuario
+            // btnVolver
             // 
-            this.btnCrearUsuario.Location = new System.Drawing.Point(174, 310);
-            this.btnCrearUsuario.Name = "btnCrearUsuario";
-            this.btnCrearUsuario.Size = new System.Drawing.Size(125, 31);
-            this.btnCrearUsuario.TabIndex = 15;
-            this.btnCrearUsuario.Text = "Crear Usuario";
-            this.btnCrearUsuario.UseVisualStyleBackColor = true;
-            this.btnCrearUsuario.Click += new System.EventHandler(this.btnCrearUsuario_Click);
+            this.btnVolver.Location = new System.Drawing.Point(617, 349);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(124, 34);
+            this.btnVolver.TabIndex = 0;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Form3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(862, 450);
+            this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
@@ -296,5 +308,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnCrearUsuario;
+        private System.Windows.Forms.Button btnVolver;
     }
 }

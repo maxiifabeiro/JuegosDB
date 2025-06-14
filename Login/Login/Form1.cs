@@ -12,9 +12,9 @@ using System.Data.SqlTypes;
 
 namespace Login
 {
-    public partial class Form1 : Form
+    public partial class Inicio : Form
     {
-        public Form1()
+        public Inicio()
         {
             InitializeComponent();
         }
@@ -26,48 +26,49 @@ namespace Login
         {
             string usuario = txtusuario.Text;
             string password = txtcontrasena.Text;
-            bool EsAdministrador = true;
-            
 
             string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario AND Contrasena = @contrasena AND EsAdministrador=@EsAdministrador";
-                //string tipousuario = "SELECT EsAdministrador FROM Usuarios WHERE NombreUsuario = @usuario AND  EsAdministrador=1";
 
-
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlCommand cmd = new SqlCommand("VerificarUsuario", con))
                 {
-                    cmd.Parameters.AddWithValue("@usuario", usuario);
-                    cmd.Parameters.AddWithValue("@contrasena", password);
-                    cmd.Parameters.AddWithValue("@EsAdministrador", true);
+                    cmd.CommandType = CommandType.StoredProcedure;
 
+                    cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
+                    cmd.Parameters.AddWithValue("@Contrasena", password);
 
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    int count = (int)cmd.ExecuteScalar();
-
-                    if (EsAdministrador)
+                    if (reader.Read())
                     {
-                        VisorAdmin formulario = new VisorAdmin();
-                        formulario.Show();
-                        this.Hide();
-                    }
-                    else if (count > 0)
+                        bool esAdmin = Convert.ToBoolean(reader["EsAdministrador"]);
+
+                        if (esAdmin)
                         {
-                            Form2 formulario = new Form2();
+                            VisorAdmin formulario = new VisorAdmin();
                             formulario.Show();
                             this.Hide();
                         }
-                    
+                        else
+                        {
+                            VisorUsuario formulario = new VisorUsuario();
+                            formulario.Show();
+                            this.Hide();
+                        }
+                    }
                     else
                     {
                         MessageBox.Show("Usuario o contraseña incorrectos");
                     }
+
+                    reader.Close();
                 }
             }
         }
+
 
 
 

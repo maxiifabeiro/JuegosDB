@@ -16,5 +16,12 @@ namespace Login
         {
             InitializeComponent();
         }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Inicio formulario = new Inicio();
+            formulario.Show();
+            this.Hide();
+        }
     }
 }

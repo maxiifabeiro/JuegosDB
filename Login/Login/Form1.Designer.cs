@@ -1,6 +1,6 @@
 ﻿namespace Login
 {
-    partial class Form1
+    partial class Inicio
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.CrearUsuario = new System.Windows.Forms.Button();
@@ -70,7 +70,7 @@
             this.groupBox1.Location = new System.Drawing.Point(410, 97);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(396, 284);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese los datos requeridos:";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
@@ -92,7 +92,7 @@
             this.ForgotClave.Location = new System.Drawing.Point(141, 265);
             this.ForgotClave.Name = "ForgotClave";
             this.ForgotClave.Size = new System.Drawing.Size(113, 13);
-            this.ForgotClave.TabIndex = 3;
+            this.ForgotClave.TabIndex = 7;
             this.ForgotClave.TabStop = true;
             this.ForgotClave.Text = "Olvidó su contraseña?";
             this.ForgotClave.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -103,7 +103,7 @@
             this.btnsalir.Location = new System.Drawing.Point(218, 229);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(59, 24);
-            this.btnsalir.TabIndex = 2;
+            this.btnsalir.TabIndex = 5;
             this.btnsalir.Text = "Salir";
             this.btnsalir.UseVisualStyleBackColor = true;
             this.btnsalir.Click += new System.EventHandler(this.btnsalir_Click);
@@ -114,7 +114,7 @@
             this.btnlimpiar.Location = new System.Drawing.Point(114, 229);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(57, 24);
-            this.btnlimpiar.TabIndex = 2;
+            this.btnlimpiar.TabIndex = 6;
             this.btnlimpiar.Text = "Limpiar";
             this.btnlimpiar.UseVisualStyleBackColor = true;
             this.btnlimpiar.Click += new System.EventHandler(this.btnlimpiar_Click);
@@ -124,7 +124,7 @@
             this.btningresar.Location = new System.Drawing.Point(218, 153);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(121, 33);
-            this.btningresar.TabIndex = 2;
+            this.btningresar.TabIndex = 3;
             this.btningresar.Text = "Ingresar";
             this.btningresar.UseVisualStyleBackColor = true;
             this.btningresar.Click += new System.EventHandler(this.btningresar_Click);
@@ -135,7 +135,7 @@
             this.txtcontrasena.Name = "txtcontrasena";
             this.txtcontrasena.PasswordChar = '*';
             this.txtcontrasena.Size = new System.Drawing.Size(140, 26);
-            this.txtcontrasena.TabIndex = 1;
+            this.txtcontrasena.TabIndex = 2;
             // 
             // txtusuario
             // 
@@ -174,7 +174,7 @@
             this.LogoTiendaJuego.TabStop = false;
             this.LogoTiendaJuego.Click += new System.EventHandler(this.LogoTiendaJuego_Click);
             // 
-            // Form1
+            // Inicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -182,7 +182,7 @@
             this.Controls.Add(this.LogoTiendaJuego);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "Inicio";
             this.Text = "System Security";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

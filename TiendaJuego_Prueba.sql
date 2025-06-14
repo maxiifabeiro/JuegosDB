@@ -30,3 +30,13 @@ VALUES
 
 
 SELECT * FROM Usuarios
+
+CREATE PROCEDURE VerificarUsuario
+    @NombreUsuario NVARCHAR(50),
+    @Contrasena NVARCHAR(50)
+AS
+BEGIN
+    SELECT EsAdministrador
+    FROM Usuarios
+    WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
+END
