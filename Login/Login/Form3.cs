@@ -83,8 +83,47 @@ namespace Login
 
         private void btnCrearUsuario_Click(object sender, EventArgs e)
         {
+          
+                string usuario = txtNombreUsuario.Text;
+                string correo = txtCorreoElectronico.Text;
+                string contrasena = txtContrasena.Text;
+                string fechanacimiento = txtFechaNacimiento.Text;
+                string pais = txtPais.Text;
+                string genero = txtGenero.Text;
+                string avatarurl = txtAvatar.Text;
+             
+
+                string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
+
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    con.Open();
+                    string query = "INSERT INTO Usuarios (NombreUsuario, CorreoElectronico, Contrasena, FechaNacimiento, Pais, Genero, AvatarURL) VALUES (@NombreUsuario, @CorreoElectronico, @Contrasena, @FechaNacimiento, @Pais, @Genero, @Avatar)";
+                    using (SqlCommand cmd = new SqlCommand(query, con))
+                    {
+                        cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
+                        cmd.Parameters.AddWithValue("@CorreoElectronico", correo);
+                        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                        cmd.Parameters.AddWithValue("@FechaNacimiento", fechanacimiento);
+                        cmd.Parameters.AddWithValue("@Pais", pais);
+                        cmd.Parameters.AddWithValue("@Genero", genero);
+                        cmd.Parameters.AddWithValue("@Avatar", avatarurl);
+    
+
+                    try
+                        {
+                            cmd.ExecuteNonQuery();
+                            MessageBox.Show("Usuario creado correctamente");
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("Error al crear usuario: " + ex.Message);
+                        }
+                    }
+                }
+            }
+
 
         }
 
     }
-}
