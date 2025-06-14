@@ -19,7 +19,7 @@ namespace Login
             InitializeComponent();
         }
 
-        SqlConnection con = new SqlConnection(@"Data Source=(LocalDb)\v11.0;Initial Catalog=TiendaJuegos;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True");
 
 
         private void btningresar_Click(object sender, EventArgs e)
