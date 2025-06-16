@@ -99,7 +99,7 @@ END;
 GO
 
 --Procedimiento para dar de alta un usuario
-CREATE OR ALTER PROCEDURE SP_AltaUsuarioCompleto
+CREATE OR ALTER PROCEDURE SP_AltaUsuario
     @NombreUsuario VARCHAR(100),
     @Correo VARCHAR(100),
     @Contrasena VARCHAR(100),
@@ -144,7 +144,7 @@ BEGIN
 END;
 GO
 
-EXEC SP_AltaUsuarioCompleto
+EXEC SP_AltaUsuario
     @NombreUsuario = 'maxi123',
     @Correo = 'maxi@gmail.com',
     @Contrasena = '12345',
