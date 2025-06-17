@@ -23,5 +23,12 @@ namespace Login
             formulario.Show();
             this.Hide();
         }
+
+        private void btnAltaJuego_Click(object sender, EventArgs e)
+        {
+            AltaJuego formulario = new AltaJuego();
+            formulario.Show();
+            this.Hide();
+        }
     }
 }
