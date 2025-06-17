@@ -149,3 +149,12 @@ INSERT INTO Categorias (Nombre) VALUES
 ('Terror'),
 ('Multijugador'),
 ('Educativo');
+
+INSERT INTO Usuarios 
+    (NombreUsuario, CorreoElectronico, Contrasena, FechaRegistro, FechaNacimiento, Pais, Genero, AvatarURL, EsAdministrador, EstadoCuenta)
+VALUES
+    ('MaxiFabeiro','maxi@mail.com', '12345', GETDATE(),'1990-01-25', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
+    ('FacuHerrera','facu@mail.com', '12345', GETDATE(),'1998-07-23', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
+    ('RodriGalarza','rodri@mail.com', '12345', GETDATE(),'2005-12-28', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
+	('MajoIllanes','majo@mail.com', '12345', GETDATE(),'1987-07-10', 'Argentina', 'Femenino', 'aca va el avatar',1,'Activo'),
+    ('CarlosPerez','carlos@mail.com', '12345', GETDATE(),'1981-12-28', 'Argentina', 'Masculino', 'aca va el avatar',0,'Activo');
