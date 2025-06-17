@@ -1,0 +1,15 @@
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe.config
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.pdb
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.SuggestedBindingRedirects.cache
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.exe
+C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.pdb

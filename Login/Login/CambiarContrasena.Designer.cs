@@ -30,31 +30,31 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambiarContrasena));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnCambiarContrasena = new System.Windows.Forms.Button();
+            this.txtVerificarContrasena = new System.Windows.Forms.TextBox();
+            this.txtNuevaContrasena = new System.Windows.Forms.TextBox();
             this.lbl_NuevaContrasenaConfirm_CC = new System.Windows.Forms.Label();
             this.lbl_NuevaContrasenaCC = new System.Windows.Forms.Label();
             this.btn_VerificarUsuario_CC = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
             this.txtusuario_CC = new System.Windows.Forms.TextBox();
             this.lblFechaNac_CC = new System.Windows.Forms.Label();
             this.lblUsuario_CC = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.textBox4);
-            this.groupBox1.Controls.Add(this.textBox3);
+            this.groupBox1.Controls.Add(this.dateTimePicker1);
+            this.groupBox1.Controls.Add(this.btnCambiarContrasena);
+            this.groupBox1.Controls.Add(this.txtVerificarContrasena);
+            this.groupBox1.Controls.Add(this.txtNuevaContrasena);
             this.groupBox1.Controls.Add(this.lbl_NuevaContrasenaConfirm_CC);
             this.groupBox1.Controls.Add(this.lbl_NuevaContrasenaCC);
             this.groupBox1.Controls.Add(this.btn_VerificarUsuario_CC);
-            this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.txtusuario_CC);
             this.groupBox1.Controls.Add(this.lblFechaNac_CC);
             this.groupBox1.Controls.Add(this.lblUsuario_CC);
@@ -65,30 +65,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese los siguientes datos para modificar la contraseña";
             // 
-            // button2
+            // btnCambiarContrasena
             // 
-            this.button2.Location = new System.Drawing.Point(129, 245);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 23);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "Cambiar Contraseña";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCambiarContrasena.Location = new System.Drawing.Point(129, 245);
+            this.btnCambiarContrasena.Name = "btnCambiarContrasena";
+            this.btnCambiarContrasena.Size = new System.Drawing.Size(116, 23);
+            this.btnCambiarContrasena.TabIndex = 6;
+            this.btnCambiarContrasena.Text = "Cambiar Contraseña";
+            this.btnCambiarContrasena.UseVisualStyleBackColor = true;
+            this.btnCambiarContrasena.Click += new System.EventHandler(this.btnCambiarContrasena_Click);
             // 
-            // textBox4
+            // txtVerificarContrasena
             // 
-            this.textBox4.Location = new System.Drawing.Point(215, 206);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.PasswordChar = '*';
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 5;
+            this.txtVerificarContrasena.Location = new System.Drawing.Point(215, 206);
+            this.txtVerificarContrasena.Name = "txtVerificarContrasena";
+            this.txtVerificarContrasena.PasswordChar = '*';
+            this.txtVerificarContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtVerificarContrasena.TabIndex = 5;
             // 
-            // textBox3
+            // txtNuevaContrasena
             // 
-            this.textBox3.Location = new System.Drawing.Point(215, 175);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.PasswordChar = '*';
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtNuevaContrasena.Location = new System.Drawing.Point(215, 175);
+            this.txtNuevaContrasena.Name = "txtNuevaContrasena";
+            this.txtNuevaContrasena.PasswordChar = '*';
+            this.txtNuevaContrasena.Size = new System.Drawing.Size(100, 20);
+            this.txtNuevaContrasena.TabIndex = 5;
+            this.txtNuevaContrasena.TextChanged += new System.EventHandler(this.txtNuevaContrasena_TextChanged);
             // 
             // lbl_NuevaContrasenaConfirm_CC
             // 
@@ -116,13 +118,7 @@
             this.btn_VerificarUsuario_CC.TabIndex = 3;
             this.btn_VerificarUsuario_CC.Text = "Verificar usuario";
             this.btn_VerificarUsuario_CC.UseVisualStyleBackColor = true;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(215, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 2;
+            this.btn_VerificarUsuario_CC.Click += new System.EventHandler(this.btnVerificarUsuario_Click);
             // 
             // txtusuario_CC
             // 
@@ -171,6 +167,18 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(215, 70);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.Value = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // CambiarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,15 +203,15 @@
         private System.Windows.Forms.TextBox txtusuario_CC;
         private System.Windows.Forms.Label lblFechaNac_CC;
         private System.Windows.Forms.Label lblUsuario_CC;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnCambiarContrasena;
+        private System.Windows.Forms.TextBox txtVerificarContrasena;
+        private System.Windows.Forms.TextBox txtNuevaContrasena;
         private System.Windows.Forms.Label lbl_NuevaContrasenaConfirm_CC;
         private System.Windows.Forms.Label lbl_NuevaContrasenaCC;
         private System.Windows.Forms.Button btn_VerificarUsuario_CC;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
