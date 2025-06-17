@@ -97,3 +97,186 @@ BEGIN
         j.IdJuego = @IdJuego;
 END;
 GO
+
+--Procedimiento para dar de alta un usuario
+CREATE OR ALTER PROCEDURE SP_AltaUsuario
+    @NombreUsuario VARCHAR(100),
+    @Correo VARCHAR(100),
+    @Contrasena VARCHAR(100),
+    @IdPermiso INT,
+
+    @Nombre VARCHAR(50),
+    @Apellido VARCHAR(50),
+    @FechaNacimiento DATE,
+    @IDPais INT,
+    @Genero VARCHAR(20)
+AS
+BEGIN
+    BEGIN TRY
+		--Uso transaction para asegurar que se completen los dos insert si una da error se anula el insert
+        BEGIN TRANSACTION;
+
+		--Inserto en Usuarios
+        INSERT INTO Usuarios (
+            NombreUsuario, Correo, Contraseña, IdPermiso
+        )
+        VALUES (
+            @NombreUsuario, @Correo, @Contrasena, @IdPermiso
+        );
+
+		--Uso SCOPE_IDENTITY para obtener el id del usuario que recien se creo y lo guardo en la variable para despues usarlo en el insert de datosUsuarios
+        DECLARE @IDUsuarioNuevo INT = SCOPE_IDENTITY();
+
+		--Inserto en datosUsuarios
+        INSERT INTO DatosUsuarios (
+            IDUsuario, Nombre, Apellido, FechaNacimiento, IDPais, Genero
+        )
+        VALUES (
+            @IDUsuarioNuevo, @Nombre, @Apellido, @FechaNacimiento, @IDPais, @Genero
+        );
+
+        COMMIT;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK;
+        THROW;
+    END CATCH
+END;
+GO
+
+EXEC SP_AltaUsuario
+    @NombreUsuario = 'maxi123',
+    @Correo = 'maxi@gmail.com',
+    @Contrasena = '12345',
+    @IdPermiso = 2,
+    @Nombre = 'Maximiliano',
+    @Apellido = 'Fabeiro',
+    @FechaNacimiento = '1999-06-03',
+    @IDPais = 1,
+    @Genero = 'Masculino';
+GO
+
+--Procedimiento para modificar usuario
+CREATE OR ALTER PROCEDURE SP_ModificarUsuario
+    @IDUsuario INT,
+    @NombreUsuario VARCHAR(100),
+    @Correo VARCHAR(100),
+    @Contrasena VARCHAR(100),
+    @IdPermiso INT,
+    @Nombre VARCHAR(50),
+    @Apellido VARCHAR(50),
+    @FechaNacimiento DATE,
+    @IDPais INT,
+    @Genero VARCHAR(20)
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Modifica datos en tabla Usuarios
+        UPDATE Usuarios
+        SET 
+            NombreUsuario = @NombreUsuario,
+            Correo = @Correo,
+            Contraseña = @Contrasena,
+            IdPermiso = @IdPermiso
+        WHERE IDUsuario = @IDUsuario;
+
+        -- Modifica datos en tabla DatosUsuarios
+        UPDATE DatosUsuarios
+        SET 
+            Nombre = @Nombre,
+            Apellido = @Apellido,
+            FechaNacimiento = @FechaNacimiento,
+            IDPais = @IDPais,
+            Genero = @Genero
+        WHERE IDDatoUsuario = @IDUsuario;
+
+        COMMIT;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK;
+        THROW;
+    END CATCH
+END;
+GO
+
+--Procedimiento para de baja usuario
+CREATE OR ALTER PROCEDURE SP_BajaUsuario
+    @IDUsuario INT
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Baja logica en tabla Usuarios
+        UPDATE Usuarios
+        SET Estado = 0
+        WHERE IDUsuario = @IDUsuario;
+
+        -- Baja logica en DatosUsuarios 
+        UPDATE DatosUsuarios
+        SET Estado = 0
+        WHERE IDDatoUsuario = @IDUsuario;
+
+        COMMIT;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK;
+        THROW;
+    END CATCH
+END;
+GO
+
+--Procedimiento para listar usuarios
+CREATE OR ALTER PROCEDURE SP_ListarUsuarios
+AS
+BEGIN
+    SELECT 
+        u.IDUsuario,
+        u.NombreUsuario,
+        u.Correo,
+        u.FechaRegistro,
+        u.IdPermiso,
+        p.Nombre,
+        u.Estado,
+
+        du.Nombre,
+        du.Apellido,
+        du.FechaNacimiento,
+        du.IDPais,
+        pais.Nombre,
+        du.Genero,
+        du.Estado AS EstadoDatos
+    FROM Usuarios u
+    INNER JOIN DatosUsuarios du ON u.IDUsuario = du.IDDatoUsuario
+    LEFT JOIN Permisos p ON u.IdPermiso = p.IdPermiso
+    LEFT JOIN Paises pais ON du.IDPais = pais.IDPais
+    WHERE u.Estado = 1 AND du.Estado = 1 -- solo activos
+    ORDER BY u.FechaRegistro DESC;
+END;
+GO
+
+--Procedimiento para mostrar las ventas mensuales
+CREATE PROCEDURE EstadisticasMensuales
+    @Mes INT = NULL,
+    @Anio INT = NULL
+AS
+BEGIN
+    SELECT
+        YEAR(i.FechaVenta) AS Anio,
+        MONTH(i.FechaVenta) AS Mes,
+        COUNT(DISTINCT i.IDVenta) AS CantidadVentas,
+        SUM(c.Cantidad) AS JuegosVendidos,
+        SUM(c.Cantidad * c.PrecioTotal) AS TotalRecaudado
+    FROM InfoVentas i
+    JOIN Carrito c ON i.IDCarrito = c.IDCarrito
+    WHERE
+        (@Mes IS NULL OR MONTH(i.FechaVenta) = @Mes) AND
+        (@Anio IS NULL OR YEAR(i.FechaVenta) = @Anio)
+    GROUP BY YEAR(i.FechaVenta), MONTH(i.FechaVenta)
+    ORDER BY Anio, Mes;
+END;
+GO
+EXEC EstadisticasMensuales @Mes = 6, @Anio = 2024;
+GO
