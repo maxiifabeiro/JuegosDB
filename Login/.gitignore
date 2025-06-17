@@ -1,0 +1,24 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Build results
+bin/
+obj/
+*.exe
+*.dll
+
+# Copilot cache
+.vs/TiendaJuego/Copilotindices/
+
+# FileContentIndex and other temp files
+*.vsidx
+*.db
+*.db-shm
+*.db-wal
+
+# Others
+*.cache
