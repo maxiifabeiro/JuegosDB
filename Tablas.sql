@@ -65,12 +65,12 @@ CREATE TABLE Usuarios (
     IDUsuario INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     NombreUsuario VARCHAR(50) NOT NULL UNIQUE,
     CorreoElectronico VARCHAR(100) NOT NULL UNIQUE,
-    Contrasenia VARCHAR(20) NOT NULL,
+    Contrasena VARCHAR(20) NOT NULL,
     FechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
+    FechaNacimiento DATE NOT NULL,
     AvatarURL VARCHAR(255),
-    IDPermiso INT NOT NULL, 
+    EsAdministrador BIT NOT NULL DEFAULT 0 
     EstadoCuenta BIT NOT NULL DEFAULT 1,
-    FOREIGN KEY (IDPermiso) REFERENCES Permisos(IDPermiso)
 );
 GO
 CREATE TABLE DatosUsuarios (
