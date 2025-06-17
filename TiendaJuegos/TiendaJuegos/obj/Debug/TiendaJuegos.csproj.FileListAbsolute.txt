@@ -1,7 +1,0 @@
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuegos.csproj.AssemblyReference.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuegos.csproj.SuggestedBindingRedirects.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuego.FormPrincipal.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuegos.Properties.Resources.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuegos.csproj.GenerateResource.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuegos.csproj.CoreCompileInputs.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\TiendaJuegos\TiendaJuegos\obj\Debug\TiendaJuego.Form1.resources
