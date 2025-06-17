@@ -68,8 +68,7 @@ GO
 INSERT INTO Permisos(Nombre, Descripcion) 
 VALUES 
     ('Administrador', 'Permiso absoluto para administradores del sistema'),
-    ('Vendedor', 'Permiso para vendedores de la tienda, en el que podra gestionar nuevas ventas...'),
-    ('Comprador', 'Permiso para el usuarios externos, el cual podran comprar juegos');
+    ('Vendedor', 'Permiso para vendedores de la tienda, en el que podra gestionar nuevas ventas...')
 GO
 
 INSERT INTO ClasificacionEdades(Nombre, Descripcion)

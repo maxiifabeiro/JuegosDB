@@ -124,14 +124,6 @@ CREATE TABLE JuegosXConsolas (
     CONSTRAINT FK_JuegosXConsolas_Consola FOREIGN KEY (IdConsola) REFERENCES Consolas(IdConsola)
 );
 GO
-CREATE TABLE Carrito (
-    IDCarrito INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    Cantidad INT NOT NULL,
-    IDJuego INT NOT NULL,
-    PrecioTotal DECIMAL(10,2) NOT NULL,
-    FOREIGN KEY (IDJuego) REFERENCES Juegos(IDJuego)
-);
-GO
 CREATE TABLE FormasDePago(
     IdFormaDePago INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(250) NOT NULL,
@@ -143,10 +135,12 @@ CREATE TABLE InfoVentas (
     IDUsuarioComprador INT NULL,
     FechaVenta DATETIME NOT NULL DEFAULT GETDATE(),
     IDFormaPago INT NOT NULL,
-    IDCarrito INT NOT NULL,
+    Cantidad INT NOT NULL,
+    IDJuego INT NOT NULL,
+    PrecioTotal DECIMAL(10,2) NOT NULL,
     FOREIGN KEY (IDUsuarioComprador) REFERENCES Usuarios(IDUsuario),
     FOREIGN KEY (IDFormaPago) REFERENCES FormasDePago(IDFormaDePago),
-    FOREIGN KEY (IDCarrito) REFERENCES Carrito(IDCarrito)
+    FOREIGN KEY (IDJuego) REFERENCES Juegos(IDJuego)
 );
 GO
 CREATE TABLE FormasDePagoPorVenta (
