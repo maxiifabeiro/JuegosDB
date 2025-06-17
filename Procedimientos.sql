@@ -280,3 +280,11 @@ END;
 GO
 EXEC EstadisticasMensuales @Mes = 6, @Anio = 2024;
 GO
+CREATE PROCEDURE VerificarUsuario
+    @NombreUsuario NVARCHAR(50),
+    @Contrasena NVARCHAR(50)
+AS
+BEGIN
+    SELECT EsAdministrador FROM Usuarios
+    WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
+END
