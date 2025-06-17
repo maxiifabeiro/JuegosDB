@@ -3,7 +3,6 @@ GO
 USE JuegosDB;
 
 GO
-
 CREATE TABLE ClasificacionEdades(
     IdClasificacionEdad INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(50) NOT NULL,
@@ -93,12 +92,12 @@ CREATE TABLE Juegos (
     IdDesarrolladorJ INT NOT NULL,
     IDCategoria INT NOT NULL,
     FechaLanzamiento DATE NOT NULL,
-    Tamaño INT NOT NULL,
+    Tamaño INT NOT NULL, --en kilobytes
     IDFormato INT NOT NULL,
     IDClasificacionEdad INT NOT NULL,
     CantidadJugadores INT NULL,
     Descripcion VARCHAR(250) NULL,
-    Precio DECIMAL(10,2) NOT NULL,
+    Precio DECIMAL(10,2) NOT NULL, --en Pesos
     Stock INT NOT NULL CHECK(Stock >= 0)
 
     FOREIGN KEY (IdDesarrolladorJ) REFERENCES DesarrolladorasJuegos(IDDesarrolladorJ),
@@ -142,14 +141,14 @@ CREATE TABLE InfoVentas (
     FOREIGN KEY (IDFormaPago) REFERENCES FormasDePago(IDFormaDePago),
     FOREIGN KEY (IDJuego) REFERENCES Juegos(IDJuego)
 );
-GO
-CREATE TABLE FormasDePagoPorVenta (
-    IdInfoVenta INT NOT NULL,
-    IdFormaDePago INT NOT NULL,
-    CONSTRAINT PK_FormasDePagoPorVenta PRIMARY KEY (IdInfoVenta, IdFormaDePago),
-    CONSTRAINT FK_FormasDePagoPorVenta_InfoVenta FOREIGN KEY (IdInfoVenta) REFERENCES InfoVentas(IdVenta),
-    CONSTRAINT FK_FormasDePagoPorVenta_Forma FOREIGN KEY (IdFormaDePago) REFERENCES FormasDePago(IdFormaDePago)
-);
+-- GO
+-- CREATE TABLE FormasDePagoPorVenta (
+--     IdInfoVenta INT NOT NULL,
+--     IdFormaDePago INT NOT NULL,
+--     CONSTRAINT PK_FormasDePagoPorVenta PRIMARY KEY (IdInfoVenta, IdFormaDePago),
+--     CONSTRAINT FK_FormasDePagoPorVenta_InfoVenta FOREIGN KEY (IdInfoVenta) REFERENCES InfoVentas(IdVenta),
+--     CONSTRAINT FK_FormasDePagoPorVenta_Forma FOREIGN KEY (IdFormaDePago) REFERENCES FormasDePago(IdFormaDePago)
+-- );
 
 
 
