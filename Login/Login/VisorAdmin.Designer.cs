@@ -30,6 +30,7 @@
         {
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAltaJuego = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -52,11 +53,22 @@
             this.btnAltaJuego.UseVisualStyleBackColor = true;
             this.btnAltaJuego.Click += new System.EventHandler(this.btnAltaJuego_Click);
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(331, 178);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 2;
+            this.btnEliminar.Text = "Eliminar Juego";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAltaJuego);
             this.Controls.Add(this.btnVolver);
             this.Name = "VisorAdmin";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAltaJuego;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }

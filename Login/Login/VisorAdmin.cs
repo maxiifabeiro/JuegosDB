@@ -30,5 +30,12 @@ namespace Login
             formulario.Show();
             this.Hide();
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            EliminarJuego formulario = new EliminarJuego();
+            formulario.Show();
+            this.Hide();
+        }
     }
 }
