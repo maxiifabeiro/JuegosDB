@@ -74,14 +74,14 @@ namespace Login
         }
         private void CargarDesarrolladores()
         {
-            SqlDataAdapter daDesarrolladores = new SqlDataAdapter("SELECT IdDesarrolladoraJ, Nombre FROM DesarrolladorasJuegos", conexionbd);
+            SqlDataAdapter daDesarrolladores = new SqlDataAdapter("SELECT IDDesarrolladoraJ, Nombre FROM DesarrolladorasJuegos", conexionbd);
             DataTable dtDesarrolladores = new DataTable();
             try
             {
                 daDesarrolladores.Fill(dtDesarrolladores);
                 cmbDesarrolladora.DataSource = dtDesarrolladores;
                 cmbDesarrolladora.DisplayMember = "Nombre";
-                cmbDesarrolladora.ValueMember = "IdDesarrolladoraJ";
+                cmbDesarrolladora.ValueMember = "IDDesarrolladoraJ";
             }
             catch (Exception ex)
             {
@@ -109,14 +109,14 @@ namespace Login
 
         private void CargarClasificacionEdad()
         {
-            SqlDataAdapter daClasificacionEdad = new SqlDataAdapter("SELECT IdClasificacionEdad, Nombre FROM ClasificacionEdades", conexionbd);
+            SqlDataAdapter daClasificacionEdad = new SqlDataAdapter("SELECT IDClasificacionEdad, Nombre FROM ClasificacionEdades", conexionbd);
             DataTable dtClasificacionEdad = new DataTable();
             try
             {
                 daClasificacionEdad.Fill(dtClasificacionEdad);
                 cmbClasificacion.DataSource = dtClasificacionEdad;
                 cmbClasificacion.DisplayMember = "Nombre";
-                cmbClasificacion.ValueMember = "IdClasificacionEdad";
+                cmbClasificacion.ValueMember = "IDClasificacionEdad";
             }
             catch (Exception ex)
             {
@@ -127,14 +127,14 @@ namespace Login
 
         private void CargarFormatos()
         {
-            SqlDataAdapter daFormatos = new SqlDataAdapter("SELECT IdFormato, Nombre FROM Formatos", conexionbd);
+            SqlDataAdapter daFormatos = new SqlDataAdapter("SELECT IDFormato, Nombre FROM Formatos", conexionbd);
             DataTable dtFormatos = new DataTable();
             try
             {
                 daFormatos.Fill(dtFormatos);
                 cmbFormato.DataSource = dtFormatos;
                 cmbFormato.DisplayMember = "Nombre";
-                cmbFormato.ValueMember = "IdFormato";
+                cmbFormato.ValueMember = "IDFormato";
             }
             catch (Exception ex)
             {

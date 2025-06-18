@@ -105,7 +105,7 @@ VALUES
     ('BioWare', 3, '1995-02-01');--13
 GO
 -- CONSOLAS
-INSERT INTO Consolas (Nombre, Descripcion, FechaCreacion, IDDesarrolladoraC) VALUES 
+INSERT INTO Consolas (Nombre, Descripcion, FechaCreacion, IDDesarrolladorC) VALUES 
 ('Nintendo Switch', 'Consola híbrida de Nintendo lanzada en 2017, permite jugar en modo portátil y de sobremesa con una gran variedad de juegos exclusivos.', '2017-03-03', 1),
 ('PlayStation 5', 'Consola de última generación de Sony lanzada en 2020 con gráficos 4K, SSD ultrarrápido y retrocompatibilidad con PS4.', '2020-11-12', 2),
 ('Xbox Series X', 'Consola de Microsoft con potente hardware, soporte para juegos 4K, Quick Resume y Game Pass integrado.', '2020-11-10', 3),
@@ -123,13 +123,13 @@ VALUES
     ('Vendedor', 'Permiso para vendedores de la tienda, en el que podra gestionar nuevas ventas...')
 GO
 INSERT INTO Usuarios 
-    (NombreUsuario, CorreoElectronico, Contrasena, FechaRegistro, FechaNacimiento, Pais, Genero, AvatarURL, EsAdministrador, EstadoCuenta)
+    (NombreUsuario, CorreoElectronico, Contrasena, FechaRegistro, FechaNacimiento, AvatarURL, EsAdministrador, Estado, IDPermiso)
 VALUES
-    ('MaxiFabeiro','maxi@mail.com', '12345', GETDATE(),'1990-01-25', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
-    ('FacuHerrera','facu@mail.com', '12345', GETDATE(),'1998-07-23', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
-    ('RodriGalarza','rodri@mail.com', '12345', GETDATE(),'2005-12-28', 'Argentina', 'Masculino', 'aca va el avatar',1,'Activo'),
-	('MajoIllanes','majo@mail.com', '12345', GETDATE(),'1987-07-10', 'Argentina', 'Femenino', 'aca va el avatar',1,'Activo'),
-    ('CarlosPerez','carlos@mail.com', '12345', GETDATE(),'1981-12-28', 'Argentina', 'Masculino', 'aca va el avatar',0,'Activo');
+    ('MaxiFabeiro','maxi@mail.com', '12345', GETDATE(),'1990-01-25', 'aca va el avatar',1, 1, 1),
+    ('FacuHerrera','facu@mail.com', '12345', GETDATE(),'1998-07-23', 'aca va el avatar',1, 1, 1),
+    ('RodriGalarza','rodri@mail.com', '12345', GETDATE(),'2005-12-28', 'aca va el avatar',1, 1, 1),
+	('MajoIllanes','majo@mail.com', '12345', GETDATE(),'1987-07-10', 'aca va el avatar',1, 1, 1),
+    ('CarlosPerez','carlos@mail.com', '12345', GETDATE(),'1981-12-28', 'aca va el avatar',0, 1, 2);
 GO
 INSERT INTO DatosUsuarios (IDUsuario, Nombre, Apellido, FechaNacimiento, IDPais, Genero) VALUES
 (1, 'Maximiliano', 'Fabeiro', '1990-05-12', 1, 'Masculino'),
@@ -140,12 +140,12 @@ INSERT INTO DatosUsuarios (IDUsuario, Nombre, Apellido, FechaNacimiento, IDPais,
 GO
 --JUEGOS
 INSERT INTO Juegos 
-    (Nombre, IdDesarrolladorJ, IDCategoria, FechaLanzamiento, Tamaño, IDFormato, IDClasificacionEdad, CantidadJugadores, Descripcion, Precio, Stock) 
+    (Nombre, IDDesarrolladoraJ, IDCategoria, FechaLanzamiento, Tamaño, IDFormato, IDClasificacionEdad, CantidadJugadores, Descripcion, Precio, Stock) 
 VALUES
     ('The Legend of Zelda', 1, 2, '1986-02-21', 128, 1, 2, 1, 'Link debe rescatar a la princesa Zelda y derrotar a Ganon en el reino de Hyrule', 10500, 5),
     ('God of War ', 2, 1, '2005-03-22', 4514845, 7, 5, 1, 'Kratos busca venganza contra Ares, el dios de la guerra', 7500, 6),
     ('The Witcher 3 ', 7, 6, '2015-05-19', 36859531, 3, 5, 1, 'Geralt de Rivia busca a su hija adoptiva Ciri mientras enfrenta a la Cacería Salvaje en un vasto mundo abierto', 12500, 10),
-    ('GTA V', 5, 1, '2013-09-17', 70312500, 3, 5, 'Tres criminales muy distintos arriesgan todo en una serie de robos en Los Santos, una ciudad inspirada en Los Ángeles', 11000, 6),
+    ('GTA V', 5, 1, '2013-09-17', 70312500, 3, 5, 2, 'Tres criminales muy distintos arriesgan todo en una serie de robos en Los Santos, una ciudad inspirada en Los Ángeles', 11000, 6),
     ('Minecraft',10, 2, '2011-11-18', 1048576, 3, 3, 1, ' Juego de mundo abierto donde los jugadores exploran, construyen y sobreviven en un entorno generado por bloques', 6000, 5);
 GO
 --IDIOMAS X JUEGOS
@@ -217,11 +217,6 @@ VALUES
 --     (3, 1),  -- Venta 3: Efectivo
 --     (3, 2),  -- Venta 3: Tarjeta
 --     (4, 3);  -- Venta 4: Transferencia
-
-
-
-
-
 
 
 

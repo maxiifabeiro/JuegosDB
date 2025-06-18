@@ -1,22 +1,24 @@
+USE master;
+go
 CREATE DATABASE JuegosDB;
 GO
 USE JuegosDB;
 
 GO
 CREATE TABLE ClasificacionEdades(
-    IdClasificacionEdad INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    IDClasificacionEdad INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(50) NOT NULL,
     Descripcion VARCHAR(250) NOT NULL,
 );
 GO
 CREATE TABLE Formatos(
-    IdFormato INT IDENTITY(1,1) PRIMARY KEY NOT NULL ,
+    IDFormato INT IDENTITY(1,1) PRIMARY KEY NOT NULL ,
     Nombre VARCHAR(50) NOT NULL,
     Fisico BIT NOT NULL,
 );
 GO
 CREATE TABLE Idiomas(
-	IdIdiomas INT  IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	IDIdioma INT  IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Nombre CHAR(50) NOT NULL 
 );
 GO
@@ -39,11 +41,11 @@ CREATE TABLE DesarrolladorasConsola (
 );
 GO
 CREATE TABLE DesarrolladorasJuegos(
-	IdDesarrolladoraJ INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	IDDesarrolladoraJ INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Nombre VARCHAR(50) NOT NULL,
-	IdPais INT NOT NULL,
+	IDPais INT NOT NULL,
 	FechaFundacion DATE NOT NULL,
-	CONSTRAINT FK_DesarrolladorasJuegos_Pais FOREIGN KEY (IdPais) REFERENCES Paises (IdPais)
+	CONSTRAINT FK_DesarrolladorasJuegos_Pais FOREIGN KEY (IDPais) REFERENCES Paises (IDPais)
 );
 GO
 CREATE TABLE Consolas (
@@ -56,7 +58,7 @@ CREATE TABLE Consolas (
 );
 GO
 CREATE TABLE Permisos(
-    IdPermiso INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    IDPermiso INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(50) NOT NULL,
     Descripcion VARCHAR(250) NULL,
 );
@@ -69,8 +71,11 @@ CREATE TABLE Usuarios (
     FechaRegistro DATETIME NOT NULL DEFAULT GETDATE(),
     FechaNacimiento DATE NOT NULL,
     AvatarURL VARCHAR(255),
-    EsAdministrador BIT NOT NULL DEFAULT 0 
-    EstadoCuenta BIT NOT NULL DEFAULT 1,
+    EsAdministrador BIT NOT NULL DEFAULT 0,
+    Estado BIT NOT NULL DEFAULT 1,
+    IDPermiso INT NOT NULL
+
+    FOREIGN KEY (IDPermiso) REFERENCES Permisos(IDPermiso)
 );
 GO
 CREATE TABLE DatosUsuarios (
@@ -89,7 +94,7 @@ GO
 CREATE TABLE Juegos (
     IDJuego INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
     Nombre VARCHAR(200) NOT NULL,
-    IdDesarrolladorJ INT NOT NULL,
+    IDDesarrolladoraJ INT NOT NULL,
     IDCategoria INT NOT NULL,
     FechaLanzamiento DATE NOT NULL,
     Tamaño INT NOT NULL, --en kilobytes
@@ -98,12 +103,13 @@ CREATE TABLE Juegos (
     CantidadJugadores INT NULL,
     Descripcion VARCHAR(250) NULL,
     Precio DECIMAL(10,2) NOT NULL, --en Pesos
-    Stock INT NOT NULL CHECK(Stock >= 0)
+    Stock INT NOT NULL CHECK(Stock >= 0),
+    Estado bit not null default 1
 
-    FOREIGN KEY (IdDesarrolladorJ) REFERENCES DesarrolladorasJuegos(IDDesarrolladorJ),
+    FOREIGN KEY (IDDesarrolladoraJ) REFERENCES DesarrolladorasJuegos(IDDesarrolladoraJ),
     FOREIGN key (IDCategoria) REFERENCES Categorias(IDCategoria),
     FOREIGN KEY (IDFormato) REFERENCES Formatos(IDFormato),
-    FOREIGN KEY (IDClasificacionEdad) REFERENCES ClasificacionEdades(IdClasificacionEdad)
+    FOREIGN KEY (IDClasificacionEdad) REFERENCES ClasificacionEdades(IDClasificacionEdad)
 );
 GO
 CREATE TABLE IdiomasXJuegos (
@@ -116,15 +122,15 @@ CREATE TABLE IdiomasXJuegos (
 );
 GO
 CREATE TABLE JuegosXConsolas (
-    IdJuego INT NOT NULL,
-    IdConsola INT NOT NULL,
-    CONSTRAINT PK_JuegosXConsolas PRIMARY KEY (IdJuego, IdConsola),
-    CONSTRAINT FK_JuegosXConsolas_Juego FOREIGN KEY (IdJuego) REFERENCES Juegos(IdJuego),
-    CONSTRAINT FK_JuegosXConsolas_Consola FOREIGN KEY (IdConsola) REFERENCES Consolas(IdConsola)
+    IDJuego INT NOT NULL,
+    IDConsola INT NOT NULL,
+    CONSTRAINT PK_JuegosXConsolas PRIMARY KEY (IDJuego, IDConsola),
+    CONSTRAINT FK_JuegosXConsolas_Juego FOREIGN KEY (IDJuego) REFERENCES Juegos(IDJuego),
+    CONSTRAINT FK_JuegosXConsolas_Consola FOREIGN KEY (IDConsola) REFERENCES Consolas(IDConsola)
 );
 GO
 CREATE TABLE FormasDePago(
-    IdFormaDePago INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+    IDFormaDePago INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
     Nombre VARCHAR(250) NOT NULL,
     Estado BIT DEFAULT 1 NOT NULL,
 );
@@ -149,9 +155,6 @@ CREATE TABLE InfoVentas (
 --     CONSTRAINT FK_FormasDePagoPorVenta_InfoVenta FOREIGN KEY (IdInfoVenta) REFERENCES InfoVentas(IdVenta),
 --     CONSTRAINT FK_FormasDePagoPorVenta_Forma FOREIGN KEY (IdFormaDePago) REFERENCES FormasDePago(IdFormaDePago)
 -- );
-
-
-
 
 
 

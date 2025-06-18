@@ -17,8 +17,8 @@ CREATE OR ALTER PROCEDURE SP_altaJuego
 AS
 BEGIN
     INSERT INTO Juegos(
-        Nombre, IdDesarrolladoraJ, IdCategoria, IdFormato,
-        IdClasificacionEdad, FechaLanzamiento, Tamaño,
+        Nombre, IDDesarrolladoraJ, IDCategoria, IDFormato,
+        IDClasificacionEdad, FechaLanzamiento, Tamaño,
 		CantidadJugadores, Descripcion, Precio, Stock,
 		Estado
     )
@@ -47,17 +47,17 @@ BEGIN
 	UPDATE Juegos
 	SET	
 		Nombre = @Nombre,
-		IdDesarrolladoraJ = @IdDesarrolladoraJ,
-		IdCategoria = @IdCategoria,
-		IdFormato = @IdFormato,
-		IdClasificacionEdad = @IdClasificacionEdad,
+		IDDesarrolladoraJ = @IdDesarrolladoraJ,
+		IDCategoria = @IdCategoria,
+		IDFormato = @IdFormato,
+		IDClasificacionEdad = @IdClasificacionEdad,
 		FechaLanzamiento = @FechaLanzamiento,
 		Tamaño = @Tamaño,
 		CantidadJugadores = @CantidadJugadores,
 		Descripcion = @Descripcion,
 		Precio = @Precio,
 		Stock = @Stock
-	WHERE IdJuego = @IdJuego AND Estado = 1;
+	WHERE IDJuego = @IdJuego AND Estado = 1;
 END;
 GO
 
@@ -66,7 +66,7 @@ CREATE OR ALTER PROCEDURE SP_BajaJuego
 	@IdJuego INT
 AS
 BEGIN
-	UPDATE Juegos SET Estado = 0 WHERE IdJuego = @IdJuego;
+	UPDATE Juegos SET Estado = 0 WHERE IDJuego = @IdJuego;
 END;
 GO
 
@@ -89,12 +89,12 @@ BEGIN
         j.Stock
     FROM 
         Juegos j
-        INNER JOIN DesarrolladorasJuegos dj ON j.IdDesarrolladoraJ = dj.IdDesarrolladoraJ
-        INNER JOIN Categorias c ON j.IdCategoria = c.IdCategoria
-        INNER JOIN Formatos f ON j.IdFormato = f.IdFormato
-        INNER JOIN ClasificacionEdades ce ON j.IdClasificacionEdad = ce.IdClasificacionEdad
+        INNER JOIN DesarrolladorasJuegos dj ON j.IDDesarrolladoraJ = dj.IDDesarrolladoraJ
+        INNER JOIN Categorias c ON j.IDCategoria = c.IDCategoria
+        INNER JOIN Formatos f ON j.IDFormato = f.IDFormato
+        INNER JOIN ClasificacionEdades ce ON j.IDClasificacionEdad = ce.IDClasificacionEdad
     WHERE 
-        j.IdJuego = @IdJuego;
+        j.IDJuego = @IdJuego;
 END;
 GO
 
@@ -118,7 +118,7 @@ BEGIN
 
 		--Inserto en Usuarios
         INSERT INTO Usuarios (
-            NombreUsuario, Correo, Contraseña, IdPermiso
+            NombreUsuario, CorreoElectronico, Contrasena, IDPermiso
         )
         VALUES (
             @NombreUsuario, @Correo, @Contrasena, @IdPermiso
@@ -177,9 +177,9 @@ BEGIN
         UPDATE Usuarios
         SET 
             NombreUsuario = @NombreUsuario,
-            Correo = @Correo,
-            Contraseña = @Contrasena,
-            IdPermiso = @IdPermiso
+            CorreoElectronico = @Correo,
+            Contrasena = @Contrasena,
+            IDPermiso = @IdPermiso
         WHERE IDUsuario = @IDUsuario;
 
         -- Modifica datos en tabla DatosUsuarios
@@ -235,9 +235,9 @@ BEGIN
     SELECT 
         u.IDUsuario,
         u.NombreUsuario,
-        u.Correo,
+        u.CorreoElectronico,
         u.FechaRegistro,
-        u.IdPermiso,
+        u.IDPermiso,
         p.Nombre,
         u.Estado,
 
@@ -250,14 +250,14 @@ BEGIN
         du.Estado AS EstadoDatos
     FROM Usuarios u
     INNER JOIN DatosUsuarios du ON u.IDUsuario = du.IDDatoUsuario
-    LEFT JOIN Permisos p ON u.IdPermiso = p.IdPermiso
+    LEFT JOIN Permisos p ON u.IDPermiso = p.IdPermiso
     LEFT JOIN Paises pais ON du.IDPais = pais.IDPais
     WHERE u.Estado = 1 AND du.Estado = 1 -- solo activos
     ORDER BY u.FechaRegistro DESC;
 END;
 GO
 
---Procedimiento para mostrar las ventas mensuales
+Procedimiento para mostrar las ventas mensuales
 CREATE PROCEDURE EstadisticasMensuales
     @Mes INT = NULL,
     @Anio INT = NULL
