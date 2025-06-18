@@ -31,6 +31,10 @@
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAltaJuego = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.btn_DevJuegos = new System.Windows.Forms.Button();
+            this.btn_DevConsolas = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVolver
@@ -45,9 +49,9 @@
             // 
             // btnAltaJuego
             // 
-            this.btnAltaJuego.Location = new System.Drawing.Point(331, 86);
+            this.btnAltaJuego.Location = new System.Drawing.Point(92, 54);
             this.btnAltaJuego.Name = "btnAltaJuego";
-            this.btnAltaJuego.Size = new System.Drawing.Size(75, 23);
+            this.btnAltaJuego.Size = new System.Drawing.Size(139, 23);
             this.btnAltaJuego.TabIndex = 1;
             this.btnAltaJuego.Text = "Alta Juego";
             this.btnAltaJuego.UseVisualStyleBackColor = true;
@@ -55,24 +59,56 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(331, 178);
+            this.btnEliminar.Location = new System.Drawing.Point(92, 167);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.Size = new System.Drawing.Size(139, 23);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar Juego";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // btn_DevJuegos
+            // 
+            this.btn_DevJuegos.Location = new System.Drawing.Point(92, 196);
+            this.btn_DevJuegos.Name = "btn_DevJuegos";
+            this.btn_DevJuegos.Size = new System.Drawing.Size(139, 23);
+            this.btn_DevJuegos.TabIndex = 3;
+            this.btn_DevJuegos.Text = "Desarrolladores Juegos";
+            this.btn_DevJuegos.UseVisualStyleBackColor = true;
+            this.btn_DevJuegos.Click += new System.EventHandler(this.btn_DevJuegos_Click);
+            // 
+            // btn_DevConsolas
+            // 
+            this.btn_DevConsolas.Location = new System.Drawing.Point(92, 225);
+            this.btn_DevConsolas.Name = "btn_DevConsolas";
+            this.btn_DevConsolas.Size = new System.Drawing.Size(139, 23);
+            this.btn_DevConsolas.TabIndex = 3;
+            this.btn_DevConsolas.Text = "Desarrolladoras Consolas";
+            this.btn_DevConsolas.UseVisualStyleBackColor = true;
+            this.btn_DevConsolas.Click += new System.EventHandler(this.btn_DevConsolas_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btn_DevConsolas);
+            this.groupBox1.Controls.Add(this.btn_DevJuegos);
+            this.groupBox1.Controls.Add(this.btnEliminar);
+            this.groupBox1.Controls.Add(this.btnAltaJuego);
+            this.groupBox1.Location = new System.Drawing.Point(239, 32);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(335, 312);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
             // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnAltaJuego);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
             this.Name = "VisorAdmin";
             this.Text = "VisorAdmin";
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -82,5 +118,8 @@
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAltaJuego;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btn_DevJuegos;
+        private System.Windows.Forms.Button btn_DevConsolas;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

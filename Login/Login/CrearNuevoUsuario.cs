@@ -6,6 +6,7 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -25,6 +26,7 @@ namespace Login
 
         private void Form3_Load(object sender, EventArgs e)
         {
+
 
         }
 
@@ -52,7 +54,7 @@ namespace Login
         {
             if (txtContrasena.Text.Equals(txtComprobarContrasena.Text))
             {
-                txtFechaNacimiento.Focus();
+                dateTimePicker2.Focus();
             }
             else
             {
@@ -88,28 +90,46 @@ namespace Login
         {
           
                 string usuario = txtNombreUsuario.Text;
-                string correo = txtCorreoElectronico.Text;
-                string contrasena = txtContrasena.Text;
-                string fechanacimiento = txtFechaNacimiento.Text;
-                string pais = txtPais.Text;
-                string genero = txtGenero.Text;
+                string correo = txtCorreoElectronico.Text.Trim();
+            string contrasena = txtContrasena.Text;
+                DateTime fecha = dateTimePicker2.Value.Date;
                 string avatarurl = txtAvatar.Text;
-             
 
-                string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
+           
+            // Validación 1: campo vacío
+            if (string.IsNullOrEmpty(correo))
+            {
+                MessageBox.Show("El correo electrónico es obligatorio.");
+                return;
+            }
+
+            // Validación 2: formato válido
+            if (!CorreoEsValido(correo))
+            {
+                MessageBox.Show("Ingrese un correo electrónico válido.");
+                return;
+            }
+
+            // Validación 3: ya registrado
+            if (CorreoExisteEnBD(correo))
+            {
+                MessageBox.Show("Este correo ya está registrado.");
+                return;
+            }
+
+
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
                     con.Open();
-                    string query = "INSERT INTO Usuarios (NombreUsuario, CorreoElectronico, Contrasena, FechaNacimiento, Pais, Genero, AvatarURL) VALUES (@NombreUsuario, @CorreoElectronico, @Contrasena, @FechaNacimiento, @Pais, @Genero, @Avatar)";
+                    string query = "INSERT INTO Usuarios (NombreUsuario, CorreoElectronico, Contrasena, FechaNacimiento, AvatarURL) VALUES (@NombreUsuario, @CorreoElectronico, @Contrasena, @FechaNacimiento, @Avatar)";
                     using (SqlCommand cmd = new SqlCommand(query, con))
                     {
                         cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
                         cmd.Parameters.AddWithValue("@CorreoElectronico", correo);
                         cmd.Parameters.AddWithValue("@Contrasena", contrasena);
-                        cmd.Parameters.AddWithValue("@FechaNacimiento", fechanacimiento);
-                        cmd.Parameters.AddWithValue("@Pais", pais);
-                        cmd.Parameters.AddWithValue("@Genero", genero);
+                        cmd.Parameters.AddWithValue("@FechaNacimiento", fecha);
                         cmd.Parameters.AddWithValue("@Avatar", avatarurl);
     
 
@@ -126,11 +146,47 @@ namespace Login
                 }
             }
 
+        private bool CorreoExisteEnBD(string correo)
+        {
+            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+
+            try
+            {
+                using (SqlConnection con = new SqlConnection(connectionString))
+                {
+                    string consulta = "SELECT COUNT(*) FROM Usuarios WHERE CorreoElectronico = @Correo";
+                    SqlCommand cmd = new SqlCommand(consulta, con);
+                    cmd.Parameters.AddWithValue("@Correo", correo);
+
+                    con.Open();
+                    int cantidad = (int)cmd.ExecuteScalar();
+                    return cantidad > 0;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al consultar la base de datos: {ex.Message}");
+                return false;
+            }
+
+        }
+
+        private bool CorreoEsValido(string correo)
+        {
+            string patronCorreo = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            return Regex.IsMatch(correo, patronCorreo);
+        }
+
         private void btnVolver_Click(object sender, EventArgs e)
         {
             Inicio formulario = new Inicio();
             formulario.Show();
             this.Hide();
+        }
+
+        private void txtCorreoElectronico_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

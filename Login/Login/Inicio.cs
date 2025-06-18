@@ -19,7 +19,9 @@ namespace Login
             InitializeComponent();
         }
 
-        //SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True");/*Conexion de majo*/
+        //SqlConnection con = new SqlConnection(@"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True");/*Conexion de majo*/
+
+
         //SqlConnection con = new SqlConnection(@"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True"); /*Conexion de maxi*/
 
         private void btningresar_Click(object sender, EventArgs e)
@@ -27,7 +29,13 @@ namespace Login
             string usuario = txtusuario.Text;
             string password = txtcontrasena.Text;
 
-            //string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";/*Conexion de majo*/
+            if (string.IsNullOrWhiteSpace(usuario) || string.IsNullOrWhiteSpace(password))
+            {
+                MessageBox.Show("Por favor, complete ambos campos.");
+                return;
+            }
+
+            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";/*Conexion de majo*/
             //string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";/*Conexion de maxi*/
             using (SqlConnection con = new SqlConnection(connectionString))
             {

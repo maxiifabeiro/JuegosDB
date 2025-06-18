@@ -64,6 +64,18 @@
     <Compile Include="Inicio.Designer.cs">
       <DependentUpon>Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListaDesarrolladorasCONSOLAS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListaDesarrolladorasCONSOLAS.Designer.cs">
+      <DependentUpon>ListaDesarrolladorasCONSOLAS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Lista_DesarrolladorasJUEGOS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Lista_DesarrolladorasJUEGOS.Designer.cs">
+      <DependentUpon>Lista_DesarrolladorasJUEGOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="VisorUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +110,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListaDesarrolladorasCONSOLAS.resx">
+      <DependentUpon>ListaDesarrolladorasCONSOLAS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Lista_DesarrolladorasJUEGOS.resx">
+      <DependentUpon>Lista_DesarrolladorasJUEGOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisorUsuario.resx">
       <DependentUpon>VisorUsuario.cs</DependentUpon>

@@ -77,6 +77,10 @@ CREATE TABLE Usuarios (
 
     FOREIGN KEY (IDPermiso) REFERENCES Permisos(IDPermiso)
 );
+
+ALTER TABLE Usuarios
+ADD CONSTRAINT DF_Usuarios_IDPermiso DEFAULT 2 FOR IDPermiso;
+
 GO
 CREATE TABLE DatosUsuarios (
     IDDatoUsuario INT NOT NULL IDENTITY(1,1) PRIMARY KEY,

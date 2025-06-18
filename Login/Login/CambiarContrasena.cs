@@ -62,8 +62,8 @@ namespace Login
 
 
             //Conectamos a la base de datos y tiramos consulta SQL para traer los datos que necesitamos comparar
-            string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
-                string query = "SELECT COUNT(*) FROM Usuarios WHERE Usuario = @usuario AND FechaNacimiento = @fecha";
+            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+                string query = "SELECT COUNT(*) FROM Usuarios WHERE NombreUsuario = @usuario AND FechaNacimiento = @fecha";
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(query, con))
@@ -104,8 +104,8 @@ namespace Login
                     return;
                 }
                 //Si coinciden hacemos update en la base de datos
-                string connectionString = @"Data Source=DESKTOP-806U76I\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";
-                string query = "UPDATE Usuarios SET Contrasena = @nueva WHERE Usuario = @usuario";
+                string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+                string query = "UPDATE Usuarios SET Contrasena = @nueva WHERE NombreUsuario = @usuario";
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 using (SqlCommand cmd = new SqlCommand(query, con))

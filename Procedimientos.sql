@@ -257,7 +257,7 @@ BEGIN
 END;
 GO
 
-Procedimiento para mostrar las ventas mensuales
+--Procedimiento para mostrar las ventas mensuales
 CREATE PROCEDURE EstadisticasMensuales
     @Mes INT = NULL,
     @Anio INT = NULL
@@ -279,7 +279,9 @@ BEGIN
 END;
 GO
 EXEC EstadisticasMensuales @Mes = 6, @Anio = 2024;
-GO
+
+
+--Procedimiento para verificar si el usuario es admin o no
 CREATE PROCEDURE VerificarUsuario
     @NombreUsuario NVARCHAR(50),
     @Contrasena NVARCHAR(50)
@@ -288,3 +290,13 @@ BEGIN
     SELECT EsAdministrador FROM Usuarios
     WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
 END
+
+--Vista Desarrolladoras juegos
+
+CREATE VIEW desarrolladorasJUEGOS AS
+SELECT IDDesarrolladoraJ,Nombre,IDPais, FechaFundacion FROM DesarrolladorasJuegos
+
+--Vista Desarrolladoras Consolas
+
+CREATE VIEW desarrolladorasCONSOLAS AS
+SELECT IDDesarrolladorC,Nombre,IDPais, FechaFundacion FROM DesarrolladorasConsola
