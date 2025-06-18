@@ -30,10 +30,12 @@
         {
             this.btnVolver = new System.Windows.Forms.Button();
             this.btnAltaJuego = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
             this.btn_DevJuegos = new System.Windows.Forms.Button();
             this.btn_DevConsolas = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnModificarJuego = new System.Windows.Forms.Button();
+            this.btnEliminarJuego = new System.Windows.Forms.Button();
+            this.btnListadoJuegos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,19 +59,9 @@
             this.btnAltaJuego.UseVisualStyleBackColor = true;
             this.btnAltaJuego.Click += new System.EventHandler(this.btnAltaJuego_Click);
             // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(92, 167);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(139, 23);
-            this.btnEliminar.TabIndex = 2;
-            this.btnEliminar.Text = "Eliminar Juego";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
             // btn_DevJuegos
             // 
-            this.btn_DevJuegos.Location = new System.Drawing.Point(92, 196);
+            this.btn_DevJuegos.Location = new System.Drawing.Point(92, 170);
             this.btn_DevJuegos.Name = "btn_DevJuegos";
             this.btn_DevJuegos.Size = new System.Drawing.Size(139, 23);
             this.btn_DevJuegos.TabIndex = 3;
@@ -79,7 +71,7 @@
             // 
             // btn_DevConsolas
             // 
-            this.btn_DevConsolas.Location = new System.Drawing.Point(92, 225);
+            this.btn_DevConsolas.Location = new System.Drawing.Point(92, 199);
             this.btn_DevConsolas.Name = "btn_DevConsolas";
             this.btn_DevConsolas.Size = new System.Drawing.Size(139, 23);
             this.btn_DevConsolas.TabIndex = 3;
@@ -89,15 +81,47 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnListadoJuegos);
+            this.groupBox1.Controls.Add(this.btnEliminarJuego);
+            this.groupBox1.Controls.Add(this.btnModificarJuego);
             this.groupBox1.Controls.Add(this.btn_DevConsolas);
             this.groupBox1.Controls.Add(this.btn_DevJuegos);
-            this.groupBox1.Controls.Add(this.btnEliminar);
             this.groupBox1.Controls.Add(this.btnAltaJuego);
             this.groupBox1.Location = new System.Drawing.Point(239, 32);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(335, 312);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // btnModificarJuego
+            // 
+            this.btnModificarJuego.Location = new System.Drawing.Point(92, 112);
+            this.btnModificarJuego.Name = "btnModificarJuego";
+            this.btnModificarJuego.Size = new System.Drawing.Size(139, 23);
+            this.btnModificarJuego.TabIndex = 4;
+            this.btnModificarJuego.Text = "Modificar Juego";
+            this.btnModificarJuego.UseVisualStyleBackColor = true;
+            this.btnModificarJuego.Click += new System.EventHandler(this.btnModificarJuego_Click);
+            // 
+            // btnEliminarJuego
+            // 
+            this.btnEliminarJuego.Location = new System.Drawing.Point(92, 83);
+            this.btnEliminarJuego.Name = "btnEliminarJuego";
+            this.btnEliminarJuego.Size = new System.Drawing.Size(139, 23);
+            this.btnEliminarJuego.TabIndex = 5;
+            this.btnEliminarJuego.Text = "Eliminar Juego";
+            this.btnEliminarJuego.UseVisualStyleBackColor = true;
+            this.btnEliminarJuego.Click += new System.EventHandler(this.btnEliminarJuego_Click);
+            // 
+            // btnListadoJuegos
+            // 
+            this.btnListadoJuegos.Location = new System.Drawing.Point(92, 141);
+            this.btnListadoJuegos.Name = "btnListadoJuegos";
+            this.btnListadoJuegos.Size = new System.Drawing.Size(139, 23);
+            this.btnListadoJuegos.TabIndex = 6;
+            this.btnListadoJuegos.Text = "Listado de Juegos";
+            this.btnListadoJuegos.UseVisualStyleBackColor = true;
+            this.btnListadoJuegos.Click += new System.EventHandler(this.btnListadoJuegos_Click);
             // 
             // VisorAdmin
             // 
@@ -117,9 +141,11 @@
 
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnAltaJuego;
-        private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btn_DevJuegos;
         private System.Windows.Forms.Button btn_DevConsolas;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnModificarJuego;
+        private System.Windows.Forms.Button btnListadoJuegos;
+        private System.Windows.Forms.Button btnEliminarJuego;
     }
 }

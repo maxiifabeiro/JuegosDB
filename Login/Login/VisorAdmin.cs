@@ -34,13 +34,6 @@ namespace Login
             this.Hide();
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
-        {
-            EliminarJuego formulario = new EliminarJuego();
-            formulario.Show();
-            this.Hide();
-        }
-
         private void btn_DevJuegos_Click(object sender, EventArgs e)
         {
             Lista_DesarrolladorasJUEGOS ventana = new Lista_DesarrolladorasJUEGOS();
@@ -52,6 +45,27 @@ namespace Login
         {
             ListaDesarrolladorasCONSOLAS ventana = new ListaDesarrolladorasCONSOLAS();
             ventana.Show();
+        }
+
+        private void btnModificarJuego_Click(object sender, EventArgs e)
+        {
+            ModificarJuego formulario = new ModificarJuego();
+            formulario.Show();
+            this.Hide();
+        }
+
+        private void btnEliminarJuego_Click(object sender, EventArgs e)
+        {
+            EliminarJuego formulario = new EliminarJuego();
+            formulario.Show();
+            this.Hide();
+        }
+
+        private void btnListadoJuegos_Click(object sender, EventArgs e)
+        {
+            ListadoJuegos formulario = new ListadoJuegos();
+            formulario.Show();
+            this.Hide();
         }
     }
 

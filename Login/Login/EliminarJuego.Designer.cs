@@ -32,7 +32,7 @@
             this.txtID = new System.Windows.Forms.TextBox();
             this.lblIngreseID = new System.Windows.Forms.Label();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnVolverAtras = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -73,14 +73,15 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnCancelar
+            // btnVolverAtras
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(373, 326);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 4;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Location = new System.Drawing.Point(373, 326);
+            this.btnVolverAtras.Name = "btnVolverAtras";
+            this.btnVolverAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnVolverAtras.TabIndex = 4;
+            this.btnVolverAtras.Text = "Volver Atras";
+            this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
             // btnBuscar
             // 
@@ -103,10 +104,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(264, 194);
+            this.txtNombre.Location = new System.Drawing.Point(223, 194);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(100, 20);
+            this.txtNombre.Size = new System.Drawing.Size(159, 20);
             this.txtNombre.TabIndex = 7;
             // 
             // EliminarJuego
@@ -117,7 +118,7 @@
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.btnBuscar);
-            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblIngreseID);
             this.Controls.Add(this.txtID);
@@ -135,7 +136,7 @@
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.Label lblIngreseID;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnVolverAtras;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblNombre;
         private System.Windows.Forms.TextBox txtNombre;

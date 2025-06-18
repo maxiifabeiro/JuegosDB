@@ -22,7 +22,7 @@ namespace Login
         //SqlConnection con = new SqlConnection(@"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True");/*Conexion de majo*/
 
 
-        //SqlConnection con = new SqlConnection(@"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True"); /*Conexion de maxi*/
+        SqlConnection con = new SqlConnection(@"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True"); /*Conexion de maxi*/
 
         private void btningresar_Click(object sender, EventArgs e)
         {
@@ -35,8 +35,8 @@ namespace Login
                 return;
             }
 
-            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";/*Conexion de majo*/
-            //string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";/*Conexion de maxi*/
+            //string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";/*Conexion de majo*/
+            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=TiendaJuegos;Integrated Security=True";/*Conexion de maxi*/
             using (SqlConnection con = new SqlConnection(connectionString))
             {
                 con.Open();

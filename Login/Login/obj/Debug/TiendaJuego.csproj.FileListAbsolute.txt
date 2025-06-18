@@ -49,3 +49,7 @@ C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.pdb
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources

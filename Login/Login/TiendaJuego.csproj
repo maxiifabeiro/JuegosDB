@@ -70,11 +70,23 @@
     <Compile Include="ListaDesarrolladorasCONSOLAS.Designer.cs">
       <DependentUpon>ListaDesarrolladorasCONSOLAS.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListadoJuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListadoJuegos.Designer.cs">
+      <DependentUpon>ListadoJuegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista_DesarrolladorasJUEGOS.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Lista_DesarrolladorasJUEGOS.Designer.cs">
       <DependentUpon>Lista_DesarrolladorasJUEGOS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModificarJuego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModificarJuego.Designer.cs">
+      <DependentUpon>ModificarJuego.cs</DependentUpon>
     </Compile>
     <Compile Include="VisorUsuario.cs">
       <SubType>Form</SubType>
@@ -114,8 +126,14 @@
     <EmbeddedResource Include="ListaDesarrolladorasCONSOLAS.resx">
       <DependentUpon>ListaDesarrolladorasCONSOLAS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ListadoJuegos.resx">
+      <DependentUpon>ListadoJuegos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Lista_DesarrolladorasJUEGOS.resx">
       <DependentUpon>Lista_DesarrolladorasJUEGOS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ModificarJuego.resx">
+      <DependentUpon>ModificarJuego.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="VisorUsuario.resx">
       <DependentUpon>VisorUsuario.cs</DependentUpon>

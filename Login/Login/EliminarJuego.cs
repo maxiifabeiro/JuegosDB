@@ -45,7 +45,7 @@ namespace Login
                     SqlDataReader reader = com.ExecuteReader();
                     if (reader.Read())
                     {
-                        txtNombre.Text = reader["Nombre"].ToString();
+                        txtNombre.Text = reader["NombreJuego"].ToString();
                     }
                     else
                     {
@@ -105,6 +105,13 @@ namespace Login
         {
             txtID.Clear();
             txtNombre.Clear();
+        }
+
+        private void btnVolverAtras_Click(object sender, EventArgs e)
+        {
+            VisorAdmin formulario = new VisorAdmin();
+            formulario.Show();
+            this.Close();
         }
     }
 }
