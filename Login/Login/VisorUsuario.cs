@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Login.Inicio;
 
 namespace Login
 {
@@ -15,6 +16,7 @@ namespace Login
         public VisorUsuario()
         {
             InitializeComponent();
+            lblBienvenido.Text = "Bienvenido " + Sesion.NombreUsuario + "!";
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -35,5 +37,7 @@ namespace Login
             formulario.Show();
             this.Close();
         }
+
+
     }
 }

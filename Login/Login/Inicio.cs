@@ -53,6 +53,8 @@ namespace Login
                     if (reader.Read())
                     {
                         bool esAdmin = Convert.ToBoolean(reader["EsAdministrador"]);
+
+                        // Guardo en sesion el nombre de usuario y si es administrador o no
                         Sesion.NombreUsuario = usuario;
                         Sesion.EsAdministrador = esAdmin;
                         if (esAdmin)

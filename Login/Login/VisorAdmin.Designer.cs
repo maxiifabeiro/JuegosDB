@@ -32,6 +32,7 @@
             this.btn_DevJuegos = new System.Windows.Forms.Button();
             this.btn_DevConsolas = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnABMLJuegos = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -68,6 +69,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblBienvenido);
             this.groupBox1.Controls.Add(this.btnABMLJuegos);
             this.groupBox1.Controls.Add(this.btn_DevConsolas);
             this.groupBox1.Controls.Add(this.btn_DevJuegos);
@@ -76,6 +78,14 @@
             this.groupBox1.Size = new System.Drawing.Size(335, 312);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Location = new System.Drawing.Point(89, 16);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(0, 13);
+            this.lblBienvenido.TabIndex = 8;
             // 
             // btnABMLJuegos
             // 
@@ -97,6 +107,7 @@
             this.Name = "VisorAdmin";
             this.Text = "VisorAdmin";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -108,5 +119,6 @@
         private System.Windows.Forms.Button btn_DevConsolas;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnABMLJuegos;
+        private System.Windows.Forms.Label lblBienvenido;
     }
 }

@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Login.Inicio;
 
 namespace Login
 {
@@ -17,7 +18,7 @@ namespace Login
         public VisorAdmin()
         {
             InitializeComponent();
-           
+            lblBienvenido.Text = "Bienvenido " + Sesion.NombreUsuario + "!";
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -46,6 +47,7 @@ namespace Login
             ventana.Show();
             this.Close();
         }
+
     }
 
 }

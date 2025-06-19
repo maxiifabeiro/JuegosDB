@@ -32,12 +32,14 @@
             this.btnListadoJuegos = new System.Windows.Forms.Button();
             this.btnAvisoStock = new System.Windows.Forms.Button();
             this.bntInfoVenta = new System.Windows.Forms.Button();
+            this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblBienvenido);
             this.groupBox1.Controls.Add(this.btnListadoJuegos);
             this.groupBox1.Controls.Add(this.btnAvisoStock);
             this.groupBox1.Controls.Add(this.bntInfoVenta);
@@ -76,6 +78,14 @@
             this.bntInfoVenta.Text = "Info Venta";
             this.bntInfoVenta.UseVisualStyleBackColor = true;
             // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Location = new System.Drawing.Point(102, 16);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(0, 13);
+            this.lblBienvenido.TabIndex = 2;
+            // 
             // btnVolver
             // 
             this.btnVolver.Location = new System.Drawing.Point(621, 334);
@@ -96,6 +106,7 @@
             this.Name = "VisorUsuario";
             this.Text = "VisorUsuario";
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -107,5 +118,6 @@
         private System.Windows.Forms.Button btnAvisoStock;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.Button btnListadoJuegos;
+        private System.Windows.Forms.Label lblBienvenido;
     }
 }
