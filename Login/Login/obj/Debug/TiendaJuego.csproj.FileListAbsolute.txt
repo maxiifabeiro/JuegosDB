@@ -77,3 +77,7 @@ D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.pdb
 D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
 D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
 D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources

@@ -90,7 +90,7 @@ namespace Login
 
                     comando.Parameters.AddWithValue("@IdJuego", int.Parse(txtID.Text));
                     comando.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    comando.Parameters.AddWithValue("@IdDesarrolladoraJ", cmbDesarrolladora.SelectedValue);
+                    comando.Parameters.AddWithValue("@IDDesarrolladoraJ", cmbDesarrolladora.SelectedValue);
                     comando.Parameters.AddWithValue("@IdCategoria", cmbCategoria.SelectedValue);
                     comando.Parameters.AddWithValue("@IdFormato", cmbClasificacion.SelectedValue);
                     comando.Parameters.AddWithValue("@IdClasificacionEdad", cmbFormato.SelectedValue);

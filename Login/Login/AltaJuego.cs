@@ -33,7 +33,7 @@ namespace Login
 
                 // Asigno los parametros y le hago la conversion adecuada de cada tipo
                 com.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                com.Parameters.AddWithValue("@IdDesarrolladoraJ", cmbDesarrolladora.SelectedValue);
+                com.Parameters.AddWithValue("@IDDesarrolladoraJ", cmbDesarrolladora.SelectedValue);
                 com.Parameters.AddWithValue("@IdCategoria", cmbCategoria.SelectedValue);
                 com.Parameters.AddWithValue("@IdFormato", cmbFormato.SelectedValue);
                 com.Parameters.AddWithValue("@IdClasificacionEdad", cmbClasificacion.SelectedValue);
