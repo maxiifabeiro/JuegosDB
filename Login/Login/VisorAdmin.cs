@@ -48,6 +48,19 @@ namespace Login
             this.Close();
         }
 
+        private void btnABMLUsuarios_Click(object sender, EventArgs e)
+        {
+            ABMLUsuario ventana = new ABMLUsuario();
+            ventana.Show();
+            this.Close();
+        }
+
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+            ListarStock ventana = new ListarStock();
+            ventana.Show();
+            this.Close();
+        }
     }
 
 }

@@ -100,6 +100,12 @@
     <Compile Include="ListadoUsuarios.Designer.cs">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarStock.Designer.cs">
+      <DependentUpon>ListarStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="Lista_DesarrolladorasJUEGOS.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ListadoUsuarios.resx">
       <DependentUpon>ListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarStock.resx">
+      <DependentUpon>ListarStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Lista_DesarrolladorasJUEGOS.resx">
       <DependentUpon>Lista_DesarrolladorasJUEGOS.cs</DependentUpon>

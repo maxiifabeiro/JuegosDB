@@ -34,6 +34,9 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnABMLJuegos = new System.Windows.Forms.Button();
+            this.btnABMLUsuarios = new System.Windows.Forms.Button();
+            this.btnVentasMensuales = new System.Windows.Forms.Button();
+            this.btnStock = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -43,13 +46,13 @@
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(124, 34);
             this.btnVolver.TabIndex = 0;
-            this.btnVolver.Text = "Volver";
+            this.btnVolver.Text = "Salir";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btn_DevJuegos
             // 
-            this.btn_DevJuegos.Location = new System.Drawing.Point(92, 170);
+            this.btn_DevJuegos.Location = new System.Drawing.Point(92, 112);
             this.btn_DevJuegos.Name = "btn_DevJuegos";
             this.btn_DevJuegos.Size = new System.Drawing.Size(139, 23);
             this.btn_DevJuegos.TabIndex = 3;
@@ -59,7 +62,7 @@
             // 
             // btn_DevConsolas
             // 
-            this.btn_DevConsolas.Location = new System.Drawing.Point(92, 199);
+            this.btn_DevConsolas.Location = new System.Drawing.Point(92, 141);
             this.btn_DevConsolas.Name = "btn_DevConsolas";
             this.btn_DevConsolas.Size = new System.Drawing.Size(139, 23);
             this.btn_DevConsolas.TabIndex = 3;
@@ -69,6 +72,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnStock);
+            this.groupBox1.Controls.Add(this.btnVentasMensuales);
+            this.groupBox1.Controls.Add(this.btnABMLUsuarios);
             this.groupBox1.Controls.Add(this.lblBienvenido);
             this.groupBox1.Controls.Add(this.btnABMLJuegos);
             this.groupBox1.Controls.Add(this.btn_DevConsolas);
@@ -97,6 +103,35 @@
             this.btnABMLJuegos.UseVisualStyleBackColor = true;
             this.btnABMLJuegos.Click += new System.EventHandler(this.btnABMLJuegos_Click);
             // 
+            // btnABMLUsuarios
+            // 
+            this.btnABMLUsuarios.Location = new System.Drawing.Point(92, 83);
+            this.btnABMLUsuarios.Name = "btnABMLUsuarios";
+            this.btnABMLUsuarios.Size = new System.Drawing.Size(139, 23);
+            this.btnABMLUsuarios.TabIndex = 9;
+            this.btnABMLUsuarios.Text = "ABML de Usuarios";
+            this.btnABMLUsuarios.UseVisualStyleBackColor = true;
+            this.btnABMLUsuarios.Click += new System.EventHandler(this.btnABMLUsuarios_Click);
+            // 
+            // btnVentasMensuales
+            // 
+            this.btnVentasMensuales.Location = new System.Drawing.Point(92, 170);
+            this.btnVentasMensuales.Name = "btnVentasMensuales";
+            this.btnVentasMensuales.Size = new System.Drawing.Size(139, 23);
+            this.btnVentasMensuales.TabIndex = 10;
+            this.btnVentasMensuales.Text = "Ventas Mensuales";
+            this.btnVentasMensuales.UseVisualStyleBackColor = true;
+            // 
+            // btnStock
+            // 
+            this.btnStock.Location = new System.Drawing.Point(92, 199);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(139, 23);
+            this.btnStock.TabIndex = 11;
+            this.btnStock.Text = "Listar Stock";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -120,5 +155,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btnABMLJuegos;
         private System.Windows.Forms.Label lblBienvenido;
+        private System.Windows.Forms.Button btnABMLUsuarios;
+        private System.Windows.Forms.Button btnStock;
+        private System.Windows.Forms.Button btnVentasMensuales;
     }
 }
