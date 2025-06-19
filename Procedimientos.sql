@@ -12,18 +12,16 @@ CREATE OR ALTER PROCEDURE SP_altaJuego
     @CantidadJugadores INT,
     @Descripcion VARCHAR(250),
     @Precio DECIMAL(10,2),
-    @Stock INT,
-	@Estado BIT
+    @Stock INT
 AS
 BEGIN
     INSERT INTO Juegos(
-        Nombre, IDDesarrolladoraJ, IDCategoria, IDFormato,
-        IDClasificacionEdad, FechaLanzamiento, Tamaño,
-		CantidadJugadores, Descripcion, Precio, Stock,
-		Estado
+        Nombre, IDDesarrolladoraJ, IdCategoria, IdFormato,
+        IdClasificacionEdad, FechaLanzamiento, Tamaño,
+		CantidadJugadores, Descripcion, Precio, Stock
     )
     VALUES (
-        @Nombre, @IdDesarrolladoraJ, @IdCategoria, @IdFormato, @IdClasificacionEdad, @FechaLanzamiento, @Tamaño, @CantidadJugadores, @Descripcion, @Precio, @Stock, 1
+        @Nombre, @IdDesarrolladoraJ, @IdCategoria, @IdFormato, @IdClasificacionEdad, @FechaLanzamiento, @Tamaño, @CantidadJugadores, @Descripcion, @Precio, @Stock
     );
 END;
 GO
@@ -66,12 +64,39 @@ CREATE OR ALTER PROCEDURE SP_BajaJuego
 	@IdJuego INT
 AS
 BEGIN
-	UPDATE Juegos SET Estado = 0 WHERE IDJuego = @IdJuego;
+	UPDATE Juegos SET Estado = 0 WHERE IdJuego = @IdJuego;
 END;
 GO
 
 --Procedimiento para listar juegos
 CREATE OR ALTER PROCEDURE SP_ListarJuegos
+AS
+BEGIN
+    SELECT 
+        j.Nombre AS NombreJuego, 
+        dj.Nombre AS Desarrolladora,
+        c.Nombre AS Categoria,
+        f.Nombre AS Formato,
+        ce.Nombre AS ClasificacionEdad,
+        j.FechaLanzamiento,
+        j.Tamaño,
+        j.CantidadJugadores,
+        j.Descripcion,
+        j.Precio,
+        j.Stock
+    FROM 
+        Juegos j
+        INNER JOIN DesarrolladorasJuegos dj ON j.IDDesarrolladoraJ = dj.IdDesarrolladoraJ
+        INNER JOIN Categorias c ON j.IdCategoria = c.IdCategoria
+        INNER JOIN Formatos f ON j.IdFormato = f.IdFormato
+        INNER JOIN ClasificacionEdades ce ON j.IdClasificacionEdad = ce.IdClasificacionEdad
+    WHERE 
+        j.Estado = 1;
+END;
+GO
+
+--Procedimiento para buscar juego por ID
+CREATE OR ALTER PROCEDURE SP_BuscarJuegoPorID
     @IdJuego INT
 AS
 BEGIN
@@ -89,13 +114,13 @@ BEGIN
         j.Stock
     FROM 
         Juegos j
-        INNER JOIN DesarrolladorasJuegos dj ON j.IDDesarrolladoraJ = dj.IDDesarrolladoraJ
-        INNER JOIN Categorias c ON j.IDCategoria = c.IDCategoria
-        INNER JOIN Formatos f ON j.IDFormato = f.IDFormato
-        INNER JOIN ClasificacionEdades ce ON j.IDClasificacionEdad = ce.IDClasificacionEdad
+        INNER JOIN DesarrolladorasJuegos dj ON j.IDDesarrolladoraJ = dj.IdDesarrolladoraJ
+        INNER JOIN Categorias c ON j.IdCategoria = c.IdCategoria
+        INNER JOIN Formatos f ON j.IdFormato = f.IdFormato
+        INNER JOIN ClasificacionEdades ce ON j.IdClasificacionEdad = ce.IdClasificacionEdad
     WHERE 
-        j.IDJuego = @IdJuego;
-END;
+        j.Estado = 1 AND j.IDJuego = @IdJuego;
+END
 GO
 
 --Procedimiento para dar de alta un usuario
