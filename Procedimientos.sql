@@ -305,6 +305,23 @@ END;
 GO
 EXEC EstadisticasMensuales @Mes = 6, @Anio = 2024;
 
+--Procedimiento para listar stock de mayor a menor
+CREATE OR ALTER PROCEDURE SP_ListarStock
+AS
+BEGIN
+    SELECT
+        j.IDJuego,
+        j.Nombre AS NombreJuego,
+        j.Stock
+    FROM 
+        Juegos j
+    WHERE
+        j.Estado = 1
+    ORDER BY
+        j.Stock DESC;
+END
+GO
+
 
 --Procedimiento para verificar si el usuario es admin o no
 CREATE PROCEDURE VerificarUsuario
