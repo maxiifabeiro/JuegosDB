@@ -140,7 +140,7 @@
             this.AvatarURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AvatarURL.Location = new System.Drawing.Point(21, 205);
             this.AvatarURL.Name = "AvatarURL";
-            this.AvatarURL.Size = new System.Drawing.Size(73, 16);
+            this.AvatarURL.Size = new System.Drawing.Size(74, 16);
             this.AvatarURL.TabIndex = 13;
             this.AvatarURL.Text = "AvatarURL";
             // 
@@ -150,7 +150,7 @@
             this.ComprobarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComprobarContrasena.Location = new System.Drawing.Point(21, 134);
             this.ComprobarContrasena.Name = "ComprobarContrasena";
-            this.ComprobarContrasena.Size = new System.Drawing.Size(150, 16);
+            this.ComprobarContrasena.Size = new System.Drawing.Size(151, 16);
             this.ComprobarContrasena.TabIndex = 9;
             this.ComprobarContrasena.Text = "Comprobar Contraseña:";
             this.ComprobarContrasena.Click += new System.EventHandler(this.ComprobarContrasena_Click);
@@ -161,7 +161,7 @@
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(21, 170);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(138, 16);
+            this.label4.Size = new System.Drawing.Size(139, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Fecha de Nacimiento:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -172,7 +172,7 @@
             this.Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contrasena.Location = new System.Drawing.Point(21, 99);
             this.Contrasena.Name = "Contrasena";
-            this.Contrasena.Size = new System.Drawing.Size(79, 16);
+            this.Contrasena.Size = new System.Drawing.Size(80, 16);
             this.Contrasena.TabIndex = 9;
             this.Contrasena.Text = "Contraseña:";
             this.Contrasena.Click += new System.EventHandler(this.Contrasena_Click);
@@ -183,7 +183,7 @@
             this.CorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoElectronico.Location = new System.Drawing.Point(21, 68);
             this.CorreoElectronico.Name = "CorreoElectronico";
-            this.CorreoElectronico.Size = new System.Drawing.Size(121, 16);
+            this.CorreoElectronico.Size = new System.Drawing.Size(122, 16);
             this.CorreoElectronico.TabIndex = 8;
             this.CorreoElectronico.Text = "Correo Electrónico:";
             // 
@@ -193,7 +193,7 @@
             this.NombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreUsuario.Location = new System.Drawing.Point(21, 33);
             this.NombreUsuario.Name = "NombreUsuario";
-            this.NombreUsuario.Size = new System.Drawing.Size(128, 16);
+            this.NombreUsuario.Size = new System.Drawing.Size(129, 16);
             this.NombreUsuario.TabIndex = 7;
             this.NombreUsuario.Text = "Nombre de Usuario:";
             this.NombreUsuario.Click += new System.EventHandler(this.NombreUsuario_Click);
@@ -231,12 +231,16 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 450);
+            this.CancelButton = this.btnVolver;
+            this.ClientSize = new System.Drawing.Size(865, 450);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CrearUsuario";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear usuario nuevo";
             this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);

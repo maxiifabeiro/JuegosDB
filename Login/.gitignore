@@ -22,3 +22,60 @@ obj/
 
 # Others
 *.cache
+# Archivos de usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de configuración de VS
+.vs/
+
+# Resultados de compilación
+bin/
+obj/
+[Bb]uild/
+[Bb]uild[Ll]og.*
+
+# Archivos temporales
+*.log
+*.tmp
+*.cache
+*.dbmdl
+
+# Archivos de pruebas
+TestResults/
+*.TestResults
+*.trx
+
+# Paquetes NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+project.fragment.lock.json
+
+# Publicaciones
+publish/
+*.pubxml
+*.publishproj
+
+# ReSharper y otros plugins
+_ReSharper*/
+*.DotSettings.user
+
+# Archivos de base de datos locales
+*.mdf
+*.ldf
+
+# Otros
+*.pfx
+*.key
+*.cer
+*.vspscc
+*.vssscc
+
+*.cache
+*.pdb
+*.resources
+*.exe

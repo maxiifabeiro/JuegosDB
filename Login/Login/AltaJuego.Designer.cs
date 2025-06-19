@@ -256,7 +256,7 @@
             // 
             // AltaJuego
             // 
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(706, 450);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.txtStock);
             this.Controls.Add(this.lblStock);

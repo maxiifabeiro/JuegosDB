@@ -53,3 +53,27 @@ C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolla
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.exe.config
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.exe
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.pdb
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.exe
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.pdb
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
+D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
