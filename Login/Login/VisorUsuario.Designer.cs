@@ -30,17 +30,17 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnListadoJuegos = new System.Windows.Forms.Button();
-            this.bntInfoVenta = new System.Windows.Forms.Button();
             this.btnAvisoStock = new System.Windows.Forms.Button();
+            this.bntInfoVenta = new System.Windows.Forms.Button();
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnListadoJuegos);
             this.groupBox1.Controls.Add(this.btnAvisoStock);
             this.groupBox1.Controls.Add(this.bntInfoVenta);
-            this.groupBox1.Controls.Add(this.btnListadoJuegos);
             this.groupBox1.Location = new System.Drawing.Point(221, 43);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(318, 325);
@@ -50,23 +50,13 @@
             // 
             // btnListadoJuegos
             // 
-            this.btnListadoJuegos.Location = new System.Drawing.Point(105, 41);
+            this.btnListadoJuegos.Location = new System.Drawing.Point(105, 51);
             this.btnListadoJuegos.Name = "btnListadoJuegos";
             this.btnListadoJuegos.Size = new System.Drawing.Size(124, 46);
-            this.btnListadoJuegos.TabIndex = 0;
+            this.btnListadoJuegos.TabIndex = 1;
             this.btnListadoJuegos.Text = "Listado de juegos";
             this.btnListadoJuegos.UseVisualStyleBackColor = true;
-            this.btnListadoJuegos.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // bntInfoVenta
-            // 
-            this.bntInfoVenta.Location = new System.Drawing.Point(105, 103);
-            this.bntInfoVenta.Name = "bntInfoVenta";
-            this.bntInfoVenta.Size = new System.Drawing.Size(124, 46);
-            this.bntInfoVenta.TabIndex = 0;
-            this.bntInfoVenta.Text = "Info Venta";
-            this.bntInfoVenta.UseVisualStyleBackColor = true;
-            this.bntInfoVenta.Click += new System.EventHandler(this.button1_Click);
+            this.btnListadoJuegos.Click += new System.EventHandler(this.btnListadoJuegos_Click);
             // 
             // btnAvisoStock
             // 
@@ -76,7 +66,15 @@
             this.btnAvisoStock.TabIndex = 0;
             this.btnAvisoStock.Text = "Aviso de Stock";
             this.btnAvisoStock.UseVisualStyleBackColor = true;
-            this.btnAvisoStock.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bntInfoVenta
+            // 
+            this.bntInfoVenta.Location = new System.Drawing.Point(105, 103);
+            this.bntInfoVenta.Name = "bntInfoVenta";
+            this.bntInfoVenta.Size = new System.Drawing.Size(124, 46);
+            this.bntInfoVenta.TabIndex = 0;
+            this.bntInfoVenta.Text = "Info Venta";
+            this.bntInfoVenta.UseVisualStyleBackColor = true;
             // 
             // btnVolver
             // 
@@ -86,6 +84,7 @@
             this.btnVolver.TabIndex = 1;
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // VisorUsuario
             // 
@@ -104,9 +103,9 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnListadoJuegos;
         private System.Windows.Forms.Button bntInfoVenta;
         private System.Windows.Forms.Button btnAvisoStock;
         private System.Windows.Forms.Button btnVolver;
+        private System.Windows.Forms.Button btnListadoJuegos;
     }
 }

@@ -144,7 +144,7 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            VisorAdmin formulario = new VisorAdmin();
+            ABMLJuegos formulario = new ABMLJuegos();
             formulario.Show();
             this.Close();
         }

@@ -53,7 +53,8 @@ namespace Login
                     if (reader.Read())
                     {
                         bool esAdmin = Convert.ToBoolean(reader["EsAdministrador"]);
-
+                        Sesion.NombreUsuario = usuario;
+                        Sesion.EsAdministrador = esAdmin;
                         if (esAdmin)
                         {
                             VisorAdmin formulario = new VisorAdmin();
@@ -71,14 +72,17 @@ namespace Login
                     {
                         MessageBox.Show("Usuario o contraseña incorrectos");
                     }
-
                     reader.Close();
                 }
             }
         }
 
 
-
+        public static  class Sesion
+        {
+            public static string NombreUsuario { get; set; }
+            public static bool EsAdministrador { get; set; }
+        }
 
 
         private void btnlimpiar_Click(object sender, EventArgs e)

@@ -22,9 +22,18 @@ namespace Login
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnListadoJuegos_Click(object sender, EventArgs e)
         {
+            ListadoJuegos formulario = new ListadoJuegos();
+            formulario.Show();
+            this.Close();
+        }
 
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            Inicio formulario = new Inicio();
+            formulario.Show();
+            this.Close();
         }
     }
 }

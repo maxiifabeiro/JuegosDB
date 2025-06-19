@@ -81,3 +81,4 @@ C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.res
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources

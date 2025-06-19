@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABMLJuegos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ABMLJuegos.Designer.cs">
+      <DependentUpon>ABMLJuegos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ABMLUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="VisorAdmin.Designer.cs">
       <DependentUpon>VisorAdmin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ABMLJuegos.resx">
+      <DependentUpon>ABMLJuegos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ABMLUsuario.resx">
       <DependentUpon>ABMLUsuario.cs</DependentUpon>
     </EmbeddedResource>

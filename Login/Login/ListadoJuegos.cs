@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static Login.Inicio;
 
 namespace Login
 {
@@ -31,8 +32,19 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            VisorAdmin Formulario = new VisorAdmin();
-            Formulario.Show();
+            this.Hide();
+
+            if (Sesion.EsAdministrador)
+            {
+                VisorAdmin formulario = new VisorAdmin();
+                formulario.Show();
+            }
+            else
+            {
+                VisorUsuario formulario = new VisorUsuario();
+                formulario.Show();
+            }
+
             this.Close();
         }
 
