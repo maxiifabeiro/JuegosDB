@@ -283,7 +283,7 @@ END;
 GO
 
 --Procedimiento para mostrar las ventas mensuales
-CREATE OR ALTER PROCEDURE EstadisticasMensuales
+CREATE OR ALTER PROCEDURE SP_EstadisticasMensuales
     @Mes INT = NULL,
     @Anio INT = NULL
 AS
