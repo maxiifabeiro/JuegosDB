@@ -240,9 +240,9 @@ BEGIN
         WHERE IDUsuario = @IDUsuario;
 
         -- Baja logica en DatosUsuarios 
-        UPDATE DatosUsuarios
-        SET Estado = 0
-        WHERE IDDatoUsuario = @IDUsuario;
+        -- UPDATE DatosUsuarios
+        -- SET Estado = 0
+        -- WHERE IDDatoUsuario = @IDUsuario;
 
         COMMIT;
     END TRY
@@ -281,6 +281,30 @@ BEGIN
     ORDER BY u.FechaRegistro DESC;
 END;
 GO
+
+--Procedimiento para buscar Usuario por ID
+CREATE OR ALTER PROCEDURE SP_BuscarUsuarioPorID
+    @IDUsuario INT
+AS
+BEGIN
+    SELECT 
+        U.NombreUsuario AS NombreUsuario, 
+        U.CorreoElectronico AS Email,
+        U.Contrasena AS Contraseña,
+        U.FechaRegistro AS "Fecha de Registro",
+        U.AvatarURL AS "Foto Perfil",
+        U.EsAdministrador AS "Es Administrador",
+        U.Estado AS "Activo",
+        P.Nombre AS "Permiso"
+    FROM 
+        Usuarios U
+        INNER JOIN Permisos P ON U.IDPermiso = P.IDPermiso
+    WHERE 
+        U.Estado = 1 AND U.IDUsuario = @IDUsuario;
+END
+
+
+GO  
 
 --Procedimiento para mostrar las ventas mensuales
 CREATE OR ALTER PROCEDURE SP_EstadisticasMensuales
