@@ -283,7 +283,7 @@ END;
 GO
 
 --Procedimiento para mostrar las ventas mensuales
-CREATE PROCEDURE EstadisticasMensuales
+CREATE OR ALTER PROCEDURE EstadisticasMensuales
     @Mes INT = NULL,
     @Anio INT = NULL
 AS
@@ -292,10 +292,9 @@ BEGIN
         YEAR(i.FechaVenta) AS Anio,
         MONTH(i.FechaVenta) AS Mes,
         COUNT(DISTINCT i.IDVenta) AS CantidadVentas,
-        SUM(c.Cantidad) AS JuegosVendidos,
-        SUM(c.Cantidad * c.PrecioTotal) AS TotalRecaudado
+        SUM(i.Cantidad) AS JuegosVendidos,
+        SUM(i.Cantidad * i.PrecioTotal) AS TotalRecaudado
     FROM InfoVentas i
-    JOIN Carrito c ON i.IDCarrito = c.IDCarrito
     WHERE
         (@Mes IS NULL OR MONTH(i.FechaVenta) = @Mes) AND
         (@Anio IS NULL OR YEAR(i.FechaVenta) = @Anio)
