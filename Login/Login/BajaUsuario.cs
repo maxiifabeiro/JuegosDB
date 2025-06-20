@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class BajaUsuario : Form
     {
-        string conexionbd = "Data Source=localhost;Initial Catalog=JuegosDB;User ID=sa;Password=Attaque77@";
+        string conexionbd = "server=.\\SQLEXPRESS; database=JuegosDB; integrated security=true";
 
         public BajaUsuario()
         {
