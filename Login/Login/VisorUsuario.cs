@@ -38,6 +38,11 @@ namespace Login
             this.Close();
         }
 
-
+        private void btnAvisoStock_Click(object sender, EventArgs e)
+        {
+            AvisoStock formulario = new AvisoStock();
+            formulario.Show();
+            this.Close();
+        }
     }
 }

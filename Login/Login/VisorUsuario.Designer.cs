@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnListadoJuegos = new System.Windows.Forms.Button();
             this.btnAvisoStock = new System.Windows.Forms.Button();
             this.bntInfoVenta = new System.Windows.Forms.Button();
-            this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnVolver = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -49,6 +49,14 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // lblBienvenido
+            // 
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Location = new System.Drawing.Point(102, 16);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(0, 13);
+            this.lblBienvenido.TabIndex = 2;
             // 
             // btnListadoJuegos
             // 
@@ -68,6 +76,7 @@
             this.btnAvisoStock.TabIndex = 0;
             this.btnAvisoStock.Text = "Aviso de Stock";
             this.btnAvisoStock.UseVisualStyleBackColor = true;
+            this.btnAvisoStock.Click += new System.EventHandler(this.btnAvisoStock_Click);
             // 
             // bntInfoVenta
             // 
@@ -77,14 +86,6 @@
             this.bntInfoVenta.TabIndex = 0;
             this.bntInfoVenta.Text = "Info Venta";
             this.bntInfoVenta.UseVisualStyleBackColor = true;
-            // 
-            // lblBienvenido
-            // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Location = new System.Drawing.Point(102, 16);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(0, 13);
-            this.lblBienvenido.TabIndex = 2;
             // 
             // btnVolver
             // 

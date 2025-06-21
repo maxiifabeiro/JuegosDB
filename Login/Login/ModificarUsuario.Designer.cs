@@ -184,9 +184,9 @@ namespace Login
             this.lblMostrarIDUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblMostrarIDUsuario.Location = new System.Drawing.Point(107, 135);
             this.lblMostrarIDUsuario.Name = "lblMostrarIDUsuario";
-            this.lblMostrarIDUsuario.Size = new System.Drawing.Size(27, 20);
+            this.lblMostrarIDUsuario.Size = new System.Drawing.Size(28, 20);
             this.lblMostrarIDUsuario.TabIndex = 0;
-            this.lblMostrarIDUsuario.Text = "lbl";
+            this.lblMostrarIDUsuario.Text = "ID";
             // 
             // txtCorreoElectronico
             // 

@@ -64,6 +64,12 @@
     <Compile Include="AltaJuego.Designer.cs">
       <DependentUpon>AltaJuego.cs</DependentUpon>
     </Compile>
+    <Compile Include="AvisoStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AvisoStock.Designer.cs">
+      <DependentUpon>AvisoStock.cs</DependentUpon>
+    </Compile>
     <Compile Include="BajaUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -158,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AltaJuego.resx">
       <DependentUpon>AltaJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AvisoStock.resx">
+      <DependentUpon>AvisoStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BajaUsuario.resx">
       <DependentUpon>BajaUsuario.cs</DependentUpon>

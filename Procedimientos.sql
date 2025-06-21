@@ -93,6 +93,7 @@ BEGIN
     WHERE 
         j.Estado = 1;
 END;
+
 GO
 
 --Procedimiento para buscar juego por ID
@@ -121,6 +122,7 @@ BEGIN
     WHERE 
         j.Estado = 1 AND j.IDJuego = @IdJuego;
 END
+
 GO
 
 --Procedimiento para dar de alta un usuario
@@ -181,7 +183,6 @@ EXEC SP_AltaUsuario
     @Genero = 'Masculino';
 GO
 
-
 --Procedimiento para modificar usuario
 CREATE OR ALTER PROCEDURE SP_ModificarUsuario
     @IDUsuario INT,
@@ -216,6 +217,7 @@ BEGIN
         THROW;
     END CATCH
 END;
+
 GO
 
 --Procedimiento para de baja usuario
@@ -243,6 +245,7 @@ BEGIN
         THROW;
     END CATCH
 END;
+
 GO
 
 --Procedimiento para listar todos usuarios
@@ -267,7 +270,9 @@ BEGIN
     WHERE U.Estado = 1
     ORDER BY U.FechaRegistro DESC;
 END;
+
 GO
+
 CREATE OR ALTER PROCEDURE SP_ListarUsuariosConID
     @IDUsuario INT
 AS
@@ -292,7 +297,6 @@ BEGIN
 END;
 
 GO
-
 
 --Procedimiento para buscar Usuario por ID
 CREATE OR ALTER PROCEDURE SP_BuscarUsuarioPorID
@@ -339,6 +343,7 @@ END;
 GO
 EXEC EstadisticasMensuales @Mes = 6, @Anio = 2024;
 
+GO
 --Procedimiento para listar stock de mayor a menor
 CREATE OR ALTER PROCEDURE SP_ListarStock
 AS
@@ -353,10 +358,72 @@ BEGIN
         j.Estado = 1
     ORDER BY
         j.Stock DESC;
-END
+END;
+
 GO
+-- Procedimiento para listar juegos por stock con filtros
+CREATE OR ALTER PROCEDURE SP_ListarStockPorFiltro
+    @Cantidad INT,
+    @TipoDeFiltro INT --1:Mayor a; 2:Igual a; 3:Menor a
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION
+            --Filtrar por Mayor a @cantidad
+        IF @TipoDeFiltro = 1 BEGIN
+            SELECT j.IDJuego,
+                j.Nombre AS NombreJuego,
+                j.Stock
+            FROM 
+                Juegos j
+            WHERE
+                j.Estado = 1 AND j.Stock > @Cantidad
+            ORDER BY
+                j.Stock DESC;
+            
+            COMMIT TRANSACTION
+        END
+        --Filtrar por Igual a @cantidad
+        ELSE IF @TipoDeFiltro = 2 BEGIN
+            SELECT j.IDJuego,
+                j.Nombre AS NombreJuego,
+                j.Stock
+            FROM 
+                Juegos j
+            WHERE
+                j.Estado = 1 AND j.Stock = @Cantidad
+            ORDER BY
+                j.Stock DESC;
 
+            COMMIT TRANSACTION
+        END
+        --Filtrar por Menor a @cantidad
+        ELSE IF @TipoDeFiltro = 3 BEGIN
+            SELECT j.IDJuego,
+                j.Nombre AS NombreJuego,
+                j.Stock
+            FROM 
+                Juegos j
+            WHERE
+                j.Estado = 1 AND j.Stock < @Cantidad
+            ORDER BY
+                j.Stock DESC;
+            
+            COMMIT TRANSACTION;
+        END
+        ELSE BEGIN
+            ROLLBACK TRANSACTION
+            RAISERROR('No se pudo realizar el filtrado ',16,1);
+        END
 
+    END TRY
+    BEGIN CATCH
+        ROLLBACK TRANSACTION
+        RAISERROR('No se pudo realizar el filtrado ',16,1);
+    END CATCH 
+END;
+
+GO
 --Procedimiento para verificar si el usuario es admin o no
 CREATE PROCEDURE VerificarUsuario
     @NombreUsuario NVARCHAR(50),
@@ -366,5 +433,7 @@ BEGIN
     SELECT EsAdministrador FROM Usuarios
     WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
 END
+
+
 
 
