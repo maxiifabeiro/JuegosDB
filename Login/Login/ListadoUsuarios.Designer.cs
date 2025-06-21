@@ -47,6 +47,7 @@ namespace Login
             this.btnVolver.TabIndex = 13;
             this.btnVolver.Text = "&Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lvwListadoUsuario
             // 
@@ -69,6 +70,7 @@ namespace Login
             this.btnMostrarTodosUsuarios.TabIndex = 11;
             this.btnMostrarTodosUsuarios.Text = "Mostrar &Todos";
             this.btnMostrarTodosUsuarios.UseVisualStyleBackColor = true;
+            this.btnMostrarTodosUsuarios.Click += new System.EventHandler(this.btnMostrarTodosUsuarios_Click);
             // 
             // btnBuscarIDUsuario
             // 
@@ -79,6 +81,7 @@ namespace Login
             this.btnBuscarIDUsuario.TabIndex = 10;
             this.btnBuscarIDUsuario.Text = "&Buscar";
             this.btnBuscarIDUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarIDUsuario.Click += new System.EventHandler(this.btnBuscarIDUsuario_Click);
             // 
             // txtIDUsuario
             // 

@@ -83,8 +83,10 @@ namespace Login
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            VisorAdmin formulario = new VisorAdmin();
+            formulario.Show();
             this.Close();
-            
+
         }
     }
 

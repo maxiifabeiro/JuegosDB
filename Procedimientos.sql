@@ -245,34 +245,54 @@ BEGIN
 END;
 GO
 
---Procedimiento para listar usuarios
+--Procedimiento para listar todos usuarios
 CREATE OR ALTER PROCEDURE SP_ListarUsuarios
 AS
 BEGIN
     SELECT 
-        u.IDUsuario,
-        u.NombreUsuario,
-        u.CorreoElectronico,
-        u.FechaRegistro,
-        u.IDPermiso,
-        p.Nombre,
-        u.Estado,
+        U.NombreUsuario AS NombreUsuario,
+        U.CorreoElectronico AS Email,
+        U.FechaRegistro AS FechaRegistro,
+        P.Nombre AS Permiso,
 
-        du.Nombre,
-        du.Apellido,
-        du.FechaNacimiento,
-        du.IDPais,
-        pais.Nombre,
-        du.Genero,
-        du.Estado AS EstadoDatos
-    FROM Usuarios u
-    INNER JOIN DatosUsuarios du ON u.IDUsuario = du.IDDatoUsuario
-    LEFT JOIN Permisos p ON u.IDPermiso = p.IdPermiso
-    LEFT JOIN Paises pais ON du.IDPais = pais.IDPais
-    WHERE u.Estado = 1 AND du.Estado = 1 -- solo activos
-    ORDER BY u.FechaRegistro DESC;
+        DU.Nombre AS Nombre,
+        DU.Apellido AS Apellido,
+        DU.FechaNacimiento AS FechaNacimiento,
+        pais.Nombre AS Pais,
+        DU.Genero AS Genero
+    FROM Usuarios U
+    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDDatoUsuario
+    LEFT JOIN Permisos P ON U.IDPermiso = P.IdPermiso
+    LEFT JOIN Paises pais ON DU.IDPais = pais.IDPais
+    WHERE U.Estado = 1
+    ORDER BY U.FechaRegistro DESC;
 END;
 GO
+CREATE OR ALTER PROCEDURE SP_ListarUsuariosConID
+    @IDUsuario INT
+AS
+BEGIN
+    SELECT 
+        U.NombreUsuario AS NombreUsuario,
+        U.CorreoElectronico AS Email,
+        U.FechaRegistro AS FechaRegistro,
+        P.Nombre AS Permiso,
+
+        DU.Nombre AS Nombre,
+        DU.Apellido AS Apellido,
+        DU.FechaNacimiento AS FechaNacimiento,
+        pais.Nombre AS Pais,
+        DU.Genero AS Genero
+    FROM Usuarios U
+    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDDatoUsuario
+    LEFT JOIN Permisos P ON U.IDPermiso = P.IdPermiso
+    LEFT JOIN Paises pais ON DU.IDPais = pais.IDPais
+    WHERE U.Estado = 1 and U.IDUsuario=@IDUsuario
+    ORDER BY U.FechaRegistro DESC;
+END;
+
+GO
+
 
 --Procedimiento para buscar Usuario por ID
 CREATE OR ALTER PROCEDURE SP_BuscarUsuarioPorID
