@@ -181,18 +181,17 @@ EXEC SP_AltaUsuario
     @Genero = 'Masculino';
 GO
 
+
 --Procedimiento para modificar usuario
 CREATE OR ALTER PROCEDURE SP_ModificarUsuario
     @IDUsuario INT,
     @NombreUsuario VARCHAR(100),
     @Correo VARCHAR(100),
     @Contrasena VARCHAR(100),
-    @IdPermiso INT,
-    @Nombre VARCHAR(50),
-    @Apellido VARCHAR(50),
-    @FechaNacimiento DATE,
-    @IDPais INT,
-    @Genero VARCHAR(20)
+    @FechaRegistro DATETIME,
+    @AvatarURL VARCHAR(255),
+    @EsAdministrador BIT,
+    @IdPermiso INT
 AS
 BEGIN
     BEGIN TRY
@@ -204,18 +203,11 @@ BEGIN
             NombreUsuario = @NombreUsuario,
             CorreoElectronico = @Correo,
             Contrasena = @Contrasena,
+            FechaRegistro = @FechaRegistro,
+            AvatarURL= @AvatarURL,
+            EsAdministrador = @EsAdministrador,
             IDPermiso = @IdPermiso
         WHERE IDUsuario = @IDUsuario;
-
-        -- Modifica datos en tabla DatosUsuarios
-        UPDATE DatosUsuarios
-        SET 
-            Nombre = @Nombre,
-            Apellido = @Apellido,
-            FechaNacimiento = @FechaNacimiento,
-            IDPais = @IDPais,
-            Genero = @Genero
-        WHERE IDDatoUsuario = @IDUsuario;
 
         COMMIT;
     END TRY
@@ -292,8 +284,8 @@ BEGIN
         U.CorreoElectronico AS Email,
         U.Contrasena AS Contraseña,
         U.FechaRegistro AS "Fecha de Registro",
-        U.AvatarURL AS "Foto Perfil",
-        U.EsAdministrador AS "Es Administrador",
+        U.AvatarURL AS "AvatarURL",
+        U.EsAdministrador AS EsAdministrador,
         U.Estado AS "Activo",
         P.Nombre AS "Permiso"
     FROM 
@@ -302,7 +294,6 @@ BEGIN
     WHERE 
         U.Estado = 1 AND U.IDUsuario = @IDUsuario;
 END
-
 
 GO  
 

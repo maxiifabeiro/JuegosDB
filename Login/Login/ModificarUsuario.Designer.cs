@@ -49,6 +49,8 @@ namespace Login
             this.cbxPermiso = new System.Windows.Forms.ComboBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.btnModificarDatosUsuario = new System.Windows.Forms.Button();
+            this.lblAvatarURL = new System.Windows.Forms.Label();
+            this.txtAvatarURL = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnBuscarUsuario
@@ -60,6 +62,7 @@ namespace Login
             this.btnBuscarUsuario.TabIndex = 2;
             this.btnBuscarUsuario.Text = "&Buscar";
             this.btnBuscarUsuario.UseVisualStyleBackColor = true;
+            this.btnBuscarUsuario.Click += new System.EventHandler(this.btnBuscarUsuario_Click);
             // 
             // txtIDUsuario
             // 
@@ -92,28 +95,30 @@ namespace Login
             // 
             this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(268, 640);
+            this.btnVolver.Location = new System.Drawing.Point(268, 694);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 28);
             this.btnVolver.TabIndex = 11;
             this.btnVolver.Text = "&Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(59, 640);
+            this.btnGuardar.Location = new System.Drawing.Point(59, 694);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 28);
             this.btnGuardar.TabIndex = 10;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblPermisoUsuario
             // 
             this.lblPermisoUsuario.AutoSize = true;
             this.lblPermisoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPermisoUsuario.Location = new System.Drawing.Point(123, 488);
+            this.lblPermisoUsuario.Location = new System.Drawing.Point(123, 534);
             this.lblPermisoUsuario.Name = "lblPermisoUsuario";
             this.lblPermisoUsuario.Size = new System.Drawing.Size(125, 20);
             this.lblPermisoUsuario.TabIndex = 0;
@@ -211,7 +216,7 @@ namespace Login
             // cbxPermiso
             // 
             this.cbxPermiso.FormattingEnabled = true;
-            this.cbxPermiso.Location = new System.Drawing.Point(127, 511);
+            this.cbxPermiso.Location = new System.Drawing.Point(127, 557);
             this.cbxPermiso.Name = "cbxPermiso";
             this.cbxPermiso.Size = new System.Drawing.Size(200, 21);
             this.cbxPermiso.TabIndex = 8;
@@ -233,12 +238,30 @@ namespace Login
             this.btnModificarDatosUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Moccasin;
             this.btnModificarDatosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarDatosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDatosUsuario.Location = new System.Drawing.Point(127, 561);
+            this.btnModificarDatosUsuario.Location = new System.Drawing.Point(127, 607);
             this.btnModificarDatosUsuario.Name = "btnModificarDatosUsuario";
             this.btnModificarDatosUsuario.Size = new System.Drawing.Size(216, 39);
             this.btnModificarDatosUsuario.TabIndex = 9;
             this.btnModificarDatosUsuario.Text = "M&odificar datos personales";
             this.btnModificarDatosUsuario.UseVisualStyleBackColor = true;
+            this.btnModificarDatosUsuario.Click += new System.EventHandler(this.btnModificarDatosUsuario_Click);
+            // 
+            // lblAvatarURL
+            // 
+            this.lblAvatarURL.AutoSize = true;
+            this.lblAvatarURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvatarURL.Location = new System.Drawing.Point(123, 473);
+            this.lblAvatarURL.Name = "lblAvatarURL";
+            this.lblAvatarURL.Size = new System.Drawing.Size(144, 20);
+            this.lblAvatarURL.TabIndex = 12;
+            this.lblAvatarURL.Text = "URL Foto de Perfil:";
+            // 
+            // txtAvatarURL
+            // 
+            this.txtAvatarURL.Location = new System.Drawing.Point(127, 496);
+            this.txtAvatarURL.Name = "txtAvatarURL";
+            this.txtAvatarURL.Size = new System.Drawing.Size(200, 20);
+            this.txtAvatarURL.TabIndex = 13;
             // 
             // ModificarUsuario
             // 
@@ -246,7 +269,9 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnVolver;
-            this.ClientSize = new System.Drawing.Size(511, 680);
+            this.ClientSize = new System.Drawing.Size(511, 742);
+            this.Controls.Add(this.txtAvatarURL);
+            this.Controls.Add(this.lblAvatarURL);
             this.Controls.Add(this.btnModificarDatosUsuario);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.cbxPermiso);
@@ -300,5 +325,7 @@ namespace Login
         private System.Windows.Forms.ComboBox cbxPermiso;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Button btnModificarDatosUsuario;
+        private System.Windows.Forms.Label lblAvatarURL;
+        private System.Windows.Forms.TextBox txtAvatarURL;
     }
 }
