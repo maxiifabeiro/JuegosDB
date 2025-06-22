@@ -517,5 +517,43 @@ BEGIN
 END
 GO
 
+CREATE OR ALTER PROCEDURE sp_ReporteVentasMensuales
+    @Anio INT,
+    @Mes INT
+AS
+BEGIN
+    SET NOCOUNT ON;
 
+    SELECT 
+        Juego,
+        SUM(Cantidad) AS UnidadesVendidas,
+        SUM(PrecioTotal) AS TotalVendido
+    FROM 
+        v_VentasDetalladas
+    WHERE 
+        YEAR(FechaVenta) = @Anio AND MONTH(FechaVenta) = @Mes
+    GROUP BY
+        Juego
+    ORDER BY
+        TotalVendido DESC;
+END
+GO
+
+CREATE OR ALTER PROCEDURE sp_ObtenerTotalesMensuales
+    @Anio INT,
+    @Mes INT
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT
+        ISNULL(SUM(Cantidad), 0) AS UnidadesTotales,
+        ISNULL(SUM(PrecioTotal), 0) AS IngresosTotales,
+        COUNT(IDVenta) AS CantidadDeVentas
+    FROM 
+        InfoVentas
+    WHERE 
+        YEAR(FechaVenta) = @Anio AND MONTH(FechaVenta) = @Mes;
+END
+GO 
 
