@@ -44,5 +44,12 @@ namespace Login
             formulario.Show();
             this.Close();
         }
+
+        private void bntInfoVenta_Click(object sender, EventArgs e)
+        {
+            Ventas formulario = new Ventas();
+            formulario.Show();
+            this.Close();
+        }
     }
 }

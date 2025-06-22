@@ -83,3 +83,30 @@ C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.AvisoStock.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.exe
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.pdb
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe.config
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.pdb
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache

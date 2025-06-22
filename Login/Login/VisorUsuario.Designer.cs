@@ -86,6 +86,7 @@
             this.bntInfoVenta.TabIndex = 0;
             this.bntInfoVenta.Text = "Info Venta";
             this.bntInfoVenta.UseVisualStyleBackColor = true;
+            this.bntInfoVenta.Click += new System.EventHandler(this.bntInfoVenta_Click);
             // 
             // btnVolver
             // 
