@@ -1,4 +1,4 @@
-CREATE FUNCTION FN_ClasificacionEdad (
+CREATE OR ALTER FUNCTION FN_ClasificacionEdad (
     @IDClasificacionEdad INT
 )
 RETURNS VARCHAR(50)
