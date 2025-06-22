@@ -39,3 +39,14 @@ INNER JOIN
 INNER JOIN
     FormasDePago fp ON v.IDFormaPago = fp.IDFormaDePago;
 GO
+
+CREATE OR ALTER VIEW VW_JuegosConClasificacion
+AS
+SELECT 
+    j.IDJuego,
+    j.Nombre AS NombreJuego,
+    j.Precio,
+    j.Stock,
+    dbo.FN_ClasificacionEdad(j.IDClasificacionEdad) AS ClasificacionEdad
+FROM Juegos j
+WHERE j.Estado = 1;
