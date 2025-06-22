@@ -238,6 +238,9 @@
     <EmbeddedResource Include="ModificarUsuario.resx">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\VentasMensuales.resx">
+      <DependentUpon>VentasMensuales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ventas\RealizarVenta.resx">
       <DependentUpon>RealizarVenta.cs</DependentUpon>
     </EmbeddedResource>

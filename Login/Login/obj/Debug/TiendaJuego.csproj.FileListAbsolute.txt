@@ -111,6 +111,7 @@ C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.pdb
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
+<<<<<<< HEAD
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.AvisoStock.resources
@@ -122,3 +123,7 @@ C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.r
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
 C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
+=======
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources
+>>>>>>> b267c734c2c13892ef785e999f4024ff5b3dd7ff
+C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources

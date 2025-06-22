@@ -28,27 +28,28 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.gbFiltros = new System.Windows.Forms.GroupBox();
-            this.nudAnio = new System.Windows.Forms.NumericUpDown();
-            this.lblMes = new System.Windows.Forms.Label();
-            this.cbMes = new System.Windows.Forms.ComboBox();
-            this.lblAnio = new System.Windows.Forms.Label();
             this.btnGenerarReporte = new System.Windows.Forms.Button();
+            this.nudAnio = new System.Windows.Forms.NumericUpDown();
+            this.cbMes = new System.Windows.Forms.ComboBox();
+            this.lblMes = new System.Windows.Forms.Label();
+            this.lblAnio = new System.Windows.Forms.Label();
             this.gbReporte = new System.Windows.Forms.GroupBox();
-            this.dgvReporte = new System.Windows.Forms.DataGridView();
-            this.gbResumen = new System.Windows.Forms.GroupBox();
-            this.lblTotales = new System.Windows.Forms.Label();
             this.lblResultados = new System.Windows.Forms.Label();
-            this.lblIngresos = new System.Windows.Forms.Label();
-            this.lblUnidades = new System.Windows.Forms.Label();
+            this.gbResumen = new System.Windows.Forms.GroupBox();
             this.lblVentas = new System.Windows.Forms.Label();
+            this.lblUnidades = new System.Windows.Forms.Label();
+            this.lblIngresos = new System.Windows.Forms.Label();
+            this.lblTotales = new System.Windows.Forms.Label();
+            this.dgvReporte = new System.Windows.Forms.DataGridView();
             this.btnSalir = new System.Windows.Forms.Button();
             this.gbFiltros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).BeginInit();
             this.gbReporte.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.gbResumen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -74,12 +75,30 @@
             this.gbFiltros.TabIndex = 5;
             this.gbFiltros.TabStop = false;
             // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.Location = new System.Drawing.Point(24, 128);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(105, 23);
+            this.btnGenerarReporte.TabIndex = 15;
+            this.btnGenerarReporte.Text = "Generar Reporte";
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
+            // 
             // nudAnio
             // 
             this.nudAnio.Location = new System.Drawing.Point(24, 49);
             this.nudAnio.Name = "nudAnio";
             this.nudAnio.Size = new System.Drawing.Size(105, 20);
             this.nudAnio.TabIndex = 11;
+            // 
+            // cbMes
+            // 
+            this.cbMes.FormattingEnabled = true;
+            this.cbMes.Location = new System.Drawing.Point(24, 91);
+            this.cbMes.Name = "cbMes";
+            this.cbMes.Size = new System.Drawing.Size(105, 21);
+            this.cbMes.TabIndex = 9;
             // 
             // lblMes
             // 
@@ -90,14 +109,6 @@
             this.lblMes.TabIndex = 10;
             this.lblMes.Text = "Mes:";
             // 
-            // cbMes
-            // 
-            this.cbMes.FormattingEnabled = true;
-            this.cbMes.Location = new System.Drawing.Point(24, 91);
-            this.cbMes.Name = "cbMes";
-            this.cbMes.Size = new System.Drawing.Size(105, 21);
-            this.cbMes.TabIndex = 9;
-            // 
             // lblAnio
             // 
             this.lblAnio.AutoSize = true;
@@ -106,16 +117,6 @@
             this.lblAnio.Size = new System.Drawing.Size(29, 13);
             this.lblAnio.TabIndex = 8;
             this.lblAnio.Text = "Año:";
-            // 
-            // btnGenerarReporte
-            // 
-            this.btnGenerarReporte.Location = new System.Drawing.Point(24, 128);
-            this.btnGenerarReporte.Name = "btnGenerarReporte";
-            this.btnGenerarReporte.Size = new System.Drawing.Size(105, 23);
-            this.btnGenerarReporte.TabIndex = 15;
-            this.btnGenerarReporte.Text = "Generar Reporte";
-            this.btnGenerarReporte.UseVisualStyleBackColor = true;
-            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
             // 
             // gbReporte
             // 
@@ -128,13 +129,15 @@
             this.gbReporte.TabIndex = 6;
             this.gbReporte.TabStop = false;
             // 
-            // dgvReporte
+            // lblResultados
             // 
-            this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvReporte.Location = new System.Drawing.Point(95, 70);
-            this.dgvReporte.Name = "dgvReporte";
-            this.dgvReporte.Size = new System.Drawing.Size(355, 204);
-            this.dgvReporte.TabIndex = 0;
+            this.lblResultados.AutoSize = true;
+            this.lblResultados.Font = new System.Drawing.Font("Britannic Bold", 16F);
+            this.lblResultados.Location = new System.Drawing.Point(108, 26);
+            this.lblResultados.Name = "lblResultados";
+            this.lblResultados.Size = new System.Drawing.Size(333, 25);
+            this.lblResultados.TabIndex = 4;
+            this.lblResultados.Text = "Resultados del Mes Seleccionado";
             // 
             // gbResumen
             // 
@@ -148,35 +151,15 @@
             this.gbResumen.TabIndex = 1;
             this.gbResumen.TabStop = false;
             // 
-            // lblTotales
+            // lblVentas
             // 
-            this.lblTotales.AutoSize = true;
-            this.lblTotales.Font = new System.Drawing.Font("Britannic Bold", 16F);
-            this.lblTotales.Location = new System.Drawing.Point(69, 16);
-            this.lblTotales.Name = "lblTotales";
-            this.lblTotales.Size = new System.Drawing.Size(161, 25);
-            this.lblTotales.TabIndex = 4;
-            this.lblTotales.Text = "Totales del Mes";
-            // 
-            // lblResultados
-            // 
-            this.lblResultados.AutoSize = true;
-            this.lblResultados.Font = new System.Drawing.Font("Britannic Bold", 16F);
-            this.lblResultados.Location = new System.Drawing.Point(108, 26);
-            this.lblResultados.Name = "lblResultados";
-            this.lblResultados.Size = new System.Drawing.Size(333, 25);
-            this.lblResultados.TabIndex = 4;
-            this.lblResultados.Text = "Resultados del Mes Seleccionado";
-            // 
-            // lblIngresos
-            // 
-            this.lblIngresos.AutoSize = true;
-            this.lblIngresos.Font = new System.Drawing.Font("Britannic Bold", 14F);
-            this.lblIngresos.Location = new System.Drawing.Point(20, 58);
-            this.lblIngresos.Name = "lblIngresos";
-            this.lblIngresos.Size = new System.Drawing.Size(87, 21);
-            this.lblIngresos.TabIndex = 4;
-            this.lblIngresos.Text = "Ingresos:";
+            this.lblVentas.AutoSize = true;
+            this.lblVentas.Font = new System.Drawing.Font("Britannic Bold", 14F);
+            this.lblVentas.Location = new System.Drawing.Point(20, 100);
+            this.lblVentas.Name = "lblVentas";
+            this.lblVentas.Size = new System.Drawing.Size(130, 21);
+            this.lblVentas.TabIndex = 4;
+            this.lblVentas.Text = "Nro de Ventas:";
             // 
             // lblUnidades
             // 
@@ -188,15 +171,44 @@
             this.lblUnidades.TabIndex = 4;
             this.lblUnidades.Text = "Unidades:";
             // 
-            // lblVentas
+            // lblIngresos
             // 
-            this.lblVentas.AutoSize = true;
-            this.lblVentas.Font = new System.Drawing.Font("Britannic Bold", 14F);
-            this.lblVentas.Location = new System.Drawing.Point(20, 100);
-            this.lblVentas.Name = "lblVentas";
-            this.lblVentas.Size = new System.Drawing.Size(130, 21);
-            this.lblVentas.TabIndex = 4;
-            this.lblVentas.Text = "Nro de Ventas:";
+            this.lblIngresos.AutoSize = true;
+            this.lblIngresos.Font = new System.Drawing.Font("Britannic Bold", 14F);
+            this.lblIngresos.Location = new System.Drawing.Point(20, 58);
+            this.lblIngresos.Name = "lblIngresos";
+            this.lblIngresos.Size = new System.Drawing.Size(87, 21);
+            this.lblIngresos.TabIndex = 4;
+            this.lblIngresos.Text = "Ingresos:";
+            // 
+            // lblTotales
+            // 
+            this.lblTotales.AutoSize = true;
+            this.lblTotales.Font = new System.Drawing.Font("Britannic Bold", 16F);
+            this.lblTotales.Location = new System.Drawing.Point(69, 16);
+            this.lblTotales.Name = "lblTotales";
+            this.lblTotales.Size = new System.Drawing.Size(161, 25);
+            this.lblTotales.TabIndex = 4;
+            this.lblTotales.Text = "Totales del Mes";
+            // 
+            // dgvReporte
+            // 
+            this.dgvReporte.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvReporte.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvReporte.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvReporte.EnableHeadersVisualStyles = false;
+            this.dgvReporte.Location = new System.Drawing.Point(79, 70);
+            this.dgvReporte.Name = "dgvReporte";
+            this.dgvReporte.RowHeadersVisible = false;
+            this.dgvReporte.Size = new System.Drawing.Size(390, 204);
+            this.dgvReporte.TabIndex = 0;
             // 
             // btnSalir
             // 
@@ -206,6 +218,7 @@
             this.btnSalir.TabIndex = 15;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // VentasMensuales
             // 
@@ -216,16 +229,18 @@
             this.Controls.Add(this.gbReporte);
             this.Controls.Add(this.gbFiltros);
             this.Controls.Add(this.lblTitulo);
+            this.MaximizeBox = false;
             this.Name = "VentasMensuales";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VentasMensuales";
             this.gbFiltros.ResumeLayout(false);
             this.gbFiltros.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudAnio)).EndInit();
             this.gbReporte.ResumeLayout(false);
             this.gbReporte.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).EndInit();
             this.gbResumen.ResumeLayout(false);
             this.gbResumen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvReporte)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
