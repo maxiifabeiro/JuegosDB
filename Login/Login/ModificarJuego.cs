@@ -104,6 +104,7 @@ namespace Login
                     conexion.Open();
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Juego modificado correctamente.");
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -183,8 +184,6 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            ABMLJuegos formulario = new ABMLJuegos();
-            formulario.Show();
             this.Close();
         }
     }

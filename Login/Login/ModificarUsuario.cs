@@ -50,6 +50,21 @@ namespace Login
                         txtContraseniaUsuario.Text = reader["Contraseña"].ToString();
                         dtpFechaRegistro.Value = Convert.ToDateTime(reader["Fecha de Registro"]);
                         txtAvatarURL.Text = reader["AvatarURL"].ToString();
+
+                        try
+                        {
+                            //carga la imagen al pbx
+                            pbxAvatarURL.Load(txtAvatarURL.Text);
+                            //adapta la imagen al pbx
+                            pbxAvatarURL.SizeMode = PictureBoxSizeMode.StretchImage;
+
+                        }
+                        catch (Exception ex)
+                        {
+                            pbxAvatarURL.Image = Properties.Resources.ImagenPerfilPorDefecto;
+                            MessageBox.Show("Error al cargar la imagen. Se cargará una imegen por defecto.");
+                        }
+
                         ckbEsAdministrador.Checked = Convert.ToBoolean(reader["EsAdministrador"]);
                         cbxPermiso.Text = reader["Permiso"].ToString();
 
@@ -77,7 +92,8 @@ namespace Login
                 formulario.IDUsuario = int.Parse(lblMostrarIDUsuario.Text);
                 formulario.ShowDialog();
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show("Error al intentar abrir la ventana Modificar Datos Personales, verifique que haya ingresado bien el ID de usuario", ex.Message);
             }

@@ -96,7 +96,8 @@
             // 
             // btnVolverAtras
             // 
-            this.btnVolverAtras.Location = new System.Drawing.Point(485, 54);
+            this.btnVolverAtras.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnVolverAtras.Location = new System.Drawing.Point(367, 438);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(75, 23);
             this.btnVolverAtras.TabIndex = 6;
@@ -108,7 +109,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.CancelButton = this.btnVolverAtras;
+            this.ClientSize = new System.Drawing.Size(803, 473);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lvwListado);
             this.Controls.Add(this.btnMostrarTodos);
@@ -117,6 +119,7 @@
             this.Controls.Add(this.lblListarPorID);
             this.Controls.Add(this.lblTitulo);
             this.Name = "ListadoJuegos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadoJuegos";
             this.ResumeLayout(false);
             this.PerformLayout();

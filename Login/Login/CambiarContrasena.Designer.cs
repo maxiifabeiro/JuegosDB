@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CambiarContrasena));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.btnCambiarContrasena = new System.Windows.Forms.Button();
             this.txtVerificarContrasena = new System.Windows.Forms.TextBox();
             this.txtNuevaContrasena = new System.Windows.Forms.TextBox();
@@ -41,7 +42,6 @@
             this.lblUsuario_CC = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -64,6 +64,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese los siguientes datos para modificar la contraseña";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(215, 70);
+            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
+            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.Value = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
             // 
             // btnCambiarContrasena
             // 
@@ -90,7 +101,6 @@
             this.txtNuevaContrasena.PasswordChar = '*';
             this.txtNuevaContrasena.Size = new System.Drawing.Size(100, 20);
             this.txtNuevaContrasena.TabIndex = 5;
-            this.txtNuevaContrasena.TextChanged += new System.EventHandler(this.txtNuevaContrasena_TextChanged);
             // 
             // lbl_NuevaContrasenaConfirm_CC
             // 
@@ -126,7 +136,6 @@
             this.txtusuario_CC.Name = "txtusuario_CC";
             this.txtusuario_CC.Size = new System.Drawing.Size(100, 20);
             this.txtusuario_CC.TabIndex = 2;
-            this.txtusuario_CC.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblFechaNac_CC
             // 
@@ -155,7 +164,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // btnVolver
             // 
@@ -167,18 +175,6 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(215, 70);
-            this.dateTimePicker1.MaxDate = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
-            this.dateTimePicker1.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(100, 20);
-            this.dateTimePicker1.TabIndex = 7;
-            this.dateTimePicker1.Value = new System.DateTime(2025, 6, 17, 0, 0, 0, 0);
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // CambiarContrasena
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -187,7 +183,10 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "CambiarContrasena";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cambiar Contraseña";
             this.Load += new System.EventHandler(this.CambiarContrasena_Load);
             this.groupBox1.ResumeLayout(false);

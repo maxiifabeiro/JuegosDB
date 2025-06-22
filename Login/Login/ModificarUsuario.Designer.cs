@@ -51,12 +51,14 @@ namespace Login
             this.btnModificarDatosUsuario = new System.Windows.Forms.Button();
             this.lblAvatarURL = new System.Windows.Forms.Label();
             this.txtAvatarURL = new System.Windows.Forms.TextBox();
+            this.pbxAvatarURL = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarURL)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscarUsuario
             // 
             this.btnBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscarUsuario.Location = new System.Drawing.Point(402, 92);
+            this.btnBuscarUsuario.Location = new System.Drawing.Point(403, 92);
             this.btnBuscarUsuario.Name = "btnBuscarUsuario";
             this.btnBuscarUsuario.Size = new System.Drawing.Size(75, 27);
             this.btnBuscarUsuario.TabIndex = 2;
@@ -66,7 +68,7 @@ namespace Login
             // 
             // txtIDUsuario
             // 
-            this.txtIDUsuario.Location = new System.Drawing.Point(268, 95);
+            this.txtIDUsuario.Location = new System.Drawing.Point(269, 95);
             this.txtIDUsuario.Name = "txtIDUsuario";
             this.txtIDUsuario.Size = new System.Drawing.Size(100, 20);
             this.txtIDUsuario.TabIndex = 1;
@@ -75,7 +77,7 @@ namespace Login
             // 
             this.lblBuscarUsuario.AutoSize = true;
             this.lblBuscarUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscarUsuario.Location = new System.Drawing.Point(12, 95);
+            this.lblBuscarUsuario.Location = new System.Drawing.Point(13, 95);
             this.lblBuscarUsuario.Name = "lblBuscarUsuario";
             this.lblBuscarUsuario.Size = new System.Drawing.Size(250, 20);
             this.lblBuscarUsuario.TabIndex = 0;
@@ -85,7 +87,7 @@ namespace Login
             // 
             this.lblIDUsuario.AutoSize = true;
             this.lblIDUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblIDUsuario.Location = new System.Drawing.Point(12, 135);
+            this.lblIDUsuario.Location = new System.Drawing.Point(12, 143);
             this.lblIDUsuario.Name = "lblIDUsuario";
             this.lblIDUsuario.Size = new System.Drawing.Size(89, 20);
             this.lblIDUsuario.TabIndex = 0;
@@ -95,7 +97,7 @@ namespace Login
             // 
             this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.Location = new System.Drawing.Point(268, 694);
+            this.btnVolver.Location = new System.Drawing.Point(391, 685);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 28);
             this.btnVolver.TabIndex = 11;
@@ -106,7 +108,7 @@ namespace Login
             // btnGuardar
             // 
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(59, 694);
+            this.btnGuardar.Location = new System.Drawing.Point(182, 685);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(75, 28);
             this.btnGuardar.TabIndex = 10;
@@ -118,7 +120,7 @@ namespace Login
             // 
             this.lblPermisoUsuario.AutoSize = true;
             this.lblPermisoUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblPermisoUsuario.Location = new System.Drawing.Point(123, 534);
+            this.lblPermisoUsuario.Location = new System.Drawing.Point(61, 534);
             this.lblPermisoUsuario.Name = "lblPermisoUsuario";
             this.lblPermisoUsuario.Size = new System.Drawing.Size(125, 20);
             this.lblPermisoUsuario.TabIndex = 0;
@@ -128,7 +130,7 @@ namespace Login
             // 
             this.lblFechaRegistro.AutoSize = true;
             this.lblFechaRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaRegistro.Location = new System.Drawing.Point(123, 369);
+            this.lblFechaRegistro.Location = new System.Drawing.Point(61, 369);
             this.lblFechaRegistro.Name = "lblFechaRegistro";
             this.lblFechaRegistro.Size = new System.Drawing.Size(137, 20);
             this.lblFechaRegistro.TabIndex = 0;
@@ -136,7 +138,7 @@ namespace Login
             // 
             // dtpFechaRegistro
             // 
-            this.dtpFechaRegistro.Location = new System.Drawing.Point(127, 392);
+            this.dtpFechaRegistro.Location = new System.Drawing.Point(65, 392);
             this.dtpFechaRegistro.Name = "dtpFechaRegistro";
             this.dtpFechaRegistro.Size = new System.Drawing.Size(200, 20);
             this.dtpFechaRegistro.TabIndex = 6;
@@ -145,7 +147,7 @@ namespace Login
             // 
             this.lblContraseniaUsuario.AutoSize = true;
             this.lblContraseniaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraseniaUsuario.Location = new System.Drawing.Point(123, 309);
+            this.lblContraseniaUsuario.Location = new System.Drawing.Point(61, 309);
             this.lblContraseniaUsuario.Name = "lblContraseniaUsuario";
             this.lblContraseniaUsuario.Size = new System.Drawing.Size(96, 20);
             this.lblContraseniaUsuario.TabIndex = 0;
@@ -155,7 +157,7 @@ namespace Login
             // 
             this.lblCorreoElectronico.AutoSize = true;
             this.lblCorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCorreoElectronico.Location = new System.Drawing.Point(123, 251);
+            this.lblCorreoElectronico.Location = new System.Drawing.Point(61, 251);
             this.lblCorreoElectronico.Name = "lblCorreoElectronico";
             this.lblCorreoElectronico.Size = new System.Drawing.Size(144, 20);
             this.lblCorreoElectronico.TabIndex = 0;
@@ -165,7 +167,7 @@ namespace Login
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(123, 195);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(61, 195);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(147, 20);
             this.lblNombreUsuario.TabIndex = 0;
@@ -173,7 +175,7 @@ namespace Login
             // 
             // txtNombreUsuario
             // 
-            this.txtNombreUsuario.Location = new System.Drawing.Point(127, 218);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(65, 218);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(200, 20);
             this.txtNombreUsuario.TabIndex = 3;
@@ -182,7 +184,7 @@ namespace Login
             // 
             this.lblMostrarIDUsuario.AutoSize = true;
             this.lblMostrarIDUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMostrarIDUsuario.Location = new System.Drawing.Point(107, 135);
+            this.lblMostrarIDUsuario.Location = new System.Drawing.Point(107, 143);
             this.lblMostrarIDUsuario.Name = "lblMostrarIDUsuario";
             this.lblMostrarIDUsuario.Size = new System.Drawing.Size(28, 20);
             this.lblMostrarIDUsuario.TabIndex = 0;
@@ -190,14 +192,14 @@ namespace Login
             // 
             // txtCorreoElectronico
             // 
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(127, 274);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(65, 274);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(200, 20);
             this.txtCorreoElectronico.TabIndex = 4;
             // 
             // txtContraseniaUsuario
             // 
-            this.txtContraseniaUsuario.Location = new System.Drawing.Point(127, 332);
+            this.txtContraseniaUsuario.Location = new System.Drawing.Point(65, 332);
             this.txtContraseniaUsuario.Name = "txtContraseniaUsuario";
             this.txtContraseniaUsuario.Size = new System.Drawing.Size(200, 20);
             this.txtContraseniaUsuario.TabIndex = 5;
@@ -206,7 +208,7 @@ namespace Login
             // 
             this.ckbEsAdministrador.AutoSize = true;
             this.ckbEsAdministrador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbEsAdministrador.Location = new System.Drawing.Point(127, 437);
+            this.ckbEsAdministrador.Location = new System.Drawing.Point(65, 437);
             this.ckbEsAdministrador.Name = "ckbEsAdministrador";
             this.ckbEsAdministrador.Size = new System.Drawing.Size(149, 24);
             this.ckbEsAdministrador.TabIndex = 7;
@@ -216,7 +218,7 @@ namespace Login
             // cbxPermiso
             // 
             this.cbxPermiso.FormattingEnabled = true;
-            this.cbxPermiso.Location = new System.Drawing.Point(127, 557);
+            this.cbxPermiso.Location = new System.Drawing.Point(65, 557);
             this.cbxPermiso.Name = "cbxPermiso";
             this.cbxPermiso.Size = new System.Drawing.Size(200, 21);
             this.cbxPermiso.TabIndex = 8;
@@ -225,7 +227,7 @@ namespace Login
             // 
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Britannic Bold", 24F);
-            this.lblTitulo.Location = new System.Drawing.Point(121, 26);
+            this.lblTitulo.Location = new System.Drawing.Point(143, 26);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(267, 36);
             this.lblTitulo.TabIndex = 0;
@@ -238,7 +240,7 @@ namespace Login
             this.btnModificarDatosUsuario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Moccasin;
             this.btnModificarDatosUsuario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnModificarDatosUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarDatosUsuario.Location = new System.Drawing.Point(127, 607);
+            this.btnModificarDatosUsuario.Location = new System.Drawing.Point(353, 496);
             this.btnModificarDatosUsuario.Name = "btnModificarDatosUsuario";
             this.btnModificarDatosUsuario.Size = new System.Drawing.Size(216, 39);
             this.btnModificarDatosUsuario.TabIndex = 9;
@@ -250,7 +252,7 @@ namespace Login
             // 
             this.lblAvatarURL.AutoSize = true;
             this.lblAvatarURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvatarURL.Location = new System.Drawing.Point(123, 473);
+            this.lblAvatarURL.Location = new System.Drawing.Point(61, 473);
             this.lblAvatarURL.Name = "lblAvatarURL";
             this.lblAvatarURL.Size = new System.Drawing.Size(144, 20);
             this.lblAvatarURL.TabIndex = 12;
@@ -258,10 +260,18 @@ namespace Login
             // 
             // txtAvatarURL
             // 
-            this.txtAvatarURL.Location = new System.Drawing.Point(127, 496);
+            this.txtAvatarURL.Location = new System.Drawing.Point(65, 496);
             this.txtAvatarURL.Name = "txtAvatarURL";
             this.txtAvatarURL.Size = new System.Drawing.Size(200, 20);
             this.txtAvatarURL.TabIndex = 13;
+            // 
+            // pbxAvatarURL
+            // 
+            this.pbxAvatarURL.Location = new System.Drawing.Point(343, 195);
+            this.pbxAvatarURL.Name = "pbxAvatarURL";
+            this.pbxAvatarURL.Size = new System.Drawing.Size(259, 258);
+            this.pbxAvatarURL.TabIndex = 14;
+            this.pbxAvatarURL.TabStop = false;
             // 
             // ModificarUsuario
             // 
@@ -269,7 +279,8 @@ namespace Login
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnVolver;
-            this.ClientSize = new System.Drawing.Size(511, 742);
+            this.ClientSize = new System.Drawing.Size(630, 742);
+            this.Controls.Add(this.pbxAvatarURL);
             this.Controls.Add(this.txtAvatarURL);
             this.Controls.Add(this.lblAvatarURL);
             this.Controls.Add(this.btnModificarDatosUsuario);
@@ -297,6 +308,7 @@ namespace Login
             this.Name = "ModificarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Usuario";
+            ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarURL)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -326,5 +338,6 @@ namespace Login
         private System.Windows.Forms.Button btnModificarDatosUsuario;
         private System.Windows.Forms.Label lblAvatarURL;
         private System.Windows.Forms.TextBox txtAvatarURL;
+        private System.Windows.Forms.PictureBox pbxAvatarURL;
     }
 }

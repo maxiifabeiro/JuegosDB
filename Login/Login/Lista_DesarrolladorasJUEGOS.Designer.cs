@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Lista_DesarrolladorasJUEGOS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista_DesarrolladorasJUEGOS";
             this.Load += new System.EventHandler(this.Lista_DesarrolladorasJUEGOS_Load);
             this.ResumeLayout(false);

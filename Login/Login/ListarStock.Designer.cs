@@ -65,11 +65,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnVolverAtras;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVolverAtras);
             this.Controls.Add(this.lvListaStock);
             this.Controls.Add(this.lblListarStock);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "ListarStock";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListarStock";
             this.Load += new System.EventHandler(this.ListarStock_Load);
             this.ResumeLayout(false);

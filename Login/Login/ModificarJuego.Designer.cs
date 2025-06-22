@@ -251,6 +251,7 @@
             // 
             // btnVolverAtras
             // 
+            this.btnVolverAtras.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolverAtras.Location = new System.Drawing.Point(342, 372);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(75, 23);
@@ -304,6 +305,7 @@
             // 
             // ModificarJuego
             // 
+            this.CancelButton = this.btnVolverAtras;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.textBox1);
@@ -334,7 +336,9 @@
             this.Controls.Add(this.cmbDesarrolladora);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
+            this.MaximizeBox = false;
             this.Name = "ModificarJuego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de Juego";
             this.ResumeLayout(false);
             this.PerformLayout();

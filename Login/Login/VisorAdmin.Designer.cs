@@ -32,16 +32,17 @@
             this.btn_DevJuegos = new System.Windows.Forms.Button();
             this.btn_DevConsolas = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnStock = new System.Windows.Forms.Button();
+            this.btnVentasMensuales = new System.Windows.Forms.Button();
+            this.btnABMLUsuarios = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnABMLJuegos = new System.Windows.Forms.Button();
-            this.btnABMLUsuarios = new System.Windows.Forms.Button();
-            this.btnVentasMensuales = new System.Windows.Forms.Button();
-            this.btnStock = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnVolver
             // 
+            this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolver.Location = new System.Drawing.Point(643, 373);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(124, 34);
@@ -85,6 +86,35 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // btnStock
+            // 
+            this.btnStock.Location = new System.Drawing.Point(92, 199);
+            this.btnStock.Name = "btnStock";
+            this.btnStock.Size = new System.Drawing.Size(139, 23);
+            this.btnStock.TabIndex = 11;
+            this.btnStock.Text = "Listar Stock";
+            this.btnStock.UseVisualStyleBackColor = true;
+            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
+            // 
+            // btnVentasMensuales
+            // 
+            this.btnVentasMensuales.Location = new System.Drawing.Point(92, 170);
+            this.btnVentasMensuales.Name = "btnVentasMensuales";
+            this.btnVentasMensuales.Size = new System.Drawing.Size(139, 23);
+            this.btnVentasMensuales.TabIndex = 10;
+            this.btnVentasMensuales.Text = "Ventas Mensuales";
+            this.btnVentasMensuales.UseVisualStyleBackColor = true;
+            // 
+            // btnABMLUsuarios
+            // 
+            this.btnABMLUsuarios.Location = new System.Drawing.Point(92, 83);
+            this.btnABMLUsuarios.Name = "btnABMLUsuarios";
+            this.btnABMLUsuarios.Size = new System.Drawing.Size(139, 23);
+            this.btnABMLUsuarios.TabIndex = 9;
+            this.btnABMLUsuarios.Text = "ABML de Usuarios";
+            this.btnABMLUsuarios.UseVisualStyleBackColor = true;
+            this.btnABMLUsuarios.Click += new System.EventHandler(this.btnABMLUsuarios_Click);
+            // 
             // lblBienvenido
             // 
             this.lblBienvenido.AutoSize = true;
@@ -103,43 +133,17 @@
             this.btnABMLJuegos.UseVisualStyleBackColor = true;
             this.btnABMLJuegos.Click += new System.EventHandler(this.btnABMLJuegos_Click);
             // 
-            // btnABMLUsuarios
-            // 
-            this.btnABMLUsuarios.Location = new System.Drawing.Point(92, 83);
-            this.btnABMLUsuarios.Name = "btnABMLUsuarios";
-            this.btnABMLUsuarios.Size = new System.Drawing.Size(139, 23);
-            this.btnABMLUsuarios.TabIndex = 9;
-            this.btnABMLUsuarios.Text = "ABML de Usuarios";
-            this.btnABMLUsuarios.UseVisualStyleBackColor = true;
-            this.btnABMLUsuarios.Click += new System.EventHandler(this.btnABMLUsuarios_Click);
-            // 
-            // btnVentasMensuales
-            // 
-            this.btnVentasMensuales.Location = new System.Drawing.Point(92, 170);
-            this.btnVentasMensuales.Name = "btnVentasMensuales";
-            this.btnVentasMensuales.Size = new System.Drawing.Size(139, 23);
-            this.btnVentasMensuales.TabIndex = 10;
-            this.btnVentasMensuales.Text = "Ventas Mensuales";
-            this.btnVentasMensuales.UseVisualStyleBackColor = true;
-            // 
-            // btnStock
-            // 
-            this.btnStock.Location = new System.Drawing.Point(92, 199);
-            this.btnStock.Name = "btnStock";
-            this.btnStock.Size = new System.Drawing.Size(139, 23);
-            this.btnStock.TabIndex = 11;
-            this.btnStock.Text = "Listar Stock";
-            this.btnStock.UseVisualStyleBackColor = true;
-            this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
-            // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnVolver;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
+            this.MinimizeBox = false;
             this.Name = "VisorAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisorAdmin";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

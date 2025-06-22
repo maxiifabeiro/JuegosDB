@@ -106,6 +106,8 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblABML);
             this.Controls.Add(this.btnAlta);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ABMLJuegos";
             this.Text = "ABMLJuegos";
             this.ResumeLayout(false);

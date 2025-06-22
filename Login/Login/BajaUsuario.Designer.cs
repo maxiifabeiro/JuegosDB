@@ -37,6 +37,8 @@ namespace Login
             this.btnEliminar = new System.Windows.Forms.Button();
             this.lblBajaUsuario = new System.Windows.Forms.Label();
             this.txtIDUsuario = new System.Windows.Forms.TextBox();
+            this.gbxUsuarioEliminar = new System.Windows.Forms.GroupBox();
+            this.gbxUsuarioEliminar.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
@@ -53,18 +55,17 @@ namespace Login
             // 
             this.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUsuario.Location = new System.Drawing.Point(258, 229);
+            this.txtNombreUsuario.Location = new System.Drawing.Point(235, 40);
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.ReadOnly = true;
-            this.txtNombreUsuario.Size = new System.Drawing.Size(224, 22);
+            this.txtNombreUsuario.Size = new System.Drawing.Size(191, 22);
             this.txtNombreUsuario.TabIndex = 3;
-            this.txtNombreUsuario.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // lblNombreUsuario
             // 
             this.lblNombreUsuario.AutoSize = true;
             this.lblNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombreUsuario.Location = new System.Drawing.Point(12, 235);
+            this.lblNombreUsuario.Location = new System.Drawing.Point(5, 43);
             this.lblNombreUsuario.Name = "lblNombreUsuario";
             this.lblNombreUsuario.Size = new System.Drawing.Size(224, 20);
             this.lblNombreUsuario.TabIndex = 0;
@@ -95,7 +96,7 @@ namespace Login
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.Location = new System.Drawing.Point(258, 288);
+            this.btnEliminar.Location = new System.Drawing.Point(235, 93);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 28);
             this.btnEliminar.TabIndex = 4;
@@ -121,16 +122,27 @@ namespace Login
             this.txtIDUsuario.Size = new System.Drawing.Size(224, 29);
             this.txtIDUsuario.TabIndex = 1;
             // 
+            // gbxUsuarioEliminar
+            // 
+            this.gbxUsuarioEliminar.Controls.Add(this.lblNombreUsuario);
+            this.gbxUsuarioEliminar.Controls.Add(this.txtNombreUsuario);
+            this.gbxUsuarioEliminar.Controls.Add(this.btnEliminar);
+            this.gbxUsuarioEliminar.ForeColor = System.Drawing.SystemColors.WindowFrame;
+            this.gbxUsuarioEliminar.Location = new System.Drawing.Point(26, 211);
+            this.gbxUsuarioEliminar.Name = "gbxUsuarioEliminar";
+            this.gbxUsuarioEliminar.Size = new System.Drawing.Size(456, 173);
+            this.gbxUsuarioEliminar.TabIndex = 6;
+            this.gbxUsuarioEliminar.TabStop = false;
+            this.gbxUsuarioEliminar.Text = "groupBox1";
+            // 
             // BajaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(512, 450);
-            this.Controls.Add(this.txtNombreUsuario);
-            this.Controls.Add(this.lblNombreUsuario);
+            this.Controls.Add(this.gbxUsuarioEliminar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.lblBajaUsuario);
             this.Controls.Add(this.txtIDUsuario);
             this.Controls.Add(this.lblTitulo);
@@ -139,6 +151,8 @@ namespace Login
             this.Name = "BajaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BajaUsuario";
+            this.gbxUsuarioEliminar.ResumeLayout(false);
+            this.gbxUsuarioEliminar.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,5 +168,6 @@ namespace Login
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label lblBajaUsuario;
         private System.Windows.Forms.TextBox txtIDUsuario;
+        private System.Windows.Forms.GroupBox gbxUsuarioEliminar;
     }
 }

@@ -26,26 +26,9 @@ namespace Login
             btnCambiarContrasena.Enabled = false;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Inicio formulario = new Inicio();
-            formulario.Show();
-            this.Hide();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
+            this.Close();
         }
 
          private void btnVerificarUsuario_Click(object sender, EventArgs e)
@@ -119,6 +102,7 @@ namespace Login
                     if (filas > 0)
                     {
                         MessageBox.Show("Contraseña actualizada correctamente");
+                        this.Close();
                     }
                     else
                     {
@@ -127,15 +111,6 @@ namespace Login
                 }
             }
 
-        private void txtNuevaContrasena_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
     }
     }
     

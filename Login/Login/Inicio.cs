@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
+using System.Windows.Forms;
 
 namespace Login
 {
@@ -59,12 +52,32 @@ namespace Login
                         Sesion.EsAdministrador = esAdmin;
                         if (esAdmin)
                         {
+                            //Comprobacion para que no se permita abrir varias ventanas 
+                            foreach (var item in Application.OpenForms)
+                            {
+                                if (item.GetType() == typeof(VisorAdmin))
+                                {
+                                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
+                                    return;
+                                }
+                            }
+
                             VisorAdmin formulario = new VisorAdmin();
                             formulario.Show();
                             this.Hide();
                         }
                         else
                         {
+                            //Comprobacion para que no se permita abrir varias ventanas 
+                            foreach (var item in Application.OpenForms)
+                            {
+                                if (item.GetType() == typeof(VisorUsuario))
+                                {
+                                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
+                                    return;
+                                }
+                            }
+
                             VisorUsuario formulario = new VisorUsuario();
                             formulario.Show();
                             this.Hide();
@@ -80,7 +93,7 @@ namespace Login
         }
 
 
-        public static  class Sesion
+        public static class Sesion
         {
             public static string NombreUsuario { get; set; }
             public static bool EsAdministrador { get; set; }
@@ -90,8 +103,8 @@ namespace Login
         private void btnlimpiar_Click(object sender, EventArgs e)
         {
             txtusuario.Text = "";
-           txtcontrasena.Text = "";
-                
+            txtcontrasena.Text = "";
+
         }
 
         private void btnsalir_Click(object sender, EventArgs e)
@@ -99,20 +112,10 @@ namespace Login
             this.Close();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void LogoTiendaJuego_Click(object sender, EventArgs e)
         {
             LogoTiendaJuego.SizeMode = PictureBoxSizeMode.StretchImage;
-           
+
         }
 
         private void OlvidoContrasena_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -125,7 +128,7 @@ namespace Login
         private void CrearUsuario_Click(object sender, EventArgs e)
         {
             CrearUsuario formulario = new CrearUsuario();
-            formulario.Show();
+            formulario.ShowDialog();
         }
     }
 }

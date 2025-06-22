@@ -88,6 +88,7 @@ namespace Login
                     {
                         MessageBox.Show("Juego eliminado (estado cambiado a 0).");
                         LimpiarCampos();
+                        this.Close();
                     }
                     else
                     {
@@ -109,8 +110,6 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            ABMLJuegos formulario = new ABMLJuegos();
-            formulario.Show();
             this.Close();
         }
     }

@@ -72,7 +72,6 @@
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Nuevo Usuario";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // dateTimePicker2
             // 
@@ -124,7 +123,6 @@
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(162, 20);
             this.txtCorreoElectronico.TabIndex = 1;
-            this.txtCorreoElectronico.TextChanged += new System.EventHandler(this.txtCorreoElectronico_TextChanged);
             // 
             // txtNombreUsuario
             // 
@@ -132,7 +130,6 @@
             this.txtNombreUsuario.Name = "txtNombreUsuario";
             this.txtNombreUsuario.Size = new System.Drawing.Size(162, 20);
             this.txtNombreUsuario.TabIndex = 0;
-            this.txtNombreUsuario.TextChanged += new System.EventHandler(this.txtNombreUsuario_TextChanged);
             // 
             // AvatarURL
             // 
@@ -164,7 +161,6 @@
             this.label4.Size = new System.Drawing.Size(139, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Fecha de Nacimiento:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // Contrasena
             // 
@@ -175,7 +171,6 @@
             this.Contrasena.Size = new System.Drawing.Size(80, 16);
             this.Contrasena.TabIndex = 9;
             this.Contrasena.Text = "Contraseña:";
-            this.Contrasena.Click += new System.EventHandler(this.Contrasena_Click);
             // 
             // CorreoElectronico
             // 
@@ -196,7 +191,6 @@
             this.NombreUsuario.Size = new System.Drawing.Size(129, 16);
             this.NombreUsuario.TabIndex = 7;
             this.NombreUsuario.Text = "Nombre de Usuario:";
-            this.NombreUsuario.Click += new System.EventHandler(this.NombreUsuario_Click);
             // 
             // pictureBox1
             // 
@@ -215,7 +209,6 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // btnVolver
             // 
@@ -242,7 +235,6 @@
             this.Name = "CrearUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Crear usuario nuevo";
-            this.Load += new System.EventHandler(this.Form3_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

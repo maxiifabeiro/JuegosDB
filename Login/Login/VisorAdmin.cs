@@ -23,43 +23,38 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Inicio formulario = new Inicio();
-            formulario.Show();
             this.Close();
         }
 
         private void btn_DevJuegos_Click(object sender, EventArgs e)
         {
             Lista_DesarrolladorasJUEGOS ventana = new Lista_DesarrolladorasJUEGOS();
-            ventana.Show();
+            ventana.ShowDialog();
 
         }
 
         private void btn_DevConsolas_Click(object sender, EventArgs e)
         {
             ListaDesarrolladorasCONSOLAS ventana = new ListaDesarrolladorasCONSOLAS();
-            ventana.Show();
+            ventana.ShowDialog();
         }
 
         private void btnABMLJuegos_Click(object sender, EventArgs e)
         {
             ABMLJuegos ventana = new ABMLJuegos();
-            ventana.Show();
-            this.Close();
+            ventana.ShowDialog();
         }
 
         private void btnABMLUsuarios_Click(object sender, EventArgs e)
         {
             ABMLUsuario ventana = new ABMLUsuario();
-            ventana.Show();
-            this.Close();
+            ventana.ShowDialog();
         }
 
         private void btnStock_Click(object sender, EventArgs e)
         {
             ListarStock ventana = new ListarStock();
-            ventana.Show();
-            this.Close();
+            ventana.ShowDialog();
         }
     }
 

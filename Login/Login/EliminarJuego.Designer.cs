@@ -75,6 +75,7 @@
             // 
             // btnVolverAtras
             // 
+            this.btnVolverAtras.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolverAtras.Location = new System.Drawing.Point(373, 326);
             this.btnVolverAtras.Name = "btnVolverAtras";
             this.btnVolverAtras.Size = new System.Drawing.Size(75, 23);
@@ -114,6 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.CancelButton = this.btnVolverAtras;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
@@ -123,7 +125,10 @@
             this.Controls.Add(this.lblIngreseID);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EliminarJuego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EliminarJuego";
             this.ResumeLayout(false);
             this.PerformLayout();

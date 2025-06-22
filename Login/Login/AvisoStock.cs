@@ -49,9 +49,15 @@ namespace Login
                 com.Parameters.AddWithValue("@Cantidad", nupCantidad.Value);
                 com.Parameters.AddWithValue("@TipoDeFiltro", TipoDeFiltro);
                 com.CommandType = CommandType.StoredProcedure;
-                conexion.Open();
-                SqlDataReader reader = com.ExecuteReader();
-                CargarDatosEnLista(reader);
+                try
+                {
+                    conexion.Open();
+                    SqlDataReader reader = com.ExecuteReader();
+                    CargarDatosEnLista(reader);
+                }catch(Exception ex)
+                {
+                    MessageBox.Show("Error al ejecutar la busqueda: " + ex.Message);
+                }
             }
         }
 

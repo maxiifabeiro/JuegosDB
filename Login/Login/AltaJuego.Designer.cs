@@ -281,7 +281,10 @@
             this.Controls.Add(this.cmbDesarrolladora);
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AltaJuego";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Alta de Juego";
             this.ResumeLayout(false);
             this.PerformLayout();

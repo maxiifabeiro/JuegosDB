@@ -64,8 +64,6 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            ABMLJuegos ventana = new ABMLJuegos();
-            ventana.Show();
             this.Close();
         }
     }

@@ -19,37 +19,37 @@ namespace Login
             lblBienvenido.Text = "Bienvenido " + Sesion.NombreUsuario + "!";
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnListadoJuegos_Click(object sender, EventArgs e)
         {
+            //Comprobacion para que no se permita abrir varias ventanas 
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListadoJuegos))
+                {
+                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
+                    return;
+                }
+            }
+
             ListadoJuegos formulario = new ListadoJuegos();
             formulario.Show();
-            this.Close();
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Inicio formulario = new Inicio();
-            formulario.Show();
             this.Close();
         }
 
         private void btnAvisoStock_Click(object sender, EventArgs e)
         {
             AvisoStock formulario = new AvisoStock();
-            formulario.Show();
-            this.Close();
+            formulario.ShowDialog();
         }
 
         private void bntInfoVenta_Click(object sender, EventArgs e)
         {
             Ventas formulario = new Ventas();
-            formulario.Show();
-            this.Close();
+            formulario.ShowDialog();
         }
     }
 }

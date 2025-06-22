@@ -20,36 +20,39 @@ namespace Login
         private void btnAlta_Click(object sender, EventArgs e)
         {
             AltaJuego formulario = new AltaJuego();
-            formulario.Show();
-            this.Close();
+            formulario.ShowDialog();
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             EliminarJuego formulario = new EliminarJuego();
-            formulario.Show();
-            this.Close();
+            formulario.ShowDialog();
         }
 
 
         private void btnModificar_Click_1(object sender, EventArgs e)
         {
             ModificarJuego formulario = new ModificarJuego();
-            formulario.Show();
-            this.Close();
+            formulario.ShowDialog();
         }
 
         private void btnListar_Click(object sender, EventArgs e)
         {
+            //Comprobacion para que no se permita abrir varias ventanas 
+            foreach (var item in Application.OpenForms)
+            {
+                if (item.GetType() == typeof(ListadoJuegos))
+                {
+                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
+                    return;
+                }
+            }
             ListadoJuegos formulario = new ListadoJuegos();
             formulario.Show();
-            this.Close();
         }
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            VisorAdmin formulario = new VisorAdmin();
-            formulario.Show();
             this.Close();
         }
     }
