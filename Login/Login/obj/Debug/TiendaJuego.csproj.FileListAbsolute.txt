@@ -111,3 +111,4 @@ C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.pdb
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
 C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
+C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources

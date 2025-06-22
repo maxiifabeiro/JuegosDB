@@ -18,6 +18,36 @@ namespace Login.Reportes
         public VentasMensuales()
         {
             InitializeComponent();
+            negocio = new ReporteNegocio();
+            CargarFiltros();
+        }
+
+        private void CargarFiltros()
+        {
+            nudAnio.Minimum = 2020;
+            nudAnio.Maximum = DateTime.Now.Year + 1;
+            nudAnio.Value = DateTime.Now.Year;
+
+            var meses = new[]
+            {
+                new { Name = "Enero", Value = 1 },
+                new { Name = "Febrero", Value = 2 },
+                new { Name = "Marzo", Value = 3 },
+                new { Name = "Abril", Value = 4 },
+                new { Name = "Mayo", Value = 5 },
+                new { Name = "Junio", Value = 6 },
+                new { Name = "Julio", Value = 7 },
+                new { Name = "Agosto", Value = 8 },
+                new { Name = "Septiembre", Value = 9 },
+                new { Name = "Octubre", Value = 10 },
+                new { Name = "Noviembre", Value = 11 },
+                new { Name = "Diciembre", Value = 12 }
+            };
+
+            cbMes.DataSource = meses;
+            cbMes.DisplayMember = "Name";
+            cbMes.ValueMember = "Value";
+            cbMes.SelectedValue = DateTime.Now.Month;
         }
 
         private void btnGenerarReporte_Click(object sender, EventArgs e)
@@ -52,6 +82,11 @@ namespace Login.Reportes
             {
                 MessageBox.Show("Ocurrió un error al generar el reporte: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
