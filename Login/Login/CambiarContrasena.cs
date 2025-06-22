@@ -111,6 +111,10 @@ namespace Login
                 }
             }
 
+        private void txtusuario_CC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
     }
     

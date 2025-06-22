@@ -136,6 +136,7 @@
             this.txtusuario_CC.Name = "txtusuario_CC";
             this.txtusuario_CC.Size = new System.Drawing.Size(100, 20);
             this.txtusuario_CC.TabIndex = 2;
+            this.txtusuario_CC.TextChanged += new System.EventHandler(this.txtusuario_CC_TextChanged);
             // 
             // lblFechaNac_CC
             // 

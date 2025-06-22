@@ -51,5 +51,16 @@ namespace Login
             Ventas formulario = new Ventas();
             formulario.ShowDialog();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_ClasificacionJuegosXEdad_Click(object sender, EventArgs e)
+        {
+            ClasificaciónJuegosXEdad formulario = new ClasificaciónJuegosXEdad();
+            formulario.ShowDialog();
+        }
     }
 }
