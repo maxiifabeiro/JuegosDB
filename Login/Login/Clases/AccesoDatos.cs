@@ -12,7 +12,7 @@ namespace Login.Clases
         private SqlConnection conexion;
         private SqlCommand comando;
         private SqlDataReader lector;
-        private string ruta = "Data Source=localhost\\SQLEXPRESS; Initial Catalog=TiendaJuegos; Integrated Security=True"; // Maxi
+        private string ruta = Conexion.ruta;
 
         public SqlDataReader Lector
         {
