@@ -82,6 +82,7 @@
     <Compile Include="Clases\FormaPago.cs" />
     <Compile Include="Clases\Juego.cs" />
     <Compile Include="Clases\JuegoNegocio.cs" />
+    <Compile Include="Clases\ReporteNegocio.cs" />
     <Compile Include="EliminarJuego.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +142,12 @@
     </Compile>
     <Compile Include="ModificarUsuario.Designer.cs">
       <DependentUpon>ModificarUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\VentasMensuales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\VentasMensuales.Designer.cs">
+      <DependentUpon>VentasMensuales.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventas\RealizarVenta.cs">
       <SubType>Form</SubType>

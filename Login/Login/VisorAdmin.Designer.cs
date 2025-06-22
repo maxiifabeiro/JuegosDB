@@ -104,6 +104,7 @@
             this.btnVentasMensuales.TabIndex = 10;
             this.btnVentasMensuales.Text = "Ventas Mensuales";
             this.btnVentasMensuales.UseVisualStyleBackColor = true;
+            this.btnVentasMensuales.Click += new System.EventHandler(this.btnVentasMensuales_Click);
             // 
             // btnABMLUsuarios
             // 

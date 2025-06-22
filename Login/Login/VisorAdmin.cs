@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static Login.Inicio;
+using Login.Clases;
+using Login.Reportes;
 
 namespace Login
 {
@@ -55,6 +57,12 @@ namespace Login
         {
             ListarStock ventana = new ListarStock();
             ventana.ShowDialog();
+        }
+
+        private void btnVentasMensuales_Click(object sender, EventArgs e)
+        {
+            VentasMensuales reporte = new VentasMensuales();
+            reporte.ShowDialog();
         }
     }
 
