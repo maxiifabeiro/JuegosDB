@@ -297,7 +297,6 @@ namespace Login
             this.Name = "ModificarUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Modificar Usuario";
-            this.Load += new System.EventHandler(this.ModificarUsuario_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

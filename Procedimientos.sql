@@ -1,5 +1,9 @@
 --PROCEDIMIENTOS
 
+USE JuegosDB;
+
+GO
+
 --Procedimiento para dar de alta un juego
 CREATE OR ALTER PROCEDURE SP_altaJuego
     @Nombre VARCHAR(100),
@@ -169,18 +173,18 @@ BEGIN
         THROW;
     END CATCH
 END;
-GO
+-- GO
 
-EXEC SP_AltaUsuario
-    @NombreUsuario = 'maxi123',
-    @Correo = 'maxi@gmail.com',
-    @Contrasena = '12345',
-    @IdPermiso = 2,
-    @Nombre = 'Maximiliano',
-    @Apellido = 'Fabeiro',
-    @FechaNacimiento = '1999-06-03',
-    @IDPais = 1,
-    @Genero = 'Masculino';
+-- EXEC SP_AltaUsuario
+--     @NombreUsuario = 'maxi123',
+--     @Correo = 'maxi@gmail.com',
+--     @Contrasena = '12345',
+--     @IdPermiso = 2,
+--     @Nombre = 'Maximiliano',
+--     @Apellido = 'Fabeiro',
+--     @FechaNacimiento = '1999-06-03',
+--     @IDPais = 1,
+--     @Genero = 'Masculino';
 GO
 
 --Procedimiento para modificar usuario
@@ -208,6 +212,39 @@ BEGIN
             AvatarURL= @AvatarURL,
             EsAdministrador = @EsAdministrador,
             IDPermiso = @IdPermiso
+        WHERE IDUsuario = @IDUsuario;
+
+        COMMIT;
+    END TRY
+    BEGIN CATCH
+        ROLLBACK;
+        THROW;
+    END CATCH
+END;
+
+GO
+
+--Procedimiento para modificar DatosUsuarios
+CREATE OR ALTER PROCEDURE SP_ModificarDatosUsuarios
+    @IDUsuario INT,
+    @Nombre VARCHAR(50),
+    @Apellido VARCHAR(50),
+    @FechaNacimiento DATETIME,
+    @IDPais INT,
+    @Genero VARCHAR(20)
+AS
+BEGIN
+    BEGIN TRY
+        BEGIN TRANSACTION;
+
+        -- Modifica datos en tabla Usuarios
+        UPDATE DatosUsuarios
+        SET 
+            Nombre = @Nombre,
+            Apellido = @Apellido,
+            FechaNacimiento = @FechaNacimiento,
+            IDPais = @IDPais,
+            Genero= @Genero
         WHERE IDUsuario = @IDUsuario;
 
         COMMIT;

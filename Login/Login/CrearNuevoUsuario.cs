@@ -179,9 +179,7 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            Inicio formulario = new Inicio();
-            formulario.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void txtCorreoElectronico_TextChanged(object sender, EventArgs e)

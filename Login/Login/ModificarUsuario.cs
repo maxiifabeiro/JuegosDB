@@ -13,17 +13,12 @@ namespace Login
 {
     public partial class ModificarUsuario : Form
     {
-        string conexionbd = "Cargar ruta del DB";
+        string conexionbd = "Ruta DB";
 
         public ModificarUsuario()
         {
             InitializeComponent();
             CargarPermisos();
-        }
-
-        private void ModificarUsuario_Load(object sender, EventArgs e)
-        {
-
         }
 
         //Busca ID del usuario y lo carga en el formulario
@@ -76,7 +71,16 @@ namespace Login
 
         private void btnModificarDatosUsuario_Click(object sender, EventArgs e)
         {
+            ModificarDatosPersonales formulario = new ModificarDatosPersonales();
+            try
+            {
+                formulario.IDUsuario = int.Parse(lblMostrarIDUsuario.Text);
+                formulario.ShowDialog();
 
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Error al intentar abrir la ventana Modificar Datos Personales, verifique que haya ingresado bien el ID de usuario", ex.Message);
+            }
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -106,6 +110,8 @@ namespace Login
                     conexion.Open();
                     comando.ExecuteNonQuery();
                     MessageBox.Show("Usuario modificado correctamente.");
+
+                    this.Close();
                 }
             }
             catch (Exception ex)
@@ -134,8 +140,6 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            ABMLUsuario formulario = new ABMLUsuario();
-            formulario.Show();
             this.Close();
         }
 

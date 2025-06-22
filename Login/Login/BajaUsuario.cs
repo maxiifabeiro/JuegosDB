@@ -114,8 +114,6 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            ABMLUsuario formulario = new ABMLUsuario();
-            formulario.Show();
             this.Close();
 
         }

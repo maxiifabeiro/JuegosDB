@@ -82,8 +82,6 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            VisorUsuario formulario = new VisorUsuario();
-            formulario.Show();
             this.Close();
         }
 
