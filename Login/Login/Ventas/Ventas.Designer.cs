@@ -106,7 +106,6 @@ namespace Login
             this.lblBuscar.Size = new System.Drawing.Size(101, 13);
             this.lblBuscar.TabIndex = 2;
             this.lblBuscar.Text = "Buscar por Nombre:";
-            this.lblBuscar.Click += new System.EventHandler(this.lblBuscar_Click);
             // 
             // lblTitulo
             // 
@@ -153,7 +152,6 @@ namespace Login
             this.Name = "Ventas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ventas";
-            this.Load += new System.EventHandler(this.Ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvJuegos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

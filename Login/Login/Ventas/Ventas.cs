@@ -122,13 +122,13 @@ namespace Login
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-           /* if (dgvJuegos.CurrentRow != null)
+           if (dgvJuegos.CurrentRow != null)
             {
                 Juego seleccionado = (Juego)dgvJuegos.CurrentRow.DataBoundItem;
                 RealizarVenta venta = new RealizarVenta(seleccionado, this.usuario);
                 venta.ShowDialog();
                 BuscarJuegos();
-            }*/
+            }
         }
 
         private void ocultarColumnas()
@@ -159,14 +159,5 @@ namespace Login
             this.Close();
         }
 
-        private void lblBuscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Ventas_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
