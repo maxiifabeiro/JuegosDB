@@ -76,6 +76,12 @@
     <Compile Include="BajaUsuario.Designer.cs">
       <DependentUpon>BajaUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\AccesoDatos.cs" />
+    <Compile Include="Clases\Categoria.cs" />
+    <Compile Include="Clases\Clasificacion.cs" />
+    <Compile Include="Clases\FormaPago.cs" />
+    <Compile Include="Clases\Juego.cs" />
+    <Compile Include="Clases\JuegoNegocio.cs" />
     <Compile Include="EliminarJuego.cs">
       <SubType>Form</SubType>
     </Compile>
