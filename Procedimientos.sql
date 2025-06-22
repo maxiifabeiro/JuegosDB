@@ -471,6 +471,51 @@ BEGIN
     WHERE NombreUsuario = @NombreUsuario AND Contrasena = @Contrasena
 END
 
+CREATE OR ALTER PROCEDURE sp_BuscarJuegoParaVenta
+    @TerminoBusqueda NVARCHAR(100) = '',
+    @IDCategoria INT = 0,
+    @IDClasificacionEdad INT = 0
+AS
+BEGIN
+    SET NOCOUNT ON;
+
+    SELECT 
+        v.IDJuego,
+        v.Nombre AS [Nombre del Juego], 
+        c.Nombre AS [Categoría],
+        ce.Nombre AS [Clasificación],
+        v.Precio,
+        v.Stock
+    FROM  v_JuegosDisponiblesParaVenta v
+    INNER JOIN Juegos j ON v.IDJuego = j.IDJuego 
+    INNER JOIN Categorias c ON j.IDCategoria = c.IDCategoria
+    INNER JOIN ClasificacionEdades ce ON j.IDClasificacionEdad = ce.IDClasificacionEdad
+    WHERE
+        (v.Nombre LIKE '%' + @TerminoBusqueda + '%') AND
+        (@IDCategoria = 0 OR j.IDCategoria = @IDCategoria) AND
+        (@IDClasificacionEdad = 0 OR j.IDClasificacionEdad = @IDClasificacionEdad)
+    ORDER BY 
+        v.Nombre;
+END
+GO
+
+CREATE OR ALTER PROCEDURE sp_RegistrarVenta
+    @IDJuego INT,
+    @NombreUsuarioVendedor NVARCHAR(50),
+    @IDFormaPago INT,
+    @Cantidad INT,
+    @PrecioTotal DECIMAL(10, 2)
+AS
+BEGIN
+    SET NOCOUNT ON;
+    DECLARE @IDVendedor INT;
+    SELECT @IDVendedor = IDUsuario 
+    FROM Usuarios 
+    WHERE NombreUsuario = @NombreUsuarioVendedor;
+    INSERT INTO InfoVentas (IDJuego,IDUsuarioVendedor, IDFormaPago, Cantidad, PrecioTotal, FechaVenta)
+    VALUES (@IDJuego, @IDVendedor, @IDFormaPago, @Cantidad, @PrecioTotal, GETDATE());
+END
+GO
 
 
 

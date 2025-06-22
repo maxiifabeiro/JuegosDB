@@ -160,6 +160,9 @@ CREATE TABLE InfoVentas (
 --     CONSTRAINT FK_FormasDePagoPorVenta_Forma FOREIGN KEY (IdFormaDePago) REFERENCES FormasDePago(IdFormaDePago)
 -- );
 
-
+--Chequear por las dudas
+ALTER TABLE InfoVentas
+ADD IDUsuarioVendedor INT NULL;
+GO
 
 
