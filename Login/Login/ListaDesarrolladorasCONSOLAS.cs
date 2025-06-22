@@ -28,7 +28,7 @@ namespace Login
 
         private void ListaDesarrolladorasCONSOLAS_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+            string connectionString = Conexion.ruta;
 
             using (SqlConnection conn = new SqlConnection(connectionString))
             {

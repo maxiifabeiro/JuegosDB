@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class ModificarDatosPersonales : Form
     {
-        string conexionbd = "Ruta DB";
+        string conexionbd = Conexion.ruta;
 
         //Propiedad para obterner IDusuario del form anterior
         public int IDUsuario { get; set; } 

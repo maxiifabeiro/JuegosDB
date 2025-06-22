@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class AvisoStock : Form
     {
-        string conexionbd = "Ruta DB";
+        string conexionbd = Conexion.ruta;
         public AvisoStock()
         {
             InitializeComponent();

@@ -25,7 +25,7 @@ namespace Login
 
         private void ClasificaciónJuegosXEdad_Load(object sender, EventArgs e)
         {
-            string connectionString = @"Data Source=Localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+            string connectionString = Conexion.ruta;
             string consulta = "SELECT * FROM VW_JuegosConClasificacion";
 
             using (SqlConnection conexion = new SqlConnection(connectionString))

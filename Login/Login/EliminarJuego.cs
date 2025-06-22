@@ -17,7 +17,7 @@ namespace Login
         {
             InitializeComponent();
         }
-        string conexionbd = "server=.\\SQLEXPRESS; database=JuegosDB; integrated security=true";
+        string conexionbd = Conexion.ruta;
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtID.Text))

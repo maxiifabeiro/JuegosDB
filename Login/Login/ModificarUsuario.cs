@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class ModificarUsuario : Form
     {
-        string conexionbd = "Ruta DB";
+        string conexionbd = Conexion.ruta;
 
         public ModificarUsuario()
         {

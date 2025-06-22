@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class BajaUsuario : Form
     {
-        string conexionbd = "server=.\\SQLEXPRESS; database=JuegosDB; integrated security=true";
+        string conexionbd = Conexion.ruta;
 
         public BajaUsuario()
         {

@@ -64,7 +64,7 @@ namespace Login
             }
 
 
-            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+            string connectionString = Conexion.ruta;
 
             using (SqlConnection con = new SqlConnection(connectionString))
             {
@@ -95,7 +95,7 @@ namespace Login
 
         private bool CorreoExisteEnBD(string correo)
         {
-            string connectionString = @"Data Source=localhost\SQLEXPRESS;Initial Catalog=JuegosDB;Integrated Security=True";
+            string connectionString = Conexion.ruta;
 
             try
             {

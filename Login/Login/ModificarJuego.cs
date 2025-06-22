@@ -13,7 +13,7 @@ namespace Login
 {
     public partial class ModificarJuego : Form
     {
-        string conexionbd = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = TiendaJuegos; Integrated Security = True;"; /*Conexion Maxi*/
+        string conexionbd = Conexion.ruta;
         public ModificarJuego()
         {
             InitializeComponent();
