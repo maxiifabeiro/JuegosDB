@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inicio));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.CrearUsuario = new System.Windows.Forms.Button();
             this.ForgotClave = new System.Windows.Forms.LinkLabel();
             this.btnsalir = new System.Windows.Forms.Button();
             this.btnlimpiar = new System.Windows.Forms.Button();
@@ -57,7 +56,6 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.CrearUsuario);
             this.groupBox1.Controls.Add(this.ForgotClave);
             this.groupBox1.Controls.Add(this.btnsalir);
             this.groupBox1.Controls.Add(this.btnlimpiar);
@@ -73,16 +71,6 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ingrese los datos requeridos:";
-            // 
-            // CrearUsuario
-            // 
-            this.CrearUsuario.Location = new System.Drawing.Point(42, 153);
-            this.CrearUsuario.Name = "CrearUsuario";
-            this.CrearUsuario.Size = new System.Drawing.Size(151, 33);
-            this.CrearUsuario.TabIndex = 4;
-            this.CrearUsuario.Text = "CrearUsuario";
-            this.CrearUsuario.UseVisualStyleBackColor = true;
-            this.CrearUsuario.Click += new System.EventHandler(this.CrearUsuario_Click);
             // 
             // ForgotClave
             // 
@@ -100,7 +88,7 @@
             // 
             this.btnsalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnsalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnsalir.Location = new System.Drawing.Point(218, 229);
+            this.btnsalir.Location = new System.Drawing.Point(223, 207);
             this.btnsalir.Name = "btnsalir";
             this.btnsalir.Size = new System.Drawing.Size(59, 24);
             this.btnsalir.TabIndex = 5;
@@ -111,7 +99,7 @@
             // btnlimpiar
             // 
             this.btnlimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnlimpiar.Location = new System.Drawing.Point(114, 229);
+            this.btnlimpiar.Location = new System.Drawing.Point(119, 207);
             this.btnlimpiar.Name = "btnlimpiar";
             this.btnlimpiar.Size = new System.Drawing.Size(57, 24);
             this.btnlimpiar.TabIndex = 6;
@@ -121,7 +109,7 @@
             // 
             // btningresar
             // 
-            this.btningresar.Location = new System.Drawing.Point(218, 153);
+            this.btningresar.Location = new System.Drawing.Point(133, 152);
             this.btningresar.Name = "btningresar";
             this.btningresar.Size = new System.Drawing.Size(121, 33);
             this.btningresar.TabIndex = 3;
@@ -209,7 +197,6 @@
         private System.Windows.Forms.Button btningresar;
         private System.Windows.Forms.PictureBox LogoTiendaJuego;
         private System.Windows.Forms.LinkLabel ForgotClave;
-        private System.Windows.Forms.Button CrearUsuario;
     }
 }
 

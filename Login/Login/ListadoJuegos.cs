@@ -14,7 +14,8 @@ namespace Login
 {
     public partial class ListadoJuegos : Form
     {
-        string conexionbd = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = TiendaJuegos; Integrated Security = True"; /*Conexion Maxi*/
+        //string conexionbd = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = TiendaJuegos; Integrated Security = True"; /*Conexion Maxi*/
+        string conexionbd = "Data Source = localhost\\SQLEXPRESS; Initial Catalog = JuegosDB; Integrated Security = True"; /*Conexion Majo*/
         public ListadoJuegos()
         {
             InitializeComponent();

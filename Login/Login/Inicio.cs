@@ -125,10 +125,6 @@ namespace Login
             this.Hide();
         }
 
-        private void CrearUsuario_Click(object sender, EventArgs e)
-        {
-            CrearUsuario formulario = new CrearUsuario();
-            formulario.ShowDialog();
-        }
+      
     }
 }
