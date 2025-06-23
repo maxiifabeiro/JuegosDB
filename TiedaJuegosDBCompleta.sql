@@ -708,11 +708,6 @@ BEGIN
         SET Estado = 0
         WHERE IDUsuario = @IDUsuario;
 
-        -- Baja logica en DatosUsuarios 
-        -- UPDATE DatosUsuarios
-        -- SET Estado = 0
-        -- WHERE IDDatoUsuario = @IDUsuario;
-
         COMMIT;
     END TRY
     BEGIN CATCH
@@ -739,7 +734,7 @@ BEGIN
         pais.Nombre AS Pais,
         DU.Genero AS Genero
     FROM Usuarios U
-    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDDatoUsuario
+    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDUsuario
     LEFT JOIN Permisos P ON U.IDPermiso = P.IdPermiso
     LEFT JOIN Paises pais ON DU.IDPais = pais.IDPais
     WHERE U.Estado = 1
@@ -764,7 +759,7 @@ BEGIN
         pais.Nombre AS Pais,
         DU.Genero AS Genero
     FROM Usuarios U
-    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDDatoUsuario
+    INNER JOIN DatosUsuarios DU ON U.IDUsuario = DU.IDUsuario
     LEFT JOIN Permisos P ON U.IDPermiso = P.IdPermiso
     LEFT JOIN Paises pais ON DU.IDPais = pais.IDPais
     WHERE U.Estado = 1 and U.IDUsuario=@IDUsuario
