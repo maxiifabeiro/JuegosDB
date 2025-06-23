@@ -81,8 +81,7 @@ CREATE TABLE Usuarios (
 
 GO
 CREATE TABLE DatosUsuarios (
-    IDDatoUsuario INT NOT NULL IDENTITY(1,1) PRIMARY KEY,
-    IDUsuario INT NOT NULL,
+    IDUsuario INT PRIMARY KEY NOT NULL,
     Nombre VARCHAR(50) NOT NULL,
     Apellido VARCHAR(50) NOT NULL,
     FechaNacimiento DATE NOT NULL,
@@ -101,7 +100,7 @@ CREATE TABLE Juegos (
     IDDesarrolladoraJ INT NOT NULL,
     IDCategoria INT NOT NULL,
     FechaLanzamiento DATE NOT NULL,
-    TamaÒo INT NOT NULL, --en kilobytes
+    Tama√±o INT NOT NULL, --en kilobytes
     IDFormato INT NOT NULL,
     IDClasificacionEdad INT NOT NULL,
     CantidadJugadores INT NULL,
@@ -157,14 +156,14 @@ GO
 
 INSERT INTO ClasificacionEdades(Nombre, Descripcion)
 VALUES
-    --ClasificaciÛn ESRB (Estados Unidos y Canad·)
-    ('EC', 'Para niÒos pequeÒos (3+). Sin contenido inapropiado'), --1
+    --Clasificaci√≥n ESRB (Estados Unidos y Canad√°)
+    ('EC', 'Para ni√±os peque√±os (3+). Sin contenido inapropiado'), --1
     ('E', 'Apto para todos (6+). Puede tener algo de humor leve o violencia muy leve'), --2
-    ('E10+', 'Para mayores de 10 aÒos. Puede incluir violencia leve, lenguaje moderado'), --3
-    ('T', 'Para mayores de 13 aÒos. Violencia, lenguaje fuerte, temas sugerentes'), --4
-    ('M', 'Para mayores de 17 aÒos. Violencia intensa, sangre, lenguaje fuerte, contenido sexual'), --5
-    ('AO', 'Solo para adultos (18+). Contenido sexual explÌcito o violencia extrema'),--6
-    ('RP', 'ClasificaciÛn a˙n no asignada');--7
+    ('E10+', 'Para mayores de 10 a√±os. Puede incluir violencia leve, lenguaje moderado'), --3
+    ('T', 'Para mayores de 13 a√±os. Violencia, lenguaje fuerte, temas sugerentes'), --4
+    ('M', 'Para mayores de 17 a√±os. Violencia intensa, sangre, lenguaje fuerte, contenido sexual'), --5
+    ('AO', 'Solo para adultos (18+). Contenido sexual expl√≠cito o violencia extrema'),--6
+    ('RP', 'Clasificaci√≥n a√∫n no asignada');--7
 GO
 INSERT INTO Formatos(Nombre, Fisico)
 VALUES
@@ -178,7 +177,7 @@ VALUES
 GO
 INSERT INTO Idiomas (Nombre)
 VALUES 
-    ('EspaÒol'),--1
+    ('Espa√±ol'),--1
     ('Ingles'),--2
     ('Frances'),--3
     ('Italiano'),--4
@@ -200,11 +199,11 @@ VALUES
     ('Polaco');--20
 GO
 INSERT INTO Categorias (Nombre) VALUES
-('AcciÛn'), --1
+('Acci√≥n'), --1
 ('Aventura'), --2
 ('Estrategia'), --3
 ('Deportes'), --4
-('SimulaciÛn'), --5
+('Simulaci√≥n'), --5
 ('Rol'), --6
 ('Puzzle'), --7
 ('Terror'), --8
@@ -221,7 +220,7 @@ INSERT INTO Paises (Nombre) VALUES
 ('Francia'),--6
 ('Alemania'),--7
 ('Brasil'),--8
-('EspaÒa'),--9
+('Espa√±a'),--9
 ('Reino Unido'),--10
 ('Italia'),--11
 ('Australia'),--12
@@ -260,16 +259,16 @@ VALUES
 GO
 -- CONSOLAS
 INSERT INTO Consolas (Nombre, Descripcion, FechaCreacion, IDDesarrolladorC) VALUES 
-('Nintendo Switch', 'Consola hÌbrida de Nintendo lanzada en 2017, permite jugar en modo port·til y de sobremesa con una gran variedad de juegos exclusivos.', '2017-03-03', 1),
-('PlayStation 5', 'Consola de ˙ltima generaciÛn de Sony lanzada en 2020 con gr·ficos 4K, SSD ultrarr·pido y retrocompatibilidad con PS4.', '2020-11-12', 2),
+('Nintendo Switch', 'Consola h√≠brida de Nintendo lanzada en 2017, permite jugar en modo port√°til y de sobremesa con una gran variedad de juegos exclusivos.', '2017-03-03', 1),
+('PlayStation 5', 'Consola de √∫ltima generaci√≥n de Sony lanzada en 2020 con gr√°ficos 4K, SSD ultrarr√°pido y retrocompatibilidad con PS4.', '2020-11-12', 2),
 ('Xbox Series X', 'Consola de Microsoft con potente hardware, soporte para juegos 4K, Quick Resume y Game Pass integrado.', '2020-11-10', 3),
 ('Sega Genesis', 'Consola de 16 bits lanzada por Sega a finales de los 80, famosa por juegos como Sonic the Hedgehog.', '1988-10-29', 4),
 ('Nintendo Wii', 'Consola de Nintendo famosa por su jugabilidad con sensores de movimiento, lanzada en 2006.', '2006-11-19', 1),
-('Atari 2600', 'Una de las primeras consolas de videojuegos domÈsticas, popularizÛ los cartuchos intercambiables.', '1977-09-11', 6),
-('PlayStation 4', 'Consola de Sony lanzada en 2013, con gran cat·logo de juegos, rendimiento sÛlido y Èxito global.', '2013-11-15', 2),
-('Xbox One', 'Consola de Microsoft de octava generaciÛn con soporte multimedia, retrocompatibilidad y juegos digitales.', '2013-11-22', 3),
-('Xbox Series S', 'VersiÛn digital y m·s accesible de Xbox Series, con compatibilidad con tÌtulos modernos a menor resoluciÛn.', '2020-11-10', 3),
-('PlayStation 4 Pro', 'VersiÛn mejorada de PS4 con soporte para resoluciÛn 4K y mejor rendimiento gr·fico.', '2016-11-10', 2);
+('Atari 2600', 'Una de las primeras consolas de videojuegos dom√©sticas, populariz√≥ los cartuchos intercambiables.', '1977-09-11', 6),
+('PlayStation 4', 'Consola de Sony lanzada en 2013, con gran cat√°logo de juegos, rendimiento s√≥lido y √©xito global.', '2013-11-15', 2),
+('Xbox One', 'Consola de Microsoft de octava generaci√≥n con soporte multimedia, retrocompatibilidad y juegos digitales.', '2013-11-22', 3),
+('Xbox Series S', 'Versi√≥n digital y m√°s accesible de Xbox Series, con compatibilidad con t√≠tulos modernos a menor resoluci√≥n.', '2020-11-10', 3),
+('PlayStation 4 Pro', 'Versi√≥n mejorada de PS4 con soporte para resoluci√≥n 4K y mejor rendimiento gr√°fico.', '2016-11-10', 2);
 GO
 INSERT INTO Permisos(Nombre, Descripcion) 
 VALUES 
@@ -294,12 +293,12 @@ INSERT INTO DatosUsuarios (IDUsuario, Nombre, Apellido, FechaNacimiento, IDPais,
 GO
 --JUEGOS
 INSERT INTO Juegos 
-    (Nombre, IDDesarrolladoraJ, IDCategoria, FechaLanzamiento, TamaÒo, IDFormato, IDClasificacionEdad, CantidadJugadores, Descripcion, Precio, Stock) 
+    (Nombre, IDDesarrolladoraJ, IDCategoria, FechaLanzamiento, Tama√±o, IDFormato, IDClasificacionEdad, CantidadJugadores, Descripcion, Precio, Stock) 
 VALUES
     ('The Legend of Zelda', 1, 2, '1986-02-21', 128, 1, 2, 1, 'Link debe rescatar a la princesa Zelda y derrotar a Ganon en el reino de Hyrule', 10500, 5),
     ('God of War ', 2, 1, '2005-03-22', 4514845, 7, 5, 1, 'Kratos busca venganza contra Ares, el dios de la guerra', 7500, 6),
-    ('The Witcher 3 ', 7, 6, '2015-05-19', 36859531, 3, 5, 1, 'Geralt de Rivia busca a su hija adoptiva Ciri mientras enfrenta a la CacerÌa Salvaje en un vasto mundo abierto', 12500, 10),
-    ('GTA V', 5, 1, '2013-09-17', 70312500, 3, 5, 2, 'Tres criminales muy distintos arriesgan todo en una serie de robos en Los Santos, una ciudad inspirada en Los ¡ngeles', 11000, 6),
+    ('The Witcher 3 ', 7, 6, '2015-05-19', 36859531, 3, 5, 1, 'Geralt de Rivia busca a su hija adoptiva Ciri mientras enfrenta a la Cacer√≠a Salvaje en un vasto mundo abierto', 12500, 10),
+    ('GTA V', 5, 1, '2013-09-17', 70312500, 3, 5, 2, 'Tres criminales muy distintos arriesgan todo en una serie de robos en Los Santos, una ciudad inspirada en Los √Ångeles', 11000, 6),
     ('Minecraft',10, 2, '2011-11-18', 1048576, 3, 3, 1, ' Juego de mundo abierto donde los jugadores exploran, construyen y sobreviven en un entorno generado por bloques', 6000, 5);
 GO
 --IDIOMAS X JUEGOS
@@ -308,19 +307,19 @@ VALUES
     (1,6), --The Legend of Zelda en Japones
     (1,2), --The Legend of Zelda en Ingles
     (1,9), --The Legend of Zelda en Aleman
-    (1,1), --The Legend of Zelda en EspaÒol
+    (1,1), --The Legend of Zelda en Espa√±ol
     (1,3), --The Legend of Zelda en Frances
 
     (2,6), --God of War en Japones
     (2,9), --God of War en Aleman
     (2,2), --God of War en Ingles
-    (2,1), --God of War en EspaÒol
+    (2,1), --God of War en Espa√±ol
     (2,5), --God of War en Portugues
 
     (3,10), --The Witcher 3 en Ruso
     (3,9), --The Witcher 3 en Aleman
     (3,2), --The Witcher 3 en Ingles
-    (3,1), --The Witcher 3 en EspaÒol
+    (3,1), --The Witcher 3 en Espa√±ol
     (3,17), --The Witcher 3 en Noruego
     (3,16), --The Witcher 3 en Danes
     (3,18), --The Witcher 3 en Finlandes
@@ -328,13 +327,13 @@ VALUES
     (4,4), --GTA V en Italiano
     (4,10), --GTA V en Ruso
     (4,2), --GTA V en Ingles
-    (4,1), --GTA V en EspaÒol
+    (4,1), --GTA V en Espa√±ol
     (4,3), --GTA V en Frances
 
     (5,6), --Minecraft en Japones
     (5,9), --Minecraft en Aleman
     (5,2), --Minecraft en Ingles
-    (5,1), --Minecraft en EspaÒol
+    (5,1), --Minecraft en Espa√±ol
     (5,3), --Minecraft en Frances
     (5,5); --Minecraft en Portugues
 GO
@@ -376,11 +375,11 @@ BEGIN
 
     SET @Resultado =
         CASE @IDClasificacionEdad
-            WHEN 1 THEN 'ATP - Todo p˙blico'
-            WHEN 2 THEN '+7 aÒos'
-            WHEN 3 THEN '+13 aÒos'
-            WHEN 4 THEN '+16 aÒos'
-            WHEN 5 THEN '+18 aÒos'
+            WHEN 1 THEN 'ATP - Todo p√∫blico'
+            WHEN 2 THEN '+7 a√±os'
+            WHEN 3 THEN '+13 a√±os'
+            WHEN 4 THEN '+16 a√±os'
+            WHEN 5 THEN '+18 a√±os'
             ELSE 'Desconocida'
         END;
 
@@ -454,7 +453,7 @@ CREATE OR ALTER PROCEDURE SP_altaJuego
     @IdFormato INT,
     @IdClasificacionEdad INT,
     @FechaLanzamiento DATE,
-    @TamaÒo INT,
+    @Tama√±o INT,
     @CantidadJugadores INT,
     @Descripcion VARCHAR(250),
     @Precio DECIMAL(10,2),
@@ -463,11 +462,11 @@ AS
 BEGIN
     INSERT INTO Juegos(
         Nombre, IDDesarrolladoraJ, IdCategoria, IdFormato,
-        IdClasificacionEdad, FechaLanzamiento, TamaÒo,
+        IdClasificacionEdad, FechaLanzamiento, Tama√±o,
 		CantidadJugadores, Descripcion, Precio, Stock
     )
     VALUES (
-        @Nombre, @IdDesarrolladoraJ, @IdCategoria, @IdFormato, @IdClasificacionEdad, @FechaLanzamiento, @TamaÒo, @CantidadJugadores, @Descripcion, @Precio, @Stock
+        @Nombre, @IdDesarrolladoraJ, @IdCategoria, @IdFormato, @IdClasificacionEdad, @FechaLanzamiento, @Tama√±o, @CantidadJugadores, @Descripcion, @Precio, @Stock
     );
 END;
 GO
@@ -481,7 +480,7 @@ CREATE OR ALTER PROCEDURE SP_ModificarJuego
     @IdFormato INT,
     @IdClasificacionEdad INT,
     @FechaLanzamiento DATE,
-    @TamaÒo INT,
+    @Tama√±o INT,
     @CantidadJugadores INT,
     @Descripcion VARCHAR(250),
     @Precio DECIMAL(10,2),
@@ -496,7 +495,7 @@ BEGIN
 		IDFormato = @IdFormato,
 		IDClasificacionEdad = @IdClasificacionEdad,
 		FechaLanzamiento = @FechaLanzamiento,
-		TamaÒo = @TamaÒo,
+		Tama√±o = @Tama√±o,
 		CantidadJugadores = @CantidadJugadores,
 		Descripcion = @Descripcion,
 		Precio = @Precio,
@@ -525,7 +524,7 @@ BEGIN
         f.Nombre AS Formato,
         ce.Nombre AS ClasificacionEdad,
         j.FechaLanzamiento,
-        j.TamaÒo,
+        j.Tama√±o,
         j.CantidadJugadores,
         j.Descripcion,
         j.Precio,
@@ -554,7 +553,7 @@ BEGIN
         f.Nombre AS Formato,
         ce.Nombre AS ClasificacionEdad,
         j.FechaLanzamiento,
-        j.TamaÒo,
+        j.Tama√±o,
         j.CantidadJugadores,
         j.Descripcion,
         j.Precio,
@@ -593,7 +592,7 @@ BEGIN
     );
 
     SELECT SCOPE_IDENTITY() AS NuevoId;
-	-- Asignar valor a EsAdministrador seg˙n el permiso
+	-- Asignar valor a EsAdministrador seg√∫n el permiso
     IF @IdPermiso = 1
 	UPDATE Usuarios
         SET EsAdministrador = 1
@@ -782,7 +781,7 @@ BEGIN
     SELECT 
         U.NombreUsuario AS NombreUsuario, 
         U.CorreoElectronico AS Email,
-        U.Contrasena AS ContraseÒa,
+        U.Contrasena AS Contrase√±a,
         U.FechaRegistro AS "Fecha de Registro",
         U.AvatarURL AS "AvatarURL",
         U.EsAdministrador AS EsAdministrador,
@@ -922,8 +921,8 @@ BEGIN
     SELECT 
         v.IDJuego,
         v.Nombre AS [Nombre del Juego], 
-        c.Nombre AS [CategorÌa],
-        ce.Nombre AS [ClasificaciÛn],
+        c.Nombre AS [Categor√≠a],
+        ce.Nombre AS [Clasificaci√≥n],
         v.Precio,
         v.Stock
     FROM  v_JuegosDisponiblesParaVenta v
