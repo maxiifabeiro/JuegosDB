@@ -84,6 +84,7 @@
             this.btnVolverAtras.TabIndex = 4;
             this.btnVolverAtras.Text = "Volver Atras";
             this.btnVolverAtras.UseVisualStyleBackColor = true;
+            this.btnVolverAtras.Click += new System.EventHandler(this.btnVolverAtras_Click);
             // 
             // btnBuscar
             // 
