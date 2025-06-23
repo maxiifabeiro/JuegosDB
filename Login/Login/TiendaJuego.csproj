@@ -102,6 +102,12 @@
     <Compile Include="EliminarJuego.Designer.cs">
       <DependentUpon>EliminarJuego.cs</DependentUpon>
     </Compile>
+    <Compile Include="EliminarVentaRealizada.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EliminarVentaRealizada.Designer.cs">
+      <DependentUpon>EliminarVentaRealizada.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +229,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarJuego.resx">
       <DependentUpon>EliminarJuego.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EliminarVentaRealizada.resx">
+      <DependentUpon>EliminarVentaRealizada.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inicio.resx">
       <DependentUpon>Inicio.cs</DependentUpon>

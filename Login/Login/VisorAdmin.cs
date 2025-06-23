@@ -64,6 +64,12 @@ namespace Login
             VentasMensuales reporte = new VentasMensuales();
             reporte.ShowDialog();
         }
+
+        private void btnEliminarVentaRealizada_Click(object sender, EventArgs e)
+        {
+            EliminarVentaRealizada ventana = new EliminarVentaRealizada();
+            ventana.ShowDialog();
+        }
     }
 
 }

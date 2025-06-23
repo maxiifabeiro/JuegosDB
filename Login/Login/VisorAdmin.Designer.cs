@@ -37,6 +37,7 @@
             this.btnABMLUsuarios = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnABMLJuegos = new System.Windows.Forms.Button();
+            this.btnEliminarVentaRealizada = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,6 +74,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnEliminarVentaRealizada);
             this.groupBox1.Controls.Add(this.btnStock);
             this.groupBox1.Controls.Add(this.btnVentasMensuales);
             this.groupBox1.Controls.Add(this.btnABMLUsuarios);
@@ -134,6 +136,16 @@
             this.btnABMLJuegos.UseVisualStyleBackColor = true;
             this.btnABMLJuegos.Click += new System.EventHandler(this.btnABMLJuegos_Click);
             // 
+            // btnEliminarVentaRealizada
+            // 
+            this.btnEliminarVentaRealizada.Location = new System.Drawing.Point(92, 228);
+            this.btnEliminarVentaRealizada.Name = "btnEliminarVentaRealizada";
+            this.btnEliminarVentaRealizada.Size = new System.Drawing.Size(139, 23);
+            this.btnEliminarVentaRealizada.TabIndex = 12;
+            this.btnEliminarVentaRealizada.Text = "Eliminar Venta Realizada";
+            this.btnEliminarVentaRealizada.UseVisualStyleBackColor = true;
+            this.btnEliminarVentaRealizada.Click += new System.EventHandler(this.btnEliminarVentaRealizada_Click);
+            // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -163,5 +175,6 @@
         private System.Windows.Forms.Button btnABMLUsuarios;
         private System.Windows.Forms.Button btnStock;
         private System.Windows.Forms.Button btnVentasMensuales;
+        private System.Windows.Forms.Button btnEliminarVentaRealizada;
     }
 }

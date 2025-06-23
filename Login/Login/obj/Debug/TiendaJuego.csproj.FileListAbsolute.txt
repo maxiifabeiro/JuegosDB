@@ -30,3 +30,4 @@ C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.exe
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.pdb
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.exe.config
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.DatosPersonales.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.EliminarVentaRealizada.resources

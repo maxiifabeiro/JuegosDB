@@ -35,7 +35,7 @@ namespace Login
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM desarrolladorasCONSOLAS";
+                    string query = "SELECT * FROM vw_desarrolladoraCONSOLAS";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);

@@ -42,7 +42,7 @@ namespace Login
                 try
                 {
                     conn.Open();
-                    string query = "SELECT * FROM desarrolladorasJUEGOS";
+                    string query = "SELECT * FROM vw_desarrolladoraJUEGOS";
                     SqlDataAdapter adapter = new SqlDataAdapter(query, conn);
                     DataTable dt = new DataTable();
                     adapter.Fill(dt);

@@ -47,14 +47,12 @@
             this.NombreUsuario = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
-            this.btnDatosPersonales = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.btnDatosPersonales);
             this.groupBox1.Controls.Add(this.cmbPermisos);
             this.groupBox1.Controls.Add(this.lblPermiso);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
@@ -235,15 +233,6 @@
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // btnDatosPersonales
-            // 
-            this.btnDatosPersonales.Location = new System.Drawing.Point(17, 274);
-            this.btnDatosPersonales.Name = "btnDatosPersonales";
-            this.btnDatosPersonales.Size = new System.Drawing.Size(125, 31);
-            this.btnDatosPersonales.TabIndex = 16;
-            this.btnDatosPersonales.Text = "Datos Personales";
-            this.btnDatosPersonales.UseVisualStyleBackColor = true;
-            // 
             // CrearUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,6 +274,5 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cmbPermisos;
         private System.Windows.Forms.Label lblPermiso;
-        private System.Windows.Forms.Button btnDatosPersonales;
     }
 }
