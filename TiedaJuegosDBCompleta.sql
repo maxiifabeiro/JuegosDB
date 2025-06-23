@@ -1005,3 +1005,14 @@ BEGIN
 END
 GO
 
+CREATE OR ALTER TRIGGER TR_EliminarVenta_RestablecerStock
+ON InfoVentas
+AFTER DELETE
+AS
+BEGIN
+    UPDATE J
+    SET J.Stock = J.Stock + D.Cantidad
+    FROM Juegos J
+    INNER JOIN deleted D ON J.IDJuego = D.IDJuego
+END
+GO
