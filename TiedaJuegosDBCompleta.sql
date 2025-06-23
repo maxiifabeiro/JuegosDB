@@ -570,8 +570,6 @@ END
 
 GO
 
-
-
 --Procedimiento para dar de alta un usuario
 CREATE OR ALTER PROCEDURE SP_altaUsuario
     @NombreUsuario VARCHAR(100),
@@ -582,8 +580,6 @@ CREATE OR ALTER PROCEDURE SP_altaUsuario
     @IdPermiso INT
 AS
 BEGIN
-    
-
     INSERT INTO Usuarios(
         NombreUsuario, CorreoElectronico, Contrasena, FechaNacimiento, AvatarURL, IDPermiso
     )
@@ -622,9 +618,6 @@ BEGIN
 END;
 GO
 
-EXEC SP_DatosUsuarios 11,'Pepe', 'Carlos', '1999-06-22', 2, 'Masculino'
-GO
-
 --Procedimiento para modificar usuario
 CREATE OR ALTER PROCEDURE SP_ModificarUsuario
     @IDUsuario INT,
@@ -659,7 +652,6 @@ BEGIN
         THROW;
     END CATCH
 END;
-
 GO
 
 --Procedimiento para modificar DatosUsuarios
@@ -707,7 +699,6 @@ BEGIN
         UPDATE Usuarios
         SET Estado = 0
         WHERE IDUsuario = @IDUsuario;
-
         COMMIT;
     END TRY
     BEGIN CATCH
@@ -715,7 +706,6 @@ BEGIN
         THROW;
     END CATCH
 END;
-
 GO
 
 --Procedimiento para listar todos usuarios
@@ -920,7 +910,7 @@ BEGIN
         ce.Nombre AS [Clasificación],
         v.Precio,
         v.Stock
-    FROM  v_JuegosDisponiblesParaVenta v
+    FROM  vw_JuegosDisponiblesParaVenta v
     INNER JOIN Juegos j ON v.IDJuego = j.IDJuego 
     INNER JOIN Categorias c ON j.IDCategoria = c.IDCategoria
     INNER JOIN ClasificacionEdades ce ON j.IDClasificacionEdad = ce.IDClasificacionEdad
@@ -963,7 +953,7 @@ BEGIN
         SUM(Cantidad) AS UnidadesVendidas,
         SUM(PrecioTotal) AS TotalVendido
     FROM 
-        v_VentasDetalladas
+        vw_VentasDetalladas
     WHERE 
         YEAR(FechaVenta) = @Anio AND MONTH(FechaVenta) = @Mes
     GROUP BY
@@ -1016,3 +1006,4 @@ BEGIN
     INNER JOIN deleted D ON J.IDJuego = D.IDJuego
 END
 GO
+
