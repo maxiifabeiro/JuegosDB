@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearUsuario));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbPermisos = new System.Windows.Forms.ComboBox();
+            this.lblPermiso = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.txtAvatar = new System.Windows.Forms.TextBox();
@@ -43,16 +45,18 @@
             this.Contrasena = new System.Windows.Forms.Label();
             this.CorreoElectronico = new System.Windows.Forms.Label();
             this.NombreUsuario = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnVolver = new System.Windows.Forms.Button();
+            this.btnDatosPersonales = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnDatosPersonales);
+            this.groupBox1.Controls.Add(this.cmbPermisos);
+            this.groupBox1.Controls.Add(this.lblPermiso);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.btnCrearUsuario);
             this.groupBox1.Controls.Add(this.txtAvatar);
@@ -73,10 +77,28 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos Nuevo Usuario";
             // 
+            // cmbPermisos
+            // 
+            this.cmbPermisos.FormattingEnabled = true;
+            this.cmbPermisos.Location = new System.Drawing.Point(190, 159);
+            this.cmbPermisos.Name = "cmbPermisos";
+            this.cmbPermisos.Size = new System.Drawing.Size(200, 21);
+            this.cmbPermisos.TabIndex = 1;
+            // 
+            // lblPermiso
+            // 
+            this.lblPermiso.AutoSize = true;
+            this.lblPermiso.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPermiso.Location = new System.Drawing.Point(21, 164);
+            this.lblPermiso.Name = "lblPermiso";
+            this.lblPermiso.Size = new System.Drawing.Size(60, 16);
+            this.lblPermiso.TabIndex = 15;
+            this.lblPermiso.Text = "Permiso:";
+            // 
             // dateTimePicker2
             // 
             this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(190, 165);
+            this.dateTimePicker2.Location = new System.Drawing.Point(190, 194);
             this.dateTimePicker2.MaxDate = new System.DateTime(2025, 6, 18, 0, 0, 0, 0);
             this.dateTimePicker2.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dateTimePicker2.Name = "dateTimePicker2";
@@ -96,7 +118,7 @@
             // 
             // txtAvatar
             // 
-            this.txtAvatar.Location = new System.Drawing.Point(190, 201);
+            this.txtAvatar.Location = new System.Drawing.Point(190, 220);
             this.txtAvatar.Name = "txtAvatar";
             this.txtAvatar.Size = new System.Drawing.Size(162, 20);
             this.txtAvatar.TabIndex = 8;
@@ -135,9 +157,9 @@
             // 
             this.AvatarURL.AutoSize = true;
             this.AvatarURL.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AvatarURL.Location = new System.Drawing.Point(21, 205);
+            this.AvatarURL.Location = new System.Drawing.Point(21, 224);
             this.AvatarURL.Name = "AvatarURL";
-            this.AvatarURL.Size = new System.Drawing.Size(74, 16);
+            this.AvatarURL.Size = new System.Drawing.Size(73, 16);
             this.AvatarURL.TabIndex = 13;
             this.AvatarURL.Text = "AvatarURL";
             // 
@@ -147,7 +169,7 @@
             this.ComprobarContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComprobarContrasena.Location = new System.Drawing.Point(21, 134);
             this.ComprobarContrasena.Name = "ComprobarContrasena";
-            this.ComprobarContrasena.Size = new System.Drawing.Size(151, 16);
+            this.ComprobarContrasena.Size = new System.Drawing.Size(150, 16);
             this.ComprobarContrasena.TabIndex = 9;
             this.ComprobarContrasena.Text = "Comprobar Contraseña:";
             this.ComprobarContrasena.Click += new System.EventHandler(this.ComprobarContrasena_Click);
@@ -156,9 +178,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(21, 170);
+            this.label4.Location = new System.Drawing.Point(21, 194);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(139, 16);
+            this.label4.Size = new System.Drawing.Size(138, 16);
             this.label4.TabIndex = 10;
             this.label4.Text = "Fecha de Nacimiento:";
             // 
@@ -168,7 +190,7 @@
             this.Contrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Contrasena.Location = new System.Drawing.Point(21, 99);
             this.Contrasena.Name = "Contrasena";
-            this.Contrasena.Size = new System.Drawing.Size(80, 16);
+            this.Contrasena.Size = new System.Drawing.Size(79, 16);
             this.Contrasena.TabIndex = 9;
             this.Contrasena.Text = "Contraseña:";
             // 
@@ -178,7 +200,7 @@
             this.CorreoElectronico.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoElectronico.Location = new System.Drawing.Point(21, 68);
             this.CorreoElectronico.Name = "CorreoElectronico";
-            this.CorreoElectronico.Size = new System.Drawing.Size(122, 16);
+            this.CorreoElectronico.Size = new System.Drawing.Size(121, 16);
             this.CorreoElectronico.TabIndex = 8;
             this.CorreoElectronico.Text = "Correo Electrónico:";
             // 
@@ -188,17 +210,9 @@
             this.NombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreUsuario.Location = new System.Drawing.Point(21, 33);
             this.NombreUsuario.Name = "NombreUsuario";
-            this.NombreUsuario.Size = new System.Drawing.Size(129, 16);
+            this.NombreUsuario.Size = new System.Drawing.Size(128, 16);
             this.NombreUsuario.TabIndex = 7;
             this.NombreUsuario.Text = "Nombre de Usuario:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(-23, -46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -212,6 +226,7 @@
             // 
             // btnVolver
             // 
+            this.btnVolver.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnVolver.Location = new System.Drawing.Point(617, 349);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(124, 34);
@@ -219,6 +234,15 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.UseVisualStyleBackColor = true;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnDatosPersonales
+            // 
+            this.btnDatosPersonales.Location = new System.Drawing.Point(17, 274);
+            this.btnDatosPersonales.Name = "btnDatosPersonales";
+            this.btnDatosPersonales.Size = new System.Drawing.Size(125, 31);
+            this.btnDatosPersonales.TabIndex = 16;
+            this.btnDatosPersonales.Text = "Datos Personales";
+            this.btnDatosPersonales.UseVisualStyleBackColor = true;
             // 
             // CrearUsuario
             // 
@@ -228,7 +252,6 @@
             this.ClientSize = new System.Drawing.Size(865, 450);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -237,7 +260,6 @@
             this.Text = "Crear usuario nuevo";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
@@ -256,11 +278,13 @@
         private System.Windows.Forms.TextBox txtAvatar;
         private System.Windows.Forms.TextBox txtComprobarContrasena;
         private System.Windows.Forms.Label ComprobarContrasena;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button btnCrearUsuario;
         private System.Windows.Forms.Button btnVolver;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ComboBox cmbPermisos;
+        private System.Windows.Forms.Label lblPermiso;
+        private System.Windows.Forms.Button btnDatosPersonales;
     }
 }

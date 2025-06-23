@@ -14,9 +14,11 @@ namespace Login
 {
     public partial class CrearUsuario : Form
     {
+        string conexionbd = Conexion.ruta;
         public CrearUsuario()
         {
             InitializeComponent();
+            CargarPermisos();
         }
         private void ComprobarContrasena_Click(object sender, EventArgs e)
         {
@@ -64,42 +66,42 @@ namespace Login
             }
 
 
-            string connectionString = Conexion.ruta;
 
-            using (SqlConnection con = new SqlConnection(connectionString))
+            int nuevoId = 0;
+            using (SqlConnection conexion = new SqlConnection(conexionbd))
             {
-                con.Open();
-                string query = "INSERT INTO Usuarios (NombreUsuario, CorreoElectronico, Contrasena, FechaNacimiento, AvatarURL) VALUES (@NombreUsuario, @CorreoElectronico, @Contrasena, @FechaNacimiento, @Avatar)";
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("SP_altaUsuario", conexion);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
+                cmd.Parameters.AddWithValue("@Correo", correo);
+                cmd.Parameters.AddWithValue("@Contrasena", contrasena);
+                cmd.Parameters.AddWithValue("@FechaNacimiento", fecha);
+                cmd.Parameters.AddWithValue("@AvatarURL", avatarurl);
+                cmd.Parameters.AddWithValue("@IdPermiso", cmbPermisos.SelectedValue);
+
+                try
                 {
-                    cmd.Parameters.AddWithValue("@NombreUsuario", usuario);
-                    cmd.Parameters.AddWithValue("@CorreoElectronico", correo);
-                    cmd.Parameters.AddWithValue("@Contrasena", contrasena);
-                    cmd.Parameters.AddWithValue("@FechaNacimiento", fecha);
-                    cmd.Parameters.AddWithValue("@Avatar", avatarurl);
-
-
-                    try
-                    {
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Usuario creado correctamente");
-                        this.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al crear usuario: " + ex.Message);
-                    }
+                    nuevoId = Convert.ToInt32(cmd.ExecuteScalar());
+                    MessageBox.Show("Usuario creado correctamente");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al crear usuario: " + ex.Message);
+                    return;
                 }
             }
+            DatosPersonales formulario = new DatosPersonales(nuevoId); // le pasás el ID real
+            formulario.ShowDialog();
         }
+
 
         private bool CorreoExisteEnBD(string correo)
         {
-            string connectionString = Conexion.ruta;
 
             try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                using (SqlConnection con = new SqlConnection(conexionbd))
                 {
                     string consulta = "SELECT COUNT(*) FROM Usuarios WHERE CorreoElectronico = @Correo";
                     SqlCommand cmd = new SqlCommand(consulta, con);
@@ -128,6 +130,24 @@ namespace Login
         {
             this.Close();
         }
+
+        private void CargarPermisos()
+        {
+            SqlDataAdapter daPermisos = new SqlDataAdapter("SELECT IDPermiso, Nombre FROM Permisos", conexionbd);
+            DataTable dtPermisos = new DataTable();
+            try
+            {
+                daPermisos.Fill(dtPermisos);
+                cmbPermisos.DataSource = dtPermisos;
+                cmbPermisos.DisplayMember = "Nombre";
+                cmbPermisos.ValueMember = "IDPermiso";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar los permisos: " + ex.Message);
+            }
+        }
+
     }
 
 }

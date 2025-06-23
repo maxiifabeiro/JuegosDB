@@ -89,6 +89,13 @@
     <Compile Include="ClasificaciónJuegosXEdad.Designer.cs">
       <DependentUpon>ClasificaciónJuegosXEdad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Conexion.cs" />
+    <Compile Include="DatosPersonales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DatosPersonales.Designer.cs">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
+    </Compile>
     <Compile Include="EliminarJuego.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -210,6 +217,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ClasificaciónJuegosXEdad.resx">
       <DependentUpon>ClasificaciónJuegosXEdad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DatosPersonales.resx">
+      <DependentUpon>DatosPersonales.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarJuego.resx">
       <DependentUpon>EliminarJuego.cs</DependentUpon>

@@ -1,26 +1,24 @@
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe.config
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.pdb
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.SuggestedBindingRedirects.cache
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.exe
-C:\Users\millanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.pdb
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\bin\Debug\Login.exe.config
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\bin\Debug\Login.exe
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\bin\Debug\Login.pdb
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.exe.config
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.AvisoStock.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ClasificaciónJuegosXEdad.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
@@ -30,100 +28,5 @@ C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.Ge
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.exe
 C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.pdb
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.SuggestedBindingRedirects.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.exe
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.pdb
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe.config
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.exe
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\bin\Debug\Login.pdb
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.exe.config
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.exe
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\bin\Debug\Login.pdb
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.exe
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.pdb
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
-D:\Programacion\T-SQL\TP laboratorio 3\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
-C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.AssemblyReference.cache
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.AltaJuego.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.AvisoStock.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.EliminarJuego.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Inicio.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListaDesarrolladorasCONSOLAS.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Lista_DesarrolladorasJUEGOS.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.VisorUsuario.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.CrearUsuario.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.CambiarContrasena.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Properties.Resources.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.VisorAdmin.resources
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.GenerateResource.cache
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.exe
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.pdb
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe.config
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.exe
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\bin\Debug\Login.pdb
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\TiendaJuego.csproj.CoreCompileInputs.cache
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
-<<<<<<< HEAD
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ABMLJuegos.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ABMLUsuario.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.AvisoStock.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.BajaUsuario.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ClasificaciónJuegosXEdad.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListadoJuegos.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListadoUsuarios.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ListarStock.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ModificarJuego.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.ModificarUsuario.resources
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.RealizarVenta.resources
-=======
-C:\Users\710\Desktop\LAB III\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources
->>>>>>> b267c734c2c13892ef785e999f4024ff5b3dd7ff
-C:\Users\Majo Illanes\Desktop\JuegosDB\Login\Login\obj\Debug\Login.Reportes.VentasMensuales.resources
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.exe.config
+C:\Users\machi\Source\Repos\JuegosDB\Login\Login\obj\Debug\Login.DatosPersonales.resources

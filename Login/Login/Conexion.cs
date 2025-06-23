@@ -8,6 +8,6 @@ namespace Login
 {
     class Conexion
     {
-        public static readonly string ruta = @"C:\ruta\a\tu\base_de_datos.db";
+        public static readonly string ruta = @"Data Source = localhost\SQLEXPRESS; Initial Catalog = TiendaJuegos; Integrated Security = True"; 
     }
 }
