@@ -38,7 +38,7 @@ namespace Login
                     if (rows > 0)
                     {
                         MessageBox.Show("Venta eliminada correctamente.");
-                        btnMostrarTodas.PerformClick(); // Refresca la grilla
+                        btnMostrarTodas.PerformClick(); 
                     }
                 }
             }

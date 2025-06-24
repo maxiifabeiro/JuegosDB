@@ -27,7 +27,7 @@ namespace Login
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             using (SqlConnection conexion = new SqlConnection(conexionbd))
-            {
+            { 
                 SqlCommand com = new SqlCommand("SP_altaJuego", conexion);
                 com.CommandType = CommandType.StoredProcedure;
 
@@ -50,7 +50,7 @@ namespace Login
                     !decimal.TryParse(txtPrecio.Text, out precio) ||
                     !int.TryParse(txtStock.Text, out stock))
                 {
-                    MessageBox.Show("Verificá que Tamaño, Cantidad de Jugadores, Precio y Stock sean valores numéricos válidos.");
+                    MessageBox.Show("Verifica que Tamaño, Cantidad de Jugadores, Precio y Stock sean valores numericos validos.");
                     return;
                 }
 
@@ -73,6 +73,8 @@ namespace Login
             }
 
         }
+
+        //Carga Combobox
         private void CargarDesarrolladores()
         {
             SqlDataAdapter daDesarrolladores = new SqlDataAdapter("SELECT IDDesarrolladoraJ, Nombre FROM DesarrolladorasJuegos", conexionbd);
