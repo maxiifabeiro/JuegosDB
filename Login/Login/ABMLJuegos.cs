@@ -38,15 +38,6 @@ namespace Login
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            //Comprobacion para que no se permita abrir varias ventanas 
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(ListadoJuegos))
-                {
-                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
-                    return;
-                }
-            }
             ListadoJuegos formulario = new ListadoJuegos();
             formulario.Show();
         }

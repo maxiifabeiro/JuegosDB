@@ -32,12 +32,12 @@
             this.btn_DevJuegos = new System.Windows.Forms.Button();
             this.btn_DevConsolas = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnEliminarVentaRealizada = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnVentasMensuales = new System.Windows.Forms.Button();
             this.btnABMLUsuarios = new System.Windows.Forms.Button();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.btnABMLJuegos = new System.Windows.Forms.Button();
-            this.btnEliminarVentaRealizada = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,6 +88,16 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             // 
+            // btnEliminarVentaRealizada
+            // 
+            this.btnEliminarVentaRealizada.Location = new System.Drawing.Point(92, 228);
+            this.btnEliminarVentaRealizada.Name = "btnEliminarVentaRealizada";
+            this.btnEliminarVentaRealizada.Size = new System.Drawing.Size(139, 23);
+            this.btnEliminarVentaRealizada.TabIndex = 12;
+            this.btnEliminarVentaRealizada.Text = "Eliminar Venta Realizada";
+            this.btnEliminarVentaRealizada.UseVisualStyleBackColor = true;
+            this.btnEliminarVentaRealizada.Click += new System.EventHandler(this.btnEliminarVentaRealizada_Click);
+            // 
             // btnStock
             // 
             this.btnStock.Location = new System.Drawing.Point(92, 199);
@@ -136,16 +146,6 @@
             this.btnABMLJuegos.UseVisualStyleBackColor = true;
             this.btnABMLJuegos.Click += new System.EventHandler(this.btnABMLJuegos_Click);
             // 
-            // btnEliminarVentaRealizada
-            // 
-            this.btnEliminarVentaRealizada.Location = new System.Drawing.Point(92, 228);
-            this.btnEliminarVentaRealizada.Name = "btnEliminarVentaRealizada";
-            this.btnEliminarVentaRealizada.Size = new System.Drawing.Size(139, 23);
-            this.btnEliminarVentaRealizada.TabIndex = 12;
-            this.btnEliminarVentaRealizada.Text = "Eliminar Venta Realizada";
-            this.btnEliminarVentaRealizada.UseVisualStyleBackColor = true;
-            this.btnEliminarVentaRealizada.Click += new System.EventHandler(this.btnEliminarVentaRealizada_Click);
-            // 
             // VisorAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -154,8 +154,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnVolver);
-            this.MinimizeBox = false;
+            this.MaximizeBox = false;
             this.Name = "VisorAdmin";
+            this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "VisorAdmin";
             this.groupBox1.ResumeLayout(false);

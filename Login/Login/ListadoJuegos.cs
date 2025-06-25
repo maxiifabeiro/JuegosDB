@@ -32,18 +32,18 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            //this.Hide();
 
-            if (Sesion.EsAdministrador)
-            {
-                VisorAdmin formulario = new VisorAdmin();
-                formulario.Show();
-            }
-            else
-            {
-                VisorUsuario formulario = new VisorUsuario();
-                formulario.Show();
-            }
+            //if (Sesion.EsAdministrador)
+            //{
+            //    VisorAdmin formulario = new VisorAdmin();
+            //    formulario.Show();
+            //}
+            //else
+            //{
+            //    VisorUsuario formulario = new VisorUsuario();
+            //    formulario.Show();
+            //}
 
             this.Close();
         }

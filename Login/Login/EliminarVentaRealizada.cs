@@ -80,9 +80,7 @@ namespace Login
 
         private void btnVolverAtras_Click(object sender, EventArgs e)
         {
-            VisorAdmin formulario = new VisorAdmin();
-            formulario.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }

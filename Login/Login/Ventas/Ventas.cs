@@ -154,8 +154,6 @@ namespace Login
 
         private void btnVolver_Click(object sender, EventArgs e)
         {
-            VisorUsuario aux = new VisorUsuario();
-            aux.Show();
             this.Close();
         }
 

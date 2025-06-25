@@ -19,66 +19,26 @@ namespace Login
 
         private void btnAltaUsuario_Click(object sender, EventArgs e)
         {
-            //Comprobacion para que no se permita abrir varias ventanas 
-            //foreach (var item in Application.OpenForms)
-            //{
-            //    if (item.GetType() == typeof(CrearUsuario))
-            //    {
-            //        MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
-            //        return;
-            //    }
-            //}
-
             CrearUsuario formulario = new CrearUsuario();
             formulario.ShowDialog();
         }
 
         private void btnBajaUsuario_Click(object sender, EventArgs e)
         {
-            //Comprobacion para que no se permita abrir varias ventanas 
-            //foreach (var item in Application.OpenForms)
-            //{
-            //    if (item.GetType() == typeof(BajaUsuario))
-            //    {
-            //        MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
-            //        return;
-            //    }
-            //}
-
             BajaUsuario formulario = new BajaUsuario();
             formulario.ShowDialog();
         }
 
         private void btnModificacionUsuario_Click(object sender, EventArgs e)
         {
-            //Comprobacion para que no se permita abrir varias ventanas 
-            //foreach (var item in Application.OpenForms)
-            //{
-            //    if (item.GetType() == typeof(ModificarUsuario))
-            //    {
-            //        MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
-            //        return;
-            //    }
-            //}
-
             ModificarUsuario formulario = new ModificarUsuario();
             formulario.ShowDialog();
         }
 
         private void btnListarUsuarios_Click(object sender, EventArgs e)
         {
-            //Comprobacion para que no se permita abrir varias ventanas 
-            foreach (var item in Application.OpenForms)
-            {
-                if (item.GetType() == typeof(ListadoUsuarios))
-                {
-                    MessageBox.Show("Ya se ha abierto una instancia de esta ventana. Termine de trabajar allí");
-                    return;
-                }
-            }
-
             ListadoUsuarios formulario = new ListadoUsuarios();
-            formulario.Show();
+            formulario.ShowDialog();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)

@@ -61,8 +61,9 @@ namespace Login
                             }
 
                             VisorAdmin formulario = new VisorAdmin();
-                            formulario.Show();
-                            this.Hide();
+                            formulario.ShowDialog();
+                            //this.Hide();
+                            
                         }
                         else
                         {
@@ -77,8 +78,8 @@ namespace Login
                             }
 
                             VisorUsuario formulario = new VisorUsuario();
-                            formulario.Show();
-                            this.Hide();
+                            formulario.ShowDialog();
+                            //this.Hide();
                         }
                     }
                     else
